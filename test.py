@@ -13,7 +13,7 @@ load_dotenv()
 def test_document_ingestion_and_rag():
     try:
         test_files = [
-            "C:\Users\Dishant Pandey\Desktop\Resume\LLM_OPS\document\Dishant_resume_2027 (2).pdf",
+            r"C:\Users\Dishant Pandey\Desktop\Resume\LLM_OPS\document\Dishant_resume_2027 (2).pdf"
         ]
 
         uploaded_files = []

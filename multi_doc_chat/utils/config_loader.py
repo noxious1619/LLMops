@@ -4,19 +4,19 @@ import yaml
 
 
 def _project_root() -> Path:
-    # .../utils/config_loader.py -> parents[1] == project root
+    # .../multi_doc_chat/utils/config_loader.py -> parents[1] == multi_doc_chat/ (package root)
     return Path(__file__).resolve().parents[1]
 
 
 def load_config(config_path: str | None = None) -> dict:
     """
     Resolve config path reliably irrespective of CWD.
-    Priority: explicit arg > CONFIG_PATH env > <project_root>/config/config.yaml
+    Priority: explicit arg > CONFIG_PATH env > <package_root>/config/config.yaml
     """
     env_path = os.getenv("CONFIG_PATH")
     if config_path is None:
         config_path = env_path or str(
-            _project_root() / "multi_doc_chat" / "config" / "config.yaml"
+            _project_root() / "config" / "config.yaml"
         )
 
     path = Path(config_path)
@@ -27,4 +27,4 @@ def load_config(config_path: str | None = None) -> dict:
         raise FileNotFoundError(f"Config file not found: {path}")
 
     with open(path, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f) or {}  
+        return yaml.safe_load(f) or {}
