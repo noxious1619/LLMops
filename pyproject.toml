@@ -1,0 +1,34 @@
+[project]
+name = "llm-ops"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Dishant", email = "shoonyam.108@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "docx2txt==0.9",
+    "faiss-cpu==1.15.1",
+    "fastapi==0.142.2",
+    "ipykernel==7.4.0",
+    "langchain==1.4.3",
+    "langchain-community==0.4.2",
+    "langchain-core==1.6.6",
+    "langchain-google-genai==4.4.0",
+    "langchain-groq==1.1.3",
+    "langchain-openai==1.6.7",
+    "langchain-text-splitters==1.1.2",
+    "langsmith==0.14.3",
+    "openai==3.23.0",
+    "pydantic==2.13.5",
+    "python-dotenv==1.2.4",
+    "python-multipart==0.0.32",
+]
+
+[project.scripts]
+llm-ops = "llm_ops:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"

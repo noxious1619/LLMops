@@ -1,0 +1,243 @@
+Portfolio
+
+About Us
+
+About AmplifyWorking With Us
+
+TeamWritingAmplify Bio
+
+The 2025 AI Engineering Report
+
+Engineering & Infrastructure
+
+The 2025 AI Engineering Report
+
+Barr YaronShare
+
+06-24-2025
+
+We surveyed hundreds of engineers building in AI about everything from which models they’re using to whether they’re using a dedicated vector database. And, of course, if they think everyone will have AI girlfriends by 2030. Some highlights:
+
+- For customer facing applications, 3 out of the top 5 (and half of the top 10) most popular models are from OpenAI
+- 70% of respondents are using RAG in some form
+- More than 50% of folks are updating their models at least monthly
+- Audio is poised for a major adoption wave, with 37% of respondents planning to use it soon
+- The majority of agents in production have write access, typically with a human in the loop, and some can even take actions completely independently
+
+And there’s a lot more. So without further ado, let’s dive in.
+
+Demographics / who we surveyed
+
+Who exactly is working on the engineering side of AI? The largest group of respondents described themselves as engineers, primarily software but also AI:
+
+image
+
+Folks had a wide variety of titles, but also a wide variety of experience. Many of the most seasoned developers out there are relative newcomers to AI: of respondents with 10+ years of software experience, 45% have 3 years or fewer of AI experience. And 1 in 10 have less than 1 year of AI experience.
+
+image
+
+Right now change is the only constant, even for the veterans.
+
+Model basics: what are people actually building?
+
+Let’s start with the basics: more than half of respondents indicated they’re using LLMs for both internal and external use cases.
+
+image
+
+The top use cases we’re seeing overall are squarely for developers – code generation and code intelligence – but there’s also a good deal of writing related tasks in there too.
+
+image
+
+Of external facing use cases – customer facing applications – OpenAI models are dominating the field. 3 out of the top 5 most popular models for these applications are from OpenAI, as well as half of the top 10. Note: the survey predates Claude 4 and GPT 4.1.
+
+image.png)
+
+Another important story here is heterogeneity. 94% of people using LLMs are using them for at least 2 use cases, and 82% are using them for at least 3.
+
+Essentially: folks using LLMs are using them internally, externally, and across multiple use cases.
+
+Using models and customizing models (prompt management, RAG, etc.)
+
+How are people actually interfacing with all of these models and customizing them to their use cases? Besides the typical few shot learning / prompting, the overwhelming answer is RAG (or retrieval augmented generation). 70% of respondents say they’re using RAG in one way or another.
+
+image
+
+A surprising data point here is how common fine-tuning is: 41% of respondents are fine-tuning the models they use. The most common listed goal for fine-tuning is task accuracy.
+
+We asked the folks fine-tuning about their methods. Many folks mentioned LoRA / QLoRA, reflecting a strong preference for parameter-efficient methods. There was also a good amount of DPO and reinforcement fine-tuning. The most popular core training approach was good old supervised fine-tuning, and many hybrid approaches were mentioned as well.
+
+Speaking of models: sometimes, it can feel like new ones are coming out every single week. Sometimes that’s even literally true. And just as you finish integrating one, another one drops with better benchmarks and a breaking change. Accordingly, more than 50% of respondents are updating their models at least monthly, with 17% doing so weekly.
+
+image.png)
+
+Unsurprisingly, prompts are updated even more frequently. 70% of folks are updating their prompts at least monthly, and 1 in 10 are doing so daily.
+
+image.png)
+
+It seems like quite a few people have been typing since GPT-4 dropped.
+
+But despite all of these frequent prompt changes, almost ⅓ of respondents (31%) said that they don’t have any structured tool for managing their prompts:
+
+image
+
+We polled respondents on some of the specific tools they’re using across the board. Starting with how they build apps with GenAI; LangChain was by far the most popular response, with more than 2x the number of respondents saying they use it relative to the next most popular (LlamaIndex).
+
+image.png)
+
+Other modalities: audio, image, and video
+
+Audio, image, and video usage all lag text usage by significant margins. We (surprise) call this “the multimodal production gap.”
+
+image
+
+This isn’t the whole story, though. If we break down the results by the portion of respondents who aren’t using each particular modality, we see an interesting pattern: a lot of folks (37%) who aren’t currently using audio do plan to use it in the future.
+
+image
+
+The intent to adopt rate is calculated by taking the percentage of respondents who say they don’t currently but do plan to use a type of model, and dividing it by the percentage of respondents who don’t currently use a type of model in total. Essentially: audio tops the chart by a wide margin. The takeaway? Audio is next. The coming wave of voice agents is near!
+
+For those curious, we also rounded up which models are most popular among these modalities. Starting with image generation:
+
+image.png)
+
+And audio:
+
+image
+
+For video, respondents cited a fairly broad variety of models: Sora, Runway, Luma, Pika, Veo models from Google, and more.
+
+All about AI agents
+
+It’s 2025, we have to talk about agents. Everyone, of course, has their own definition of what exactly an agent is. For clarity, we defined it in the survey as “a system where the LLM controls the core decision making or workflow.”
+
+Agents are still, on the whole, fairly nascent. 80% of respondents say that LLMs are working well at work, but less than 20% say the same about agents.
+
+image
+
+Agents might not be everywhere yet, but they’re on their way. Fewer than 1 in 10 folks say they have no plans to use agents at all.
+
+But not all agents are created (with) equal (permissions). Surprisingly, the majority of respondents with agents in production have the ability to write data, albeit with a human in the loop. And some (13%) even can take actions completely independently.
+
+image
+
+It will be very exciting to see where tool permissioning goes.
+
+Monitoring and observability
+
+If we want AI in production, we need strong monitoring and observability. So we asked how people monitor their AI systems.
+
+Most folks are using multiple methods to monitor their models. 60% are using standard observability, and over 50% rely on offline eval.
+
+image
+
+We asked the same question for how they evaluate model and system accuracy. Folks are using a combination of methods, including data collection from users, benchmarking, etc. But the most popular at the end of the day is still human review.
+
+image
+
+What about monitoring your own model usage? Most respondents rely on internal metrics, but approaches seem to be pretty hybrid, including model vendor metrics.
+
+image
+
+Storage, retrieval, and 🌟vector databases 🌟
+
+Where does the context live? How do we get it when we need it?
+
+65% of respondents are using a dedicated vector database. It turns out that at the moment specialized vector databases are providing enough value over general purpose ones with vector extensions.
+
+image
+
+35% said they primarily self host, while 30% primarily use a third party provider. But overall, that’s a healthy majority!
+
+The (more) fun stuff
+
+OK, now for some more spicy stuff. We asked some rapid fire questions:
+
+image
+
+It also seems like a large portion of folks don’t believe that attention is all you need. And despite major advances in reasoning models, more than 40% of respondents still aren’t willing to pay more for inference time compute.
+
+Another common hot topic: will open source models eventually converge with closed source? Most respondents think yes.
+
+image
+
+Now, for some more serious subject matter. Across the survey population, folks believe on average that 26% of the US Gen Z population will have an AI boyfriend or girlfriend.
+
+image
+
+Who knows what it will be like in a world where we don’t know if we’re being left on read, or just facing latency issues. Or how it will feel to receive the dreaded breakup message: it’s not you, it’s my algorithm.
+
+Finally, we asked folks: what is the #1 most painful thing about AI engineering today?
+
+image
+
+And if you’re looking to learn more (who isn’t), we asked folks to pick the podcasts and newsletters that they actively learn something from at least once a month. Note that there’s a bit of bias here since the AI Engineering Survey is done in partnership with Latent Space. But still.
+
+image
+
+image
+
+If you’re looking for new things to follow and learn from, this is your list.
+
+Anywhere you’d want more data? Questions we should ask next year? Let us know via email or X.
+
+Authors
+
+Barr Yaron
+
+Editors
+
+Justin Gage
+
+Subscribe
+
+More Writing
+
+Announcing our investment in Superlogical
+
+Announcing our investment in Superlogical
+
+Lenny Pruss
+
+ (image)
+
+The primitive is the product
+
+The primitive is the product
+
+Lenny Pruss
+
+ (image)
+
+Will agents like Git any more than we do?
+
+Will agents like Git any more than we do?
+
+Lenny Pruss, Rebecca Dodd
+
+ (image)
+
+exe.dev and the perfect little computer
+
+exe.dev and the perfect little computer
+
+Lenny Pruss, Justin Gage
+
+ (image)
+
+Amplify Partners
+
+Menlo Park
+800 Menlo Ave, Suite 220
+Menlo Park
+CA 94025
+
+San Francisco
+457 Bryant St
+San Francisco
+CA 94107
+
+Our MissionPortfolioOur TeamAmplify BioPrivacy
+
+WritingWriting FellowshipWork at an Amplify companyStartup Legal HubBarrchives Podcast
+
+XLinkedIn© 2025 Amplify Partners. All rights reserved.
