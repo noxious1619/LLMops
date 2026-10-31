@@ -17,5 +17,7 @@ openai==3.23.0
 pydantic==2.13.5
 fastapi==0.142.2
 faiss-cpu==1.15.1
+Uvicorn: 0.54.0
+Jinja2: 3.1.6
 
 pandas==2.3.3

@@ -4,6 +4,9 @@ embedding_model:
 
 retriever:
   top_k: 10
+  search_type: "mmr"
+  fetch_k: 20
+  lambda_mult: 0.5
 
 llm:
   groq:

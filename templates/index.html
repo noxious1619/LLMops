@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiDocChat | AI Document Assistant</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #1f2937;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        header p {
+            color: #9ca3af;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .upload-card,
+        .chat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .upload-area {
+            border: 2px dashed #cbd5e1;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        input[type="file"] {
+            margin: 15px 0;
+            max-width: 100%;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        .status {
+            margin-top: 12px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .chat-box {
+            height: 350px;
+            overflow-y: auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 9px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #fafafa;
+        }
+
+        .message {
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            max-width: 85%;
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+
+        .user {
+            background: #dbeafe;
+            margin-left: auto;
+        }
+
+        .assistant {
+            background: #e5e7eb;
+            margin-right: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            outline: none;
+            min-width: 0;
+        }
+
+        .chat-input input:focus {
+            border-color: #2563eb;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .chat-input {
+                flex-direction: column;
+            }
+
+            .message {
+                max-width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MultiDocChat</h1>
+        <p>AI-powered multi-document question answering</p>
+    </header>
+
+    <main class="container">
+
+        <section class="upload-card">
+            <h2>Upload Documents</h2>
+
+            <div class="upload-area">
+                <p>Select documents to build your knowledge base.</p>
+
+                <input type="file" id="files" multiple accept=".pdf,.docx,.txt">
+
+                <br>
+
+                <button id="uploadBtn" onclick="uploadFiles()">
+                    Upload & Process
+                </button>
+
+                <p class="status" id="uploadStatus">
+                    No documents uploaded yet.
+                </p>
+            </div>
+        </section>
+
+        <section class="chat-card">
+            <h2>Chat with Your Documents</h2>
+
+            <div class="chat-box" id="chatBox">
+                <p class="status">
+                    Upload documents first to start chatting.
+                </p>
+            </div>
+
+            <div class="chat-input">
+                <input type="text" id="message" placeholder="Ask something about your documents..." disabled
+                    onkeydown="if(event.key === 'Enter') sendMessage()">
+
+                <button id="sendBtn" onclick="sendMessage()" disabled>
+                    Send
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const API_URL = "http://127.0.0.1:9000";
+
+        let sessionId = null;
+
+        async function uploadFiles() {
+            const fileInput = document.getElementById("files");
+            const status = document.getElementById("uploadStatus");
+            const button = document.getElementById("uploadBtn");
+
+            if (!fileInput.files.length) {
+                status.textContent = "Please select at least one file.";
+                return;
+            }
+
+            const formData = new FormData();
+
+            for (const file of fileInput.files) {
+                formData.append("files", file);
+            }
+
+            button.disabled = true;
+            status.textContent = "Processing documents...";
+
+            try {
+                const response = await fetch(`${API_URL}/upload`, {
+                    method: "POST",
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.detail || "Upload failed");
+                }
+
+                sessionId = data.session_id;
+
+                status.textContent = "Documents indexed successfully!";
+
+                document.getElementById("message").disabled = false;
+                document.getElementById("sendBtn").disabled = false;
+
+                document.getElementById("chatBox").innerHTML = "";
+
+                addMessage("assistant",
+                    "Your documents are ready! Ask me anything about them."
+                );
+
+            } catch (error) {
+                status.textContent = error.message;
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById("message");
+            const button = document.getElementById("sendBtn");
+            const message = input.value.trim();
+
+            if (!message || !sessionId) return;
+
+            addMessage("user", message);
+            input.value = "";
+            button.disabled = true;
+
+            try {
+                const response = await fetch(`${API_URL}/chat`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        session_id: sessionId,
+                        message: message
+                    })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.detail || "Chat request failed");
+                }
+
+                addMessage("assistant", data.answer);
+
+            } catch (error) {
+                addMessage("assistant", "Error: " + error.message);
+            } finally {
+                button.disabled = false;
+                input.focus();
+            }
+        }
+
+        function addMessage(role, content) {
+            const chatBox = document.getElementById("chatBox");
+
+            const message = document.createElement("div");
+            message.className = `message ${role}`;
+            message.textContent = content;
+
+            chatBox.appendChild(message);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -48,8 +48,11 @@ class ChatIngestor:
                       faiss_dir=str(self.faiss_dir),
                       sessionized=self.use_session)
         except Exception as e:
-            log.error("Failed to initialize ChatIngestor", error=str(e))
-            raise DocumentPortalException("Initialization error in ChatIngestor", e) from e
+            log.exception("Failed to build retriever")
+            raise DocumentPortalException("Failed to build retriever", e) from e
+        # except Exception as e:
+        #     log.error("Failed to initialize ChatIngestor", error=str(e))
+        #     raise DocumentPortalException("Initialization error in ChatIngestor", e) from e
 
 
     def _resolve_dir(self, base: Path):
