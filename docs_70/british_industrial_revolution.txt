@@ -1,0 +1,21 @@
+Document ID: DOC-HIS-505
+Title: The British Industrial Revolution and the Factory System
+Category: Economic and Social History
+Version: 1.0
+
+1. Preconditions for Industrialization in Britain
+The Industrial Revolution, occurring roughly between 1760 and 1840, marks the transition from agrarian, handicraft economies to machine-driven manufacturing. Great Britain was uniquely positioned as the birthplace of this transformation due to several intersecting factors. Geographically, Britain possessed abundant, easily accessible deposits of coal and iron ore, along with navigable rivers for transport. Economically, the British Empire provided both a vast supply of raw materials (like cotton from overseas colonies) and a captive consumer market. Furthermore, the Agricultural Revolution and the Enclosure Acts had consolidated land ownership, increasing crop yields but displacing rural laborers, thereby creating a large, mobile workforce desperate for wage labor in urban centers.
+
+2. The Mechanization of the Textile Industry
+The initial catalyst for the Industrial Revolution was the textile industry. Prior to the 18th century, spinning and weaving were painstakingly slow, done by individuals in their homes (the domestic or "putting-out" system). A series of rapid technological innovations shattered this bottleneck. James Hargreaves's Spinning Jenny (1764) allowed one worker to spin multiple spools of yarn simultaneously. Richard Arkwright's Water Frame (1769) utilized water power to produce stronger threads, necessitating the construction of large mills near fast-flowing rivers. Eventually, Edmund Cartwright's Power Loom (1785) mechanized the weaving process, exponentially increasing the output of cheap cotton cloth, which became Britain's dominant export.
+
+3. Steam Power and Metallurgy
+While water power was geographically limiting, the refinement of the steam engine liberated factories from riverbanks. Thomas Newcomen's early atmospheric engine was highly inefficient and used solely for pumping water out of coal mines. In 1776, James Watt developed a radically improved steam engine with a separate condenser, making it efficient enough to power heavy machinery. Concurrently, Henry Cort developed the puddling process in the 1780s, which allowed for the mass production of high-quality wrought iron. The synergy between coal, steam, and iron drove the rapid expansion of railways in the 1820s and 1830s, shrinking distances and drastically reducing the cost of overland transport.
+
+4. The Rise of the Factory System and Urbanization
+The necessity of housing massive steam engines and complex machinery gave birth to the centralized factory system. This fundamentally altered the nature of work. Instead of skilled artisans controlling their own pace, labor was divided into repetitive, unskilled tasks dictated by the rhythm of the machine and the factory whistle.
+This industrial boom caused unprecedented urbanization. Cities like Manchester and Birmingham exploded in population. Manchester, often considered the world's first industrial city, grew from a population of 25,000 in 1770 to over 300,000 by 1850.
+
+5. Social Consequences and Legislative Response
+The rapid, unplanned urban growth led to catastrophic living conditions. The working class endured overcrowded, disease-ridden slums (cholera and tuberculosis were rampant) and grueling 14- to 16-hour workdays in dangerous factory environments. The exploitation of child labor was particularly pervasive, as children could be paid a fraction of adult wages and fit under machinery. 
+These conditions sparked social unrest, most notably the Luddite movement (textile workers who smashed machinery in protest). Ultimately, the profound social crisis forced parliamentary intervention. The Factory Acts (beginning in 1833) were the first significant attempts to regulate working conditions, incrementally limiting child labor hours and establishing the precedent for government intervention in industrial capitalism.

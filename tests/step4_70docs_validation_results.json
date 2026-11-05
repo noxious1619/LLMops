@@ -1,0 +1,1175 @@
+{
+  "dataset": "docs_70",
+  "benchmark_session": "benchmark_70docs_v1",
+  "inventory": {
+    "total_files": 68,
+    "extension_counts": {
+      ".txt": 25,
+      ".pdf": 23,
+      ".docx": 20
+    },
+    "extension_bytes": {
+      ".txt": 123307,
+      ".pdf": 2498778,
+      ".docx": 789151
+    },
+    "total_bytes": 3411236,
+    "min_file_size": {
+      "name": "01_Physics_Electrostatics.txt",
+      "path": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\01_Physics_Electrostatics.txt",
+      "extension": ".txt",
+      "size_bytes": 1559,
+      "sha256": "ee9f3569aa0a0765fc27f308d7b552c5c0c642d7f10f9802a9f20c4a5c47ad74"
+    },
+    "max_file_size": {
+      "name": "Implementing Asynchronous Generators in Python.pdf",
+      "path": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Implementing Asynchronous Generators in Python.pdf",
+      "extension": ".pdf",
+      "size_bytes": 155354,
+      "sha256": "2c6f442c3019a3c5648505fc0fcae15dbe503a7b7cc383aa19d2c69f7691e037"
+    },
+    "avg_file_size": 50165.23529411765,
+    "duplicate_content_groups": 0,
+    "empty_files": 0,
+    "unreadable_files": 0,
+    "overlap_with_docs20": 20,
+    "new_files": 48
+  },
+  "extraction": {
+    "time_sec": 2.48,
+    "files_processed": 68,
+    "files_succeeded": 68,
+    "files_failed": 0,
+    "total_documents": 85,
+    "total_chars": 336920,
+    "total_words": 47040,
+    "total_tokens": 66297,
+    "short_content_warnings": 0,
+    "unicode_warnings": 0
+  },
+  "chunking": {
+    "time_sec": 0.059,
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "tokenizer": "cl100k_base",
+    "total_chunks": 181,
+    "min_tokens": 93,
+    "max_tokens": 498,
+    "avg_tokens": 377.06,
+    "chunks_exceeding_limit": 0,
+    "evaluated_overlap_pairs": 113,
+    "avg_overlap_tokens": 17.26,
+    "missing_chunk_ids": 0,
+    "duplicate_chunk_ids": 0,
+    "missing_content_hashes": 0,
+    "invalid_content_hashes": 0,
+    "missing_sources": 0
+  },
+  "per_file_summary": [
+    {
+      "file_name": "01_Physics_Electrostatics.txt",
+      "extension": ".txt",
+      "file_size": 1559,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 1515,
+      "words": 253,
+      "tokens": 394,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "02_Physics_Current_Electricity.txt",
+      "extension": ".txt",
+      "file_size": 1686,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 1624,
+      "words": 286,
+      "tokens": 419,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "03_Chemistry_Electrochemistry.txt",
+      "extension": ".txt",
+      "file_size": 2071,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 2045,
+      "words": 286,
+      "tokens": 448,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "04_Biology_Molecular_Basis_of_Inheritance.txt",
+      "extension": ".txt",
+      "file_size": 1985,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 1969,
+      "words": 282,
+      "tokens": 434,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "05_Biology_Human_Reproduction.txt",
+      "extension": ".txt",
+      "file_size": 1905,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 1903,
+      "words": 267,
+      "tokens": 443,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "adas_actuation_and_steer_by_wire.txt",
+      "extension": ".txt",
+      "file_size": 7537,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7537,
+      "words": 1047,
+      "tokens": 1419,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Advanced Metaprogramming with Python Metaclasses.pdf",
+      "extension": ".pdf",
+      "file_size": 155180,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 2962,
+      "words": 398,
+      "tokens": 632,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "advanced_automotive_lighting_technologies.txt",
+      "extension": ".txt",
+      "file_size": 7566,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7552,
+      "words": 1034,
+      "tokens": 1408,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Automotive Lightweighting and Composite Materials.pdf",
+      "extension": ".pdf",
+      "file_size": 99830,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 6421,
+      "words": 845,
+      "tokens": 1278,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Automotive On-Board Diagnostics and Telematics.pdf",
+      "extension": ".pdf",
+      "file_size": 100929,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 6551,
+      "words": 892,
+      "tokens": 1332,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Automotive_CAN_Bus_Architecture_and_Diagnostics.docx",
+      "extension": ".docx",
+      "file_size": 40543,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 8775,
+      "words": 1183,
+      "tokens": 1642,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Automotive_Crashworthiness_and_Structural_Safety.docx",
+      "extension": ".docx",
+      "file_size": 40817,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9272,
+      "words": 1258,
+      "tokens": 1739,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Automotive_ECU_Architecture_and_Microcontrollers.docx",
+      "extension": ".docx",
+      "file_size": 40612,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 8924,
+      "words": 1191,
+      "tokens": 1674,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "automotive_hvac_and_heat_pump_systems.txt",
+      "extension": ".txt",
+      "file_size": 7959,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7956,
+      "words": 1109,
+      "tokens": 1527,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "automotive_suspension_kinematics.txt",
+      "extension": ".txt",
+      "file_size": 7682,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7682,
+      "words": 1073,
+      "tokens": 1441,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "automotive_transmission_systems.txt",
+      "extension": ".txt",
+      "file_size": 8006,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 8006,
+      "words": 1106,
+      "tokens": 1495,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Automotive_Tribology_Friction_and_Wear.docx",
+      "extension": ".docx",
+      "file_size": 40739,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9185,
+      "words": 1241,
+      "tokens": 1745,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Autonomous_Driving_Sensor_Fusion_and_Perception.docx",
+      "extension": ".docx",
+      "file_size": 40845,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9239,
+      "words": 1246,
+      "tokens": 1709,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "aztec_empire_spanish_conquest.txt",
+      "extension": ".txt",
+      "file_size": 3849,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3824,
+      "words": 560,
+      "tokens": 848,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "british_industrial_revolution.txt",
+      "extension": ".txt",
+      "file_size": 4002,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 4002,
+      "words": 558,
+      "tokens": 764,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "byzantine_empire_and_justinian_code.txt",
+      "extension": ".txt",
+      "file_size": 3696,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3688,
+      "words": 532,
+      "tokens": 744,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Circuit Breaker Pattern in Microservices.pdf",
+      "extension": ".pdf",
+      "file_size": 94181,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3089,
+      "words": 440,
+      "tokens": 642,
+      "pages": [
+        0
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Cold War Geopolitics_ The Strategy of Containment.pdf",
+      "extension": ".pdf",
+      "file_size": 89957,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3931,
+      "words": 580,
+      "tokens": 802,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "cold_war_space_race.txt",
+      "extension": ".txt",
+      "file_size": 3585,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3581,
+      "words": 523,
+      "tokens": 722,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Configuring K8s HPA for Custom Metrics.pdf",
+      "extension": ".pdf",
+      "file_size": 119480,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3015,
+      "words": 398,
+      "tokens": 658,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "connected_vehicle_v2x_communication.txt",
+      "extension": ".txt",
+      "file_size": 7309,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7309,
+      "words": 985,
+      "tokens": 1400,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-ARC-901.docx",
+      "extension": ".docx",
+      "file_size": 38264,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3404,
+      "words": 479,
+      "tokens": 653,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-DEV-1003.docx",
+      "extension": ".docx",
+      "file_size": 38299,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3454,
+      "words": 456,
+      "tokens": 625,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-HIS-2116.docx",
+      "extension": ".docx",
+      "file_size": 38216,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3267,
+      "words": 419,
+      "tokens": 568,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-HIS-2217.docx",
+      "extension": ".docx",
+      "file_size": 38229,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3213,
+      "words": 459,
+      "tokens": 639,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-HIS-2318.docx",
+      "extension": ".docx",
+      "file_size": 38245,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3228,
+      "words": 426,
+      "tokens": 626,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-HIS-2419.docx",
+      "extension": ".docx",
+      "file_size": 38204,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3228,
+      "words": 452,
+      "tokens": 611,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-HIS-2520.docx",
+      "extension": ".docx",
+      "file_size": 38241,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3236,
+      "words": 468,
+      "tokens": 649,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-ML-705.docx",
+      "extension": ".docx",
+      "file_size": 38134,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3295,
+      "words": 453,
+      "tokens": 592,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-NET-802.docx",
+      "extension": ".docx",
+      "file_size": 38087,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3173,
+      "words": 445,
+      "tokens": 637,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "DOC-SEC-601.docx",
+      "extension": ".docx",
+      "file_size": 38012,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 2912,
+      "words": 417,
+      "tokens": 584,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Electric Vehicle Charging Infrastructure.pdf",
+      "extension": ".pdf",
+      "file_size": 99374,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 6843,
+      "words": 949,
+      "tokens": 1406,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Electric_Vehicle_Battery_Management_Systems_BMS.docx",
+      "extension": ".docx",
+      "file_size": 40775,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9402,
+      "words": 1291,
+      "tokens": 1772,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "electric_vehicle_motor_topologies.txt",
+      "extension": ".txt",
+      "file_size": 8052,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 8049,
+      "words": 1098,
+      "tokens": 1539,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "fall_of_the_western_roman_empire.txt",
+      "extension": ".txt",
+      "file_size": 3412,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3402,
+      "words": 498,
+      "tokens": 695,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "FCEV_Hydrogen_Storage_and_Stack_Architecture.docx",
+      "extension": ".docx",
+      "file_size": 40763,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9184,
+      "words": 1270,
+      "tokens": 1733,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Idempotency in RESTful API Design.pdf",
+      "extension": ".pdf",
+      "file_size": 111464,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3332,
+      "words": 502,
+      "tokens": 721,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Implementing Asynchronous Generators in Python.pdf",
+      "extension": ".pdf",
+      "file_size": 155354,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3538,
+      "words": 462,
+      "tokens": 702,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Internal_Combustion_Engine_Thermodynamics.docx",
+      "extension": ".docx",
+      "file_size": 40728,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9026,
+      "words": 1228,
+      "tokens": 1750,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Optimizing PostgreSQL JSONB Query Performance.pdf",
+      "extension": ".pdf",
+      "file_size": 146710,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3386,
+      "words": 487,
+      "tokens": 713,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Paxos and Raft Consensus Algorithms.pdf",
+      "extension": ".pdf",
+      "file_size": 85100,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 2966,
+      "words": 441,
+      "tokens": 620,
+      "pages": [
+        0
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Redis Cluster Data Sharding and High Availability.pdf",
+      "extension": ".pdf",
+      "file_size": 107090,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 2938,
+      "words": 457,
+      "tokens": 609,
+      "pages": [
+        0
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "regenerative_braking_and_friction_blending.txt",
+      "extension": ".txt",
+      "file_size": 7589,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7587,
+      "words": 1053,
+      "tokens": 1413,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "silk_road_trade_networks.txt",
+      "extension": ".txt",
+      "file_size": 3573,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3563,
+      "words": 522,
+      "tokens": 727,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Software_Defined_Vehicle_SDV_and_OTA_Updates.docx",
+      "extension": ".docx",
+      "file_size": 40658,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9131,
+      "words": 1215,
+      "tokens": 1711,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "soviet_command_economy_and_five_year_plans.txt",
+      "extension": ".txt",
+      "file_size": 4050,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 4042,
+      "words": 593,
+      "tokens": 791,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Age of Discovery and Maritime Trade Routes.pdf",
+      "extension": ".pdf",
+      "file_size": 87954,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3581,
+      "words": 530,
+      "tokens": 767,
+      "pages": [
+        0
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The American Revolution and Constitutional Design.pdf",
+      "extension": ".pdf",
+      "file_size": 96038,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 4044,
+      "words": 570,
+      "tokens": 777,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Berlin Wall and the Iron Curtain.pdf",
+      "extension": ".pdf",
+      "file_size": 82818,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3856,
+      "words": 581,
+      "tokens": 843,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Black Death and Socioeconomic Transformation.pdf",
+      "extension": ".pdf",
+      "file_size": 154808,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 4177,
+      "words": 574,
+      "tokens": 837,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Magna Carta and the Foundations of Common Law.pdf",
+      "extension": ".pdf",
+      "file_size": 114887,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3837,
+      "words": 589,
+      "tokens": 827,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Mongol Empire and the Pax Mongolica.pdf",
+      "extension": ".pdf",
+      "file_size": 97653,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3533,
+      "words": 514,
+      "tokens": 778,
+      "pages": [
+        0
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Roman Republic and the Punic Wars.pdf",
+      "extension": ".pdf",
+      "file_size": 91941,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3844,
+      "words": 558,
+      "tokens": 867,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Russian Revolution and the Rise of the Bolsheviks.pdf",
+      "extension": ".pdf",
+      "file_size": 139473,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3715,
+      "words": 545,
+      "tokens": 784,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Saga Pattern for Distributed Transactions.pdf",
+      "extension": ".pdf",
+      "file_size": 102871,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3615,
+      "words": 513,
+      "tokens": 744,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "The Scramble for Africa and the Berlin Conference.pdf",
+      "extension": ".pdf",
+      "file_size": 83132,
+      "status": "SUCCESS",
+      "doc_objects": 2,
+      "chars": 3816,
+      "words": 535,
+      "tokens": 785,
+      "pages": [
+        0,
+        1
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "the_haitian_revolution.txt",
+      "extension": ".txt",
+      "file_size": 4046,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 4043,
+      "words": 583,
+      "tokens": 803,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "the_meiji_restoration.txt",
+      "extension": ".txt",
+      "file_size": 3441,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3433,
+      "words": 488,
+      "tokens": 706,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "thirty_years_war_and_westphalia.txt",
+      "extension": ".txt",
+      "file_size": 3712,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3700,
+      "words": 533,
+      "tokens": 739,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "tire_dynamics_and_slip_angle_modeling.txt",
+      "extension": ".txt",
+      "file_size": 7386,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7382,
+      "words": 1042,
+      "tokens": 1390,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Vehicle_Aerodynamics_and_Computational_Fluid_Dynamics.docx",
+      "extension": ".docx",
+      "file_size": 40740,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 9269,
+      "words": 1264,
+      "tokens": 1702,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "vehicle_dynamics_and_electronic_stability_control.txt",
+      "extension": ".txt",
+      "file_size": 7649,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 7649,
+      "words": 1080,
+      "tokens": 1461,
+      "pages": [
+        null
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    },
+    {
+      "file_name": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+      "extension": ".pdf",
+      "file_size": 82554,
+      "status": "SUCCESS",
+      "doc_objects": 1,
+      "chars": 3070,
+      "words": 428,
+      "tokens": 642,
+      "pages": [
+        0
+      ],
+      "source_preserved": true,
+      "has_page_metadata": true,
+      "has_replacement_char": false
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+file_name,extension,file_size_bytes,status,doc_objects,chars,words,tokens,chunks,page_count
+"01_Physics_Electrostatics.txt",".txt",1559,"SUCCESS",1,1515,253,394,1,1
+"02_Physics_Current_Electricity.txt",".txt",1686,"SUCCESS",1,1624,286,419,1,1
+"03_Chemistry_Electrochemistry.txt",".txt",2071,"SUCCESS",1,2045,286,448,1,1
+"04_Biology_Molecular_Basis_of_Inheritance.txt",".txt",1985,"SUCCESS",1,1969,282,434,1,1
+"05_Biology_Human_Reproduction.txt",".txt",1905,"SUCCESS",1,1903,267,443,1,1
+"adas_actuation_and_steer_by_wire.txt",".txt",7537,"SUCCESS",1,7537,1047,1419,3,1
+"Advanced Metaprogramming with Python Metaclasses.pdf",".pdf",155180,"SUCCESS",2,2962,398,632,2,2
+"advanced_automotive_lighting_technologies.txt",".txt",7566,"SUCCESS",1,7552,1034,1408,3,1
+"Automotive Lightweighting and Composite Materials.pdf",".pdf",99830,"SUCCESS",2,6421,845,1278,3,2
+"Automotive On-Board Diagnostics and Telematics.pdf",".pdf",100929,"SUCCESS",2,6551,892,1332,4,2
+"Automotive_CAN_Bus_Architecture_and_Diagnostics.docx",".docx",40543,"SUCCESS",1,8775,1183,1642,4,1
+"Automotive_Crashworthiness_and_Structural_Safety.docx",".docx",40817,"SUCCESS",1,9272,1258,1739,4,1
+"Automotive_ECU_Architecture_and_Microcontrollers.docx",".docx",40612,"SUCCESS",1,8924,1191,1674,4,1
+"automotive_hvac_and_heat_pump_systems.txt",".txt",7959,"SUCCESS",1,7956,1109,1527,4,1
+"automotive_suspension_kinematics.txt",".txt",7682,"SUCCESS",1,7682,1073,1441,4,1
+"automotive_transmission_systems.txt",".txt",8006,"SUCCESS",1,8006,1106,1495,4,1
+"Automotive_Tribology_Friction_and_Wear.docx",".docx",40739,"SUCCESS",1,9185,1241,1745,4,1
+"Autonomous_Driving_Sensor_Fusion_and_Perception.docx",".docx",40845,"SUCCESS",1,9239,1246,1709,4,1
+"aztec_empire_spanish_conquest.txt",".txt",3849,"SUCCESS",1,3824,560,848,2,1
+"british_industrial_revolution.txt",".txt",4002,"SUCCESS",1,4002,558,764,2,1
+"byzantine_empire_and_justinian_code.txt",".txt",3696,"SUCCESS",1,3688,532,744,2,1
+"Circuit Breaker Pattern in Microservices.pdf",".pdf",94181,"SUCCESS",1,3089,440,642,2,1
+"Cold War Geopolitics_ The Strategy of Containment.pdf",".pdf",89957,"SUCCESS",2,3931,580,802,3,2
+"cold_war_space_race.txt",".txt",3585,"SUCCESS",1,3581,523,722,2,1
+"Configuring K8s HPA for Custom Metrics.pdf",".pdf",119480,"SUCCESS",2,3015,398,658,2,2
+"connected_vehicle_v2x_communication.txt",".txt",7309,"SUCCESS",1,7309,985,1400,4,1
+"DOC-ARC-901.docx",".docx",38264,"SUCCESS",1,3404,479,653,2,1
+"DOC-DEV-1003.docx",".docx",38299,"SUCCESS",1,3454,456,625,2,1
+"DOC-HIS-2116.docx",".docx",38216,"SUCCESS",1,3267,419,568,2,1
+"DOC-HIS-2217.docx",".docx",38229,"SUCCESS",1,3213,459,639,2,1
+"DOC-HIS-2318.docx",".docx",38245,"SUCCESS",1,3228,426,626,2,1
+"DOC-HIS-2419.docx",".docx",38204,"SUCCESS",1,3228,452,611,2,1
+"DOC-HIS-2520.docx",".docx",38241,"SUCCESS",1,3236,468,649,2,1
+"DOC-ML-705.docx",".docx",38134,"SUCCESS",1,3295,453,592,2,1
+"DOC-NET-802.docx",".docx",38087,"SUCCESS",1,3173,445,637,2,1
+"DOC-SEC-601.docx",".docx",38012,"SUCCESS",1,2912,417,584,2,1
+"Electric Vehicle Charging Infrastructure.pdf",".pdf",99374,"SUCCESS",2,6843,949,1406,4,2
+"Electric_Vehicle_Battery_Management_Systems_BMS.docx",".docx",40775,"SUCCESS",1,9402,1291,1772,5,1
+"electric_vehicle_motor_topologies.txt",".txt",8052,"SUCCESS",1,8049,1098,1539,4,1
+"fall_of_the_western_roman_empire.txt",".txt",3412,"SUCCESS",1,3402,498,695,2,1
+"FCEV_Hydrogen_Storage_and_Stack_Architecture.docx",".docx",40763,"SUCCESS",1,9184,1270,1733,4,1
+"Idempotency in RESTful API Design.pdf",".pdf",111464,"SUCCESS",2,3332,502,721,2,2
+"Implementing Asynchronous Generators in Python.pdf",".pdf",155354,"SUCCESS",2,3538,462,702,2,2
+"Internal_Combustion_Engine_Thermodynamics.docx",".docx",40728,"SUCCESS",1,9026,1228,1750,4,1
+"Optimizing PostgreSQL JSONB Query Performance.pdf",".pdf",146710,"SUCCESS",2,3386,487,713,2,2
+"Paxos and Raft Consensus Algorithms.pdf",".pdf",85100,"SUCCESS",1,2966,441,620,2,1
+"Redis Cluster Data Sharding and High Availability.pdf",".pdf",107090,"SUCCESS",1,2938,457,609,2,1
+"regenerative_braking_and_friction_blending.txt",".txt",7589,"SUCCESS",1,7587,1053,1413,3,1
+"silk_road_trade_networks.txt",".txt",3573,"SUCCESS",1,3563,522,727,2,1
+"Software_Defined_Vehicle_SDV_and_OTA_Updates.docx",".docx",40658,"SUCCESS",1,9131,1215,1711,4,1
+"soviet_command_economy_and_five_year_plans.txt",".txt",4050,"SUCCESS",1,4042,593,791,2,1
+"The Age of Discovery and Maritime Trade Routes.pdf",".pdf",87954,"SUCCESS",1,3581,530,767,2,1
+"The American Revolution and Constitutional Design.pdf",".pdf",96038,"SUCCESS",2,4044,570,777,3,2
+"The Berlin Wall and the Iron Curtain.pdf",".pdf",82818,"SUCCESS",2,3856,581,843,3,2
+"The Black Death and Socioeconomic Transformation.pdf",".pdf",154808,"SUCCESS",2,4177,574,837,3,2
+"The Magna Carta and the Foundations of Common Law.pdf",".pdf",114887,"SUCCESS",2,3837,589,827,3,2
+"The Mongol Empire and the Pax Mongolica.pdf",".pdf",97653,"SUCCESS",1,3533,514,778,2,1
+"The Roman Republic and the Punic Wars.pdf",".pdf",91941,"SUCCESS",2,3844,558,867,3,2
+"The Russian Revolution and the Rise of the Bolsheviks.pdf",".pdf",139473,"SUCCESS",2,3715,545,784,3,2
+"The Saga Pattern for Distributed Transactions.pdf",".pdf",102871,"SUCCESS",2,3615,513,744,2,2
+"The Scramble for Africa and the Berlin Conference.pdf",".pdf",83132,"SUCCESS",2,3816,535,785,3,2
+"the_haitian_revolution.txt",".txt",4046,"SUCCESS",1,4043,583,803,2,1
+"the_meiji_restoration.txt",".txt",3441,"SUCCESS",1,3433,488,706,2,1
+"thirty_years_war_and_westphalia.txt",".txt",3712,"SUCCESS",1,3700,533,739,2,1
+"tire_dynamics_and_slip_angle_modeling.txt",".txt",7386,"SUCCESS",1,7382,1042,1390,3,1
+"Vehicle_Aerodynamics_and_Computational_Fluid_Dynamics.docx",".docx",40740,"SUCCESS",1,9269,1264,1702,4,1
+"vehicle_dynamics_and_electronic_stability_control.txt",".txt",7649,"SUCCESS",1,7649,1080,1461,4,1
+"Zero Trust Network Access (ZTNA) Implementation.pdf",".pdf",82554,"SUCCESS",1,3070,428,642,2,1

@@ -1,0 +1,21 @@
+Filename,Format,Status,Characters,Document Objects,Metadata Status,Issues,File Size Bytes,SHA256
+01_Physics_Electrostatics.txt,TXT,SUCCESS,1515,1,BASIC (source only),None,1559,ee9f3569aa0a0765fc27f308d7b552c5c0c642d7f10f9802a9f20c4a5c47ad74
+02_Physics_Current_Electricity.txt,TXT,SUCCESS,1624,1,BASIC (source only),None,1686,54764b8cb48452fda5321c70ac5795dcff341bc7cd9021313f79e4dc90fb3d64
+03_Chemistry_Electrochemistry.txt,TXT,SUCCESS,2045,1,BASIC (source only),None,2071,6640affd8bcccf5cc4aa782a3eceb4ce2a5f0fd352100ff7112c2505b9410acc
+04_Biology_Molecular_Basis_of_Inheritance.txt,TXT,SUCCESS,1969,1,BASIC (source only),None,1985,ce0c319e257ed105c41355cb3e6ee3a1e2ab45dae25abe3b6ed54779bacb7649
+05_Biology_Human_Reproduction.txt,TXT,SUCCESS,1903,1,BASIC (source only),None,1905,02d9eae93c79f697baf05784978f559fabdfa8067943a6ef492c8ed7c9586635
+Advanced Metaprogramming with Python Metaclasses.pdf,PDF,SUCCESS,2962,2,"COMPLETE (source, page, total_pages)",None,155180,dfae3952871ead1192b428f775287bdc325554fee6d0cce6ee104bfc709db7e7
+Circuit Breaker Pattern in Microservices.pdf,PDF,PASS WITH WARNINGS,3089,1,"COMPLETE (source, page, total_pages)","Unnormalized ligatures present: ﬁ (U+FB01), ﬂ (U+FB02), ﬃ (U+FB03)",94181,7a91020e071b09fbed7238cfa1a611171264f9f36a70c29c598537c46ab00d81
+Configuring K8s HPA for Custom Metrics.pdf,PDF,SUCCESS,3015,2,"COMPLETE (source, page, total_pages)",None,119480,4facf0b71226efeb5bfff9154db4a5d8c5f1aefbeaf9d9733558f4a47bbadb57
+DOC-ARC-901.docx,DOCX,SUCCESS,3404,1,BASIC (source only),None,38264,cefc3b6c52cdaa86ad97299e141d27e7b67f9b918c847725459d7b6782e58785
+DOC-DEV-1003.docx,DOCX,SUCCESS,3454,1,BASIC (source only),None,38299,0c29ae1bbc3b8383ee1ac8ba16d20ec82198cbe1298c521e2d373df8af1c6a83
+DOC-ML-705.docx,DOCX,SUCCESS,3295,1,BASIC (source only),None,38134,f18a7d79c1db65a6a2f534ffbb54bb1734b8ac20e61507762a93e65c2d246f3d
+DOC-NET-802.docx,DOCX,SUCCESS,3173,1,BASIC (source only),None,38087,88e1b6ac69fbe33d04913d5b7f6d7afdeb8faa36119fe18c686fa87f8f6c39fc
+DOC-SEC-601.docx,DOCX,SUCCESS,2912,1,BASIC (source only),None,38012,664c3a67208745458f9f9556a8536fdb3a23997df3e408b80c618a375ec0e4eb
+Idempotency in RESTful API Design.pdf,PDF,SUCCESS,3332,2,"COMPLETE (source, page, total_pages)",None,111464,e4ed82feb4175e157bda05060ee3fcebd1fe36691f45fd0b3a2f9e268517d4b6
+Implementing Asynchronous Generators in Python.pdf,PDF,SUCCESS,3538,2,"COMPLETE (source, page, total_pages)",None,155354,2c6f442c3019a3c5648505fc0fcae15dbe503a7b7cc383aa19d2c69f7691e037
+Optimizing PostgreSQL JSONB Query Performance.pdf,PDF,SUCCESS,3386,2,"COMPLETE (source, page, total_pages)",None,146710,9e37efb56c5d4c950568e7b269de33ed50e9a6145660ef8ba6eb425396dfa0a7
+Paxos and Raft Consensus Algorithms.pdf,PDF,SUCCESS,2966,1,"COMPLETE (source, page, total_pages)",None,85100,a8bb300d2f16ec1cc55263f47645a37108a8d75d6de4eb1e53b5f0527ff9512f
+Redis Cluster Data Sharding and High Availability.pdf,PDF,SUCCESS,2938,1,"COMPLETE (source, page, total_pages)",None,107090,9b3a3e69ff408c81753c069d670cb3b80c04173fc51aa1e6ee1b9903e4c7559d
+The Saga Pattern for Distributed Transactions.pdf,PDF,PASS WITH WARNINGS,3615,2,"COMPLETE (source, page, total_pages)","Unnormalized ligatures present: ﬁ (U+FB01), ﬂ (U+FB02), ﬃ (U+FB03)",102871,1142208c7da0c2ff59db15337a50e6415bb13250ca7195578ab0d2d12511b285
+Zero Trust Network Access (ZTNA) Implementation.pdf,PDF,SUCCESS,3070,1,"COMPLETE (source, page, total_pages)",None,82554,a97ba69d7e23d07633473a81c66f315b545bce8071b0959f626035d09a459f25

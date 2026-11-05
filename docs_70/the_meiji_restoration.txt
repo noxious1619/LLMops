@@ -1,0 +1,19 @@
+Document ID: DOC-HIS-204
+Title: The Meiji Restoration and the Modernization of Japan
+Category: Modern Asian History
+Version: 1.1
+
+1. Historical Context and the End of Sakoku
+The Meiji Restoration of 1868 marks a watershed moment in Japanese history, transitioning the nation from an isolated, feudal society into a modernized, industrialized world power. For over 250 years, the Tokugawa Shogunate had enforced a policy of "sakoku" (national isolation), severely restricting foreign trade and influence. This isolation was forcibly ended in 1853 when United States Commodore Matthew Perry arrived with a fleet of technologically advanced steamships (the "Black Ships"), demanding that Japan open its ports. The Shogunate's inability to resist Western military pressure exposed its vulnerability and triggered widespread domestic unrest.
+
+2. The Overthrow of the Shogunate
+The capitulation to Western demands through "unequal treaties" outraged the samurai class, particularly in the southern domains of Satsuma and Choshu. Rallying behind the slogan "Sonno Joi" (Revere the Emperor, Expel the Barbarians), these domains formed an alliance to overthrow the Tokugawa regime. Following the brief Boshin War (1868–1869), the Shogunate was abolished, and nominal supreme power was "restored" to the young Emperor Meiji, who relocated the capital from Kyoto to Edo (renamed Tokyo).
+
+3. Political and Social Reforms
+The new Meiji oligarchy recognized that resisting Western imperialism required adopting Western institutional frameworks. In 1868, they issued the Charter Oath, which promised the establishment of deliberative assemblies and the pursuit of global knowledge. The government dismantled the feudal domain system (han) and replaced it with a centralized prefecture system. Crucially, they abolished the rigid four-tier class system. The samurai lost their exclusive military privileges and stipends, a traumatic shift that sparked the ultimately unsuccessful Satsuma Rebellion of 1877, led by Saigo Takamori. In 1889, Japan adopted the Meiji Constitution, establishing a bicameral parliament (the Diet) modeled heavily on the Prussian system.
+
+4. Rapid Industrialization and the Zaibatsu
+The Meiji government spearheaded an aggressive industrialization campaign under the slogan "Fukoku Kyohei" (Enrich the Country, Strengthen the Military). The state invested heavily in infrastructure, constructing railways, telegraph lines, and modern shipyards. To stimulate manufacturing, the government built model factories and subsequently sold them at a fraction of their cost to private investors with close government ties. This policy facilitated the rise of the "zaibatsu"—massive financial and industrial conglomerates, such as Mitsubishi and Mitsui, which came to dominate the Japanese economy.
+
+5. Global Impact and Imperial Expansion
+The success of the Meiji Restoration was rapidly demonstrated on the global stage. By implementing universal male conscription and modernizing its military with Western tactics and weaponry, Japan easily defeated Qing China in the First Sino-Japanese War (1894–1895). A decade later, Japan achieved an unprecedented victory over a major European power in the Russo-Japanese War (1904–1905). By the end of the Meiji era in 1912, Japan had successfully renegotiated the unequal treaties, secured an alliance with Great Britain, and established itself as the dominant imperial power in East Asia.

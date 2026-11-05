@@ -1,0 +1,42 @@
+CLASS 12 SCIENCE — BIOLOGY Topic: Molecular Basis of Inheritance
+
+The molecular basis of inheritance explains how genetic information is
+stored, copied and expressed. DNA (deoxyribonucleic acid) is the
+hereditary material in most organisms. It is made of nucleotides, each
+containing a deoxyribose sugar, a phosphate group and a nitrogenous
+base.
+
+DNA usually forms a double helix with two antiparallel strands. Adenine
+pairs with thymine through two hydrogen bonds, while guanine pairs with
+cytosine through three. This complementary pairing allows accurate
+replication.
+
+DNA replication is semi-conservative: each daughter DNA molecule
+contains one parental strand and one newly synthesised strand. Helicase
+separates the strands, while DNA polymerase adds nucleotides in the 5′
+to 3′ direction. The leading strand is synthesised continuously; the
+lagging strand is made in short Okazaki fragments that are joined by DNA
+ligase.
+
+Gene expression involves transcription and translation. During
+transcription, RNA polymerase uses a DNA template to synthesise RNA. In
+eukaryotes, the primary RNA transcript is processed by capping, tailing
+and splicing to form mature mRNA.
+
+During translation, ribosomes read mRNA codons. Transfer RNA molecules
+bring amino acids corresponding to the codons, and the ribosome links
+them into a polypeptide. The genetic code is nearly universal,
+degenerate and unambiguous.
+
+Mutations are changes in genetic material. They may arise spontaneously
+or due to mutagens such as certain chemicals and radiation. Mutations
+can be harmful, beneficial or neutral, and they contribute to genetic
+variation.
+
+Key terms: • Replication: copying of DNA. • Transcription: synthesis of
+RNA from DNA. • Translation: synthesis of protein using mRNA. • Codon: a
+three-nucleotide sequence in mRNA. • Mutation: a heritable change in
+genetic sequence.
+
+Understanding these processes helps explain inheritance, evolution,
+genetic disorders and biotechnology.

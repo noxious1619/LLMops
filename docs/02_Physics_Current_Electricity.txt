@@ -1,0 +1,35 @@
+CLASS 12 SCIENCE — PHYSICS Topic: Current Electricity
+
+Electric current is the rate of flow of electric charge through a
+conductor. If charge Q flows in time t, current is I = Q/t. Its SI unit
+is the ampere (A). Conventional current flows from higher to lower
+potential, opposite to the direction of electron drift in a metal.
+
+Ohm’s law states that, at constant temperature and other physical
+conditions, current through a conductor is directly proportional to the
+potential difference across it: V = IR. The constant R is resistance,
+measured in ohms (Ω).
+
+Resistance depends on the material, length and cross-sectional area of a
+conductor. R = ρL/A, where ρ is resistivity. Longer wires have greater
+resistance, while thicker wires have lower resistance.
+
+Resistors in series carry the same current and have equivalent
+resistance Rₛ = R₁ + R₂ + …. In parallel, each resistor has the same
+potential difference and 1/Rₚ = 1/R₁ + 1/R₂ + ….
+
+Electrical power is the rate at which electrical energy is consumed: P =
+VI. Using Ohm’s law, P = I²R = V²/R. Electrical energy consumed over
+time t is W = Pt.
+
+Kirchhoff’s junction rule follows conservation of charge: total current
+entering a junction equals total current leaving it. The loop rule
+follows conservation of energy: the algebraic sum of potential
+differences around a closed loop is zero.
+
+Key formulas: • Current: I = Q/t • Ohm’s law: V = IR • Resistance: R =
+ρL/A • Series: Rₛ = R₁ + R₂ + … • Parallel: 1/Rₚ = 1/R₁ + 1/R₂ + … •
+Power: P = VI = I²R = V²/R
+
+These principles are used in household wiring, electrical appliances,
+circuit design and power distribution.

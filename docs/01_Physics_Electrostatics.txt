@@ -1,0 +1,32 @@
+CLASS 12 SCIENCE — PHYSICS Topic: Electrostatics
+
+Electrostatics is the study of electric charges at rest. Electric charge
+is a basic property of matter. It can be positive or negative, and like
+charges repel while unlike charges attract. The SI unit of charge is the
+coulomb (C).
+
+Coulomb’s law states that the electrostatic force between two stationary
+point charges is directly proportional to the product of their
+magnitudes and inversely proportional to the square of the distance
+between them. In vacuum, F = (1/4πε₀) × |q₁q₂|/r². The force acts along
+the line joining the charges.
+
+The electric field at a point is the force experienced per unit positive
+test charge: E = F/q₀. Its SI unit is newton per coulomb (N/C). Electric
+field lines begin on positive charges and end on negative charges. They
+never intersect.
+
+Electric potential is the work done per unit positive charge in bringing
+it from infinity to a point: V = W/q. Its SI unit is the volt (V). For a
+point charge, V = (1/4πε₀)(q/r).
+
+Capacitance measures a conductor’s ability to store charge: C = Q/V. A
+parallel-plate capacitor in vacuum has capacitance C = ε₀A/d, where A is
+plate area and d is separation. A dielectric increases capacitance by
+reducing the effective electric field.
+
+Key formulas: • Coulomb’s law: F = k|q₁q₂|/r² • Electric field: E = F/q
+• Potential: V = W/q • Capacitance: C = Q/V • Energy stored: U = ½CV²
+
+Applications include capacitors in electronic circuits, touchscreens,
+camera flashes and energy-storage systems.

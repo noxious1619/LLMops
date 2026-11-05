@@ -1,0 +1,42 @@
+CLASS 12 SCIENCE — CHEMISTRY Topic: Electrochemistry
+
+Electrochemistry studies the relationship between chemical reactions and
+electrical energy. It mainly deals with redox reactions, electrochemical
+cells and the movement of ions.
+
+A galvanic (voltaic) cell converts the chemical energy of a spontaneous
+redox reaction into electrical energy. Oxidation occurs at the anode and
+reduction occurs at the cathode. In a galvanic cell, the anode is
+negative and the cathode is positive. Electrons travel through the
+external circuit from anode to cathode.
+
+A salt bridge completes the internal circuit, maintains electrical
+neutrality and reduces liquid-junction potential. Cell potential is the
+potential difference between the cathode and anode. Under standard
+conditions, E°cell = E°cathode − E°anode, using standard reduction
+potentials.
+
+The Nernst equation relates electrode potential to concentration. At 298
+K, for a cell reaction involving n electrons, Ecell = E°cell −
+(0.0591/n) log Q, where Q is the reaction quotient.
+
+An electrolytic cell uses an external source of electrical energy to
+drive a non-spontaneous chemical reaction. Electrolysis is used in metal
+extraction, electroplating and the manufacture of chemicals.
+
+Faraday’s first law states that the amount of substance deposited or
+liberated at an electrode is proportional to the quantity of electricity
+passed: m ∝ Q, where Q = It. Faraday’s second law compares the amounts
+of different substances produced by the same quantity of electricity.
+
+Conductivity measures a solution’s ability to conduct electricity. Molar
+conductivity is the conductivity of the volume of solution containing
+one mole of electrolyte.
+
+Important distinctions: • Galvanic cell: spontaneous reaction; chemical
+energy becomes electrical energy. • Electrolytic cell: non-spontaneous
+reaction; electrical energy drives chemistry. • Anode: oxidation. •
+Cathode: reduction.
+
+Electrochemistry is important in batteries, fuel cells, corrosion
+prevention, electroplating and industrial chemical production.

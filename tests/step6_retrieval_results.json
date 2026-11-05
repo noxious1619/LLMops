@@ -1,0 +1,1019 @@
+{
+  "index_evaluated": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\faiss_index\\step5_validation_test_20261101_121818",
+  "embedding_model": "models/gemini-embedding-001",
+  "embedding_dimensions": 3072,
+  "total_index_vectors": 35,
+  "total_questions_evaluated": 15,
+  "metrics": {
+    "chunk_hit_rate_at_5_percent": 100.0,
+    "doc_hit_rate_at_5_percent": 100.0,
+    "mean_reciprocal_rank_mrr": 0.9667,
+    "mean_precision_at_5": 0.3733,
+    "latency_ms": {
+      "avg": 524.09,
+      "min": 491.83,
+      "max": 730.05,
+      "median": 510.68
+    },
+    "rank_distribution": {
+      "1": 14,
+      "2": 1,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "not_in_top5": 0
+    }
+  },
+  "query_results": [
+    {
+      "question_id": "EVAL-01",
+      "topic": "Physics & Electrostatics",
+      "question": "What does Coulomb's law state regarding the electrostatic force between two stationary point charges?",
+      "expected_source": "01_Physics_Electrostatics.txt",
+      "expected_chunk_id": "c5dc43a39496f55ca76b9121ce239067aef4d995fbf10b13d2c9e8c6b36d5bc4",
+      "latency_ms": 730.0526001490653,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.2,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "c5dc43a39496f55ca76b9121ce239067aef4d995fbf10b13d2c9e8c6b36d5bc4",
+          "source": "01_Physics_Electrostatics.txt",
+          "page": null,
+          "score_l2": 0.5599561929702759,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "CLASS 12 SCIENCE \u2014 PHYSICS Topic: Electrostatics  Electrostatics is the study of electric charges at rest. Electric char"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "528f5cf63f554abd55f097d6fd6179176734ce15f6f6e701fafffcea7d13dec5",
+          "source": "02_Physics_Current_Electricity.txt",
+          "page": null,
+          "score_l2": 0.7941201329231262,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "CLASS 12 SCIENCE \u2014 PHYSICS Topic: Current Electricity  Electric current is the rate of flow of electric charge through a"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "226f5193c3530dd9f1f83bc82d1d567ce94a94b861d0d3c037d00b2604e17fc0",
+          "source": "03_Chemistry_Electrochemistry.txt",
+          "page": null,
+          "score_l2": 0.8284623026847839,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "CLASS 12 SCIENCE \u2014 CHEMISTRY Topic: Electrochemistry  Electrochemistry studies the relationship between chemical reactio"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "30a0eed8b5f614d9df4f6e7f0d01ffe2f44d093dea03e963b57fbdf8ae91ba8e",
+          "source": "05_Biology_Human_Reproduction.txt",
+          "page": null,
+          "score_l2": 0.9059432744979858,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "CLASS 12 SCIENCE \u2014 BIOLOGY Topic: Human Reproduction  Human reproduction is sexual and involves the formation and fusion"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "651a509fda9f53971c89a14b2e3d4de1dfc73e57724a44a2714c58e6c52620dd",
+          "source": "04_Biology_Molecular_Basis_of_Inheritance.txt",
+          "page": null,
+          "score_l2": 0.9326772093772888,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "CLASS 12 SCIENCE \u2014 BIOLOGY Topic: Molecular Basis of Inheritance  The molecular basis of inheritance explains how geneti"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-02",
+      "topic": "Biology & Genetics",
+      "question": "What is the role of DNA and nucleotides in the molecular basis of inheritance?",
+      "expected_source": "04_Biology_Molecular_Basis_of_Inheritance.txt",
+      "expected_chunk_id": "651a509fda9f53971c89a14b2e3d4de1dfc73e57724a44a2714c58e6c52620dd",
+      "latency_ms": 509.8703997209668,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.2,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "651a509fda9f53971c89a14b2e3d4de1dfc73e57724a44a2714c58e6c52620dd",
+          "source": "04_Biology_Molecular_Basis_of_Inheritance.txt",
+          "page": null,
+          "score_l2": 0.5187655687332153,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "CLASS 12 SCIENCE \u2014 BIOLOGY Topic: Molecular Basis of Inheritance  The molecular basis of inheritance explains how geneti"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "30a0eed8b5f614d9df4f6e7f0d01ffe2f44d093dea03e963b57fbdf8ae91ba8e",
+          "source": "05_Biology_Human_Reproduction.txt",
+          "page": null,
+          "score_l2": 0.8928197026252747,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "CLASS 12 SCIENCE \u2014 BIOLOGY Topic: Human Reproduction  Human reproduction is sexual and involves the formation and fusion"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "7f64d7b19967a4e2675b71a2c0473bdb9ff3d2d34b47c45218522eee9eddcec0",
+          "source": "Advanced Metaprogramming with Python Metaclasses.pdf",
+          "page": 0,
+          "score_l2": 0.9286609888076782,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Advanced Metaprogramming with Python Metaclasses Document ID: DOC-PY-102  |  Category: Python and Software Engineering  "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "528f5cf63f554abd55f097d6fd6179176734ce15f6f6e701fafffcea7d13dec5",
+          "source": "02_Physics_Current_Electricity.txt",
+          "page": null,
+          "score_l2": 0.9339629411697388,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "CLASS 12 SCIENCE \u2014 PHYSICS Topic: Current Electricity  Electric current is the rate of flow of electric charge through a"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.9376810789108276,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and Redis Version: 1.5 1"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-03",
+      "topic": "Distributed Systems & Reliability",
+      "question": "What are the core components and operational states of the Circuit Breaker pattern to prevent cascading failures?",
+      "expected_source": "Circuit Breaker Pattern in Microservices.pdf",
+      "expected_chunk_id": "c8e4e2e1c78b94defe9a6fcd40ccb3caa060beb0ea46fb69a790cfeca6376396",
+      "latency_ms": 508.38869996368885,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "c8e4e2e1c78b94defe9a6fcd40ccb3caa060beb0ea46fb69a790cfeca6376396",
+          "source": "Circuit Breaker Pattern in Microservices.pdf",
+          "page": 0,
+          "score_l2": 0.4446372985839844,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Resilience Engineering: The Circuit Breaker Pattern ID: DOC-SYS-403 Domain: System Design and Microservices Version: 1.1"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "884a17c8f64285b6a7cb25bd288a20de2881f0b420012d8b1e8471f685aecbe9",
+          "source": "Circuit Breaker Pattern in Microservices.pdf",
+          "page": 0,
+          "score_l2": 0.5541377067565918,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "immediately returns to the Open state, restarting the sleep timer. 3. Fallback Mechanisms Fast-failing is better than ha"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "59186f4501480f65ad2de535d19da0f05c7542e1d1854b9802e6eeaadcf86b35",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 0,
+          "score_l2": 0.7454180717468262,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing the Saga Pattern for Distributed Transactions ID: DOC-SYS-402 Domain: System Design and Microservices Versi"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "393f3497c34c882f43823e7a937433fb24f105fd16ba94ffa03dcdf7616a7271",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 1,
+          "score_l2": 0.7834942936897278,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "4. Designing Compensating Transactions Compensating transactions are the hardest part of implementing Sagas. A compensat"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "3cefe0925bffeb41798157f6f46360dbc65b670b73a9a8c2963e494389c3626a",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 0,
+          "score_l2": 0.7842988967895508,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Idempotency in RESTful API Design: Principles and Implementation ID: DOC-API-204 Category: REST APIs and Backend Archite"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-04",
+      "topic": "Distributed Consensus",
+      "question": "What is the primary difference between Paxos and Raft consensus algorithms regarding comprehensibility and leader election?",
+      "expected_source": "Paxos and Raft Consensus Algorithms.pdf",
+      "expected_chunk_id": "520eafdebdf9a8061f48a76f0f09898e056fce47ec197405da625c966a63444a",
+      "latency_ms": 504.22050012275577,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "520eafdebdf9a8061f48a76f0f09898e056fce47ec197405da625c966a63444a",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.44199061393737793,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Paxos and Raft Consensus Algorithms Explained ID: DOC-NET-803 | Category: Distributed Systems and Networking | Version: "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "ce502eb1dc6c3f9d3bb3c44918026e64807f3b3ab027a87e1d304f4b3c8b6b22",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.5110064744949341,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Log Replication: The leader acts as the sole ingress for client requests. It appends the request to its local log and se"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "b27fbf056a302474aba0005bc3b5a7bb43ca61790358cb93db4db809874b3ec4",
+          "source": "DOC-ARC-901.docx",
+          "page": null,
+          "score_l2": 0.7007681131362915,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Storage, Retention, and Compaction Kafka's storage mechanism is heavily optimized for sequential disk I/O. It relies on "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "59186f4501480f65ad2de535d19da0f05c7542e1d1854b9802e6eeaadcf86b35",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 0,
+          "score_l2": 0.8216025829315186,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing the Saga Pattern for Distributed Transactions ID: DOC-SYS-402 Domain: System Design and Microservices Versi"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "393f3497c34c882f43823e7a937433fb24f105fd16ba94ffa03dcdf7616a7271",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 1,
+          "score_l2": 0.8283901810646057,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "4. Designing Compensating Transactions Compensating transactions are the hardest part of implementing Sagas. A compensat"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-05",
+      "topic": "Cloud Infrastructure & DevOps",
+      "question": "How does the Kubernetes Horizontal Pod Autoscaler (HPA) scale workloads beyond CPU and memory using custom metrics?",
+      "expected_source": "Configuring K8s HPA for Custom Metrics.pdf",
+      "expected_chunk_id": "d6c18fe58aaa9121c3fe8a9b2ae1a21ae41a71cd0a45ddbf93819f4533217b41",
+      "latency_ms": 520.9232000634074,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "d6c18fe58aaa9121c3fe8a9b2ae1a21ae41a71cd0a45ddbf93819f4533217b41",
+          "source": "Configuring K8s HPA for Custom Metrics.pdf",
+          "page": 0,
+          "score_l2": 0.3924265503883362,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Configuring Kubernetes Horizontal Pod Autoscaler (HPA) for Custom Metrics Document ID: DOC-CLD-510   |   Category: Cloud"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "ad7a19dbb9bb68a4f958478d502c94b77e3a572b23be401b07401629a2328d8f",
+          "source": "Configuring K8s HPA for Custom Metrics.pdf",
+          "page": 1,
+          "score_l2": 0.4153009355068207,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "apiVersion: autoscaling/v2 kind: HorizontalPodAutoscaler metadata:   name: order-worker-hpa spec:   scaleTargetRef:     "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "b27fbf056a302474aba0005bc3b5a7bb43ca61790358cb93db4db809874b3ec4",
+          "source": "DOC-ARC-901.docx",
+          "page": null,
+          "score_l2": 0.8574333786964417,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Storage, Retention, and Compaction Kafka's storage mechanism is heavily optimized for sequential disk I/O. It relies on "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "ce502eb1dc6c3f9d3bb3c44918026e64807f3b3ab027a87e1d304f4b3c8b6b22",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.8669607043266296,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Log Replication: The leader acts as the sole ingress for client requests. It appends the request to its local log and se"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.8764781951904297,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and Redis Version: 1.5 1"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-06",
+      "topic": "Distributed Transactions & Microservices",
+      "question": "What are compensating transactions in the Saga pattern and why are they necessary for distributed transactions?",
+      "expected_source": "The Saga Pattern for Distributed Transactions.pdf",
+      "expected_chunk_id": "393f3497c34c882f43823e7a937433fb24f105fd16ba94ffa03dcdf7616a7271",
+      "latency_ms": 511.8223000317812,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "393f3497c34c882f43823e7a937433fb24f105fd16ba94ffa03dcdf7616a7271",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 1,
+          "score_l2": 0.4095538556575775,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "4. Designing Compensating Transactions Compensating transactions are the hardest part of implementing Sagas. A compensat"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "59186f4501480f65ad2de535d19da0f05c7542e1d1854b9802e6eeaadcf86b35",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 0,
+          "score_l2": 0.457728773355484,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Implementing the Saga Pattern for Distributed Transactions ID: DOC-SYS-402 Domain: System Design and Microservices Versi"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "c8e4e2e1c78b94defe9a6fcd40ccb3caa060beb0ea46fb69a790cfeca6376396",
+          "source": "Circuit Breaker Pattern in Microservices.pdf",
+          "page": 0,
+          "score_l2": 0.7551627159118652,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Resilience Engineering: The Circuit Breaker Pattern ID: DOC-SYS-403 Domain: System Design and Microservices Version: 1.1"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "965c92447d927fd9a410b5a363bf6e8147828704cca736e06d3858c8bc19c747",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 1,
+          "score_l2": 0.7662272453308105,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "1. Check Key Existence: The server checks if the provided Idempotency-Key exists in the datastore. 2. In Progress: If th"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "3cefe0925bffeb41798157f6f46360dbc65b670b73a9a8c2963e494389c3626a",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 0,
+          "score_l2": 0.7756773233413696,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Idempotency in RESTful API Design: Principles and Implementation ID: DOC-API-204 Category: REST APIs and Backend Archite"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-07",
+      "topic": "Cloud Networking",
+      "question": "How does VPC Peering route traffic between Virtual Private Clouds and what are its routing constraints?",
+      "expected_source": "DOC-NET-802.docx",
+      "expected_chunk_id": "9efca84eb88446017fa4d4218b8e47ddd11693756b5acec1030a9d5cb84bf05b",
+      "latency_ms": 511.72190019860864,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "9efca84eb88446017fa4d4218b8e47ddd11693756b5acec1030a9d5cb84bf05b",
+          "source": "DOC-NET-802.docx",
+          "page": null,
+          "score_l2": 0.48173269629478455,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "VPC Peering Architecture VPC Peering is a networking connection between two Virtual Private Clouds that enables routing "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "dad5d007e40fba7db4c95aa0aec7826720114fb7bed89305c5b3845c9438de19",
+          "source": "DOC-NET-802.docx",
+          "page": null,
+          "score_l2": 0.5764409303665161,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Document ID: DOC-NET-802  BGP Routing and VPC Peering Fundamentals  Category: Distributed systems and networking  Versio"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "87de67dcbe20c45cb3fe0fb592fe34a9e44ba19d3762f3eb33916143e4be9568",
+          "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "page": 0,
+          "score_l2": 0.8593626022338867,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing Zero Trust Network Access (ZTNA) ID: DOC-SEC-602 | Category: Cybersecurity and Authentication | Version: 2."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.8784177303314209,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and Redis Version: 1.5 1"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "ce502eb1dc6c3f9d3bb3c44918026e64807f3b3ab027a87e1d304f4b3c8b6b22",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.8986467123031616,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Log Replication: The leader acts as the sole ingress for client requests. It appends the request to its local log and se"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-08",
+      "topic": "Python Internals & Asynchronous Programming",
+      "question": "How does an asynchronous generator yield values in Python and what protocols does it implement?",
+      "expected_source": "Implementing Asynchronous Generators in Python.pdf",
+      "expected_chunk_id": "d8b5643d894f56350f28cab1cf22d201f41df909ee756e01dba444a9801786d8",
+      "latency_ms": 515.2997002005577,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "d8b5643d894f56350f28cab1cf22d201f41df909ee756e01dba444a9801786d8",
+          "source": "Implementing Asynchronous Generators in Python.pdf",
+          "page": 0,
+          "score_l2": 0.4905797839164734,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Implementing Asynchronous Generators in Python Document ID: DOC-PY-101  |  Category: Python and Software Engineering  | "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "0bf6610b41775346f5f6f5d86977a0f5845db0e1b8242c62dba32648fd2da3f1",
+          "source": "Implementing Asynchronous Generators in Python.pdf",
+          "page": 1,
+          "score_l2": 0.5499730110168457,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "import asyncio import httpx async def fetch_paginated_data(api_url: str):     async with httpx.AsyncClient() as client: "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "7f64d7b19967a4e2675b71a2c0473bdb9ff3d2d34b47c45218522eee9eddcec0",
+          "source": "Advanced Metaprogramming with Python Metaclasses.pdf",
+          "page": 0,
+          "score_l2": 0.8593924045562744,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Advanced Metaprogramming with Python Metaclasses Document ID: DOC-PY-102  |  Category: Python and Software Engineering  "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "59186f4501480f65ad2de535d19da0f05c7542e1d1854b9802e6eeaadcf86b35",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 0,
+          "score_l2": 0.8884562253952026,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing the Saga Pattern for Distributed Transactions ID: DOC-SYS-402 Domain: System Design and Microservices Versi"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "393f3497c34c882f43823e7a937433fb24f105fd16ba94ffa03dcdf7616a7271",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 1,
+          "score_l2": 0.8991910219192505,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "4. Designing Compensating Transactions Compensating transactions are the hardest part of implementing Sagas. A compensat"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-09",
+      "topic": "Databases & Indexing",
+      "question": "How does a GIN index optimize PostgreSQL JSONB query performance compared to standard B-tree indexes?",
+      "expected_source": "Optimizing PostgreSQL JSONB Query Performance.pdf",
+      "expected_chunk_id": "8ef4dffbf797b1e0c08249c07cfc590888edb8729e14c3e90f087541436bdfe9",
+      "latency_ms": 508.5889999754727,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "8ef4dffbf797b1e0c08249c07cfc590888edb8729e14c3e90f087541436bdfe9",
+          "source": "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "page": 0,
+          "score_l2": 0.38981014490127563,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Optimizing PostgreSQL JSONB Query Performance with GIN Indexes Document ID: DOC-DB-315 Category: MongoDB, PostgreSQL and"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "9f0b9133646a96e312c519e44e483ccd17da729aa8f1d228f7d7cedbd25c3476",
+          "source": "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "page": 1,
+          "score_l2": 0.40372925996780396,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "-- Creating a path-optimized GIN index CREATE INDEX idx_user_data_path ON users USING GIN (profile_data jsonb_path_ops);"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.8218425512313843,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and Redis Version: 1.5 1"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "bdd5737ed85491a0b4d2effebfca3ca465a7487315c54501d9c089fd41b0d27e",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.8845609426498413,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Attempting a cross-slot operation will result in a CROSSSLOT error. To bypass this limitation, developers must use Hash "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "520eafdebdf9a8061f48a76f0f09898e056fce47ec197405da625c966a63444a",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.8944299817085266,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Paxos and Raft Consensus Algorithms Explained ID: DOC-NET-803 | Category: Distributed Systems and Networking | Version: "
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-10",
+      "topic": "Cybersecurity & Identity",
+      "question": "How are JSON Web Tokens (JWT) validated by resource servers in OAuth 2.0 implementations?",
+      "expected_source": "DOC-SEC-601.docx",
+      "expected_chunk_id": "3f62478dbaad181254859fac41f83c5fba6b42d8ab30b2cdca4e917d339c99cd",
+      "latency_ms": 515.9104000777006,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "3f62478dbaad181254859fac41f83c5fba6b42d8ab30b2cdca4e917d339c99cd",
+          "source": "DOC-SEC-601.docx",
+          "page": null,
+          "score_l2": 0.49597468972206116,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Token Management and JWT Validation Access Tokens issued by the authorization server should be short-lived and opaque to"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "2a7337a606105f5662f60d5f92b158843963515fb0855c898d2501475f614320",
+          "source": "DOC-SEC-601.docx",
+          "page": null,
+          "score_l2": 0.5667167901992798,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Document ID: DOC-SEC-601  OAuth 2.0 and OpenID Connect Implementation Guide  Category: Cybersecurity and authentication "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "87de67dcbe20c45cb3fe0fb592fe34a9e44ba19d3762f3eb33916143e4be9568",
+          "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "page": 0,
+          "score_l2": 0.8017123937606812,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing Zero Trust Network Access (ZTNA) ID: DOC-SEC-602 | Category: Cybersecurity and Authentication | Version: 2."
+        },
+        {
+          "rank": 4,
+          "chunk_id": "965c92447d927fd9a410b5a363bf6e8147828704cca736e06d3858c8bc19c747",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 1,
+          "score_l2": 0.8076065182685852,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "1. Check Key Existence: The server checks if the provided Idempotency-Key exists in the datastore. 2. In Progress: If th"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "7df2fcd3b1570de77ef4235a97e2377e0828f657ea511984961b86660fa13d7f",
+          "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "page": 0,
+          "score_l2": 0.8330093026161194,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "with the organization's Identity Provider (IdP) to enforce Multi-Factor Authentication (MFA). Only after the user's iden"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-11",
+      "topic": "Cybersecurity & Network Architecture",
+      "question": "How does Zero Trust Network Access (ZTNA) differ from traditional VPN perimeter security architecture?",
+      "expected_source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+      "expected_chunk_id": "87de67dcbe20c45cb3fe0fb592fe34a9e44ba19d3762f3eb33916143e4be9568",
+      "latency_ms": 509.4193001277745,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "87de67dcbe20c45cb3fe0fb592fe34a9e44ba19d3762f3eb33916143e4be9568",
+          "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "page": 0,
+          "score_l2": 0.5013057589530945,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Implementing Zero Trust Network Access (ZTNA) ID: DOC-SEC-602 | Category: Cybersecurity and Authentication | Version: 2."
+        },
+        {
+          "rank": 2,
+          "chunk_id": "7df2fcd3b1570de77ef4235a97e2377e0828f657ea511984961b86660fa13d7f",
+          "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "page": 0,
+          "score_l2": 0.5503261089324951,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "with the organization's Identity Provider (IdP) to enforce Multi-Factor Authentication (MFA). Only after the user's iden"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "9efca84eb88446017fa4d4218b8e47ddd11693756b5acec1030a9d5cb84bf05b",
+          "source": "DOC-NET-802.docx",
+          "page": null,
+          "score_l2": 0.7774437665939331,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "VPC Peering Architecture VPC Peering is a networking connection between two Virtual Private Clouds that enables routing "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "dad5d007e40fba7db4c95aa0aec7826720114fb7bed89305c5b3845c9438de19",
+          "source": "DOC-NET-802.docx",
+          "page": null,
+          "score_l2": 0.8397018909454346,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Document ID: DOC-NET-802  BGP Routing and VPC Peering Fundamentals  Category: Distributed systems and networking  Versio"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "2a7337a606105f5662f60d5f92b158843963515fb0855c898d2501475f614320",
+          "source": "DOC-SEC-601.docx",
+          "page": null,
+          "score_l2": 0.8652325868606567,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Document ID: DOC-SEC-601  OAuth 2.0 and OpenID Connect Implementation Guide  Category: Cybersecurity and authentication "
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-12",
+      "topic": "Databases & In-Memory Caching",
+      "question": "How does Redis Cluster shard data across nodes using hash slots and prevent CROSSSLOT errors?",
+      "expected_source": "Redis Cluster Data Sharding and High Availability.pdf",
+      "expected_chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+      "latency_ms": 510.6846000999212,
+      "chunk_hit": true,
+      "chunk_rank": 2,
+      "reciprocal_rank": 0.5,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "bdd5737ed85491a0b4d2effebfca3ca465a7487315c54501d9c089fd41b0d27e",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.40438026189804077,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Attempting a cross-slot operation will result in a CROSSSLOT error. To bypass this limitation, developers must use Hash "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.404740571975708,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and Redis Version: 1.5 1"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "965c92447d927fd9a410b5a363bf6e8147828704cca736e06d3858c8bc19c747",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 1,
+          "score_l2": 0.8175196647644043,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "1. Check Key Existence: The server checks if the provided Idempotency-Key exists in the datastore. 2. In Progress: If th"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "8ef4dffbf797b1e0c08249c07cfc590888edb8729e14c3e90f087541436bdfe9",
+          "source": "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "page": 0,
+          "score_l2": 0.8179513812065125,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Optimizing PostgreSQL JSONB Query Performance with GIN Indexes Document ID: DOC-DB-315 Category: MongoDB, PostgreSQL and"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "520eafdebdf9a8061f48a76f0f09898e056fce47ec197405da625c966a63444a",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.8251818418502808,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Paxos and Raft Consensus Algorithms Explained ID: DOC-NET-803 | Category: Distributed Systems and Networking | Version: "
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-13",
+      "topic": "API Design & Reliability",
+      "question": "How does an API server use the Idempotency-Key header to handle concurrent and completed requests?",
+      "expected_source": "Idempotency in RESTful API Design.pdf",
+      "expected_chunk_id": "965c92447d927fd9a410b5a363bf6e8147828704cca736e06d3858c8bc19c747",
+      "latency_ms": 496.9476000405848,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "965c92447d927fd9a410b5a363bf6e8147828704cca736e06d3858c8bc19c747",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 1,
+          "score_l2": 0.37917065620422363,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "1. Check Key Existence: The server checks if the provided Idempotency-Key exists in the datastore. 2. In Progress: If th"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "3cefe0925bffeb41798157f6f46360dbc65b670b73a9a8c2963e494389c3626a",
+          "source": "Idempotency in RESTful API Design.pdf",
+          "page": 0,
+          "score_l2": 0.5063033699989319,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Idempotency in RESTful API Design: Principles and Implementation ID: DOC-API-204 Category: REST APIs and Backend Archite"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "393f3497c34c882f43823e7a937433fb24f105fd16ba94ffa03dcdf7616a7271",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 1,
+          "score_l2": 0.7255368232727051,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "4. Designing Compensating Transactions Compensating transactions are the hardest part of implementing Sagas. A compensat"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "59186f4501480f65ad2de535d19da0f05c7542e1d1854b9802e6eeaadcf86b35",
+          "source": "The Saga Pattern for Distributed Transactions.pdf",
+          "page": 0,
+          "score_l2": 0.7473058104515076,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing the Saga Pattern for Distributed Transactions ID: DOC-SYS-402 Domain: System Design and Microservices Versi"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "c8e4e2e1c78b94defe9a6fcd40ccb3caa060beb0ea46fb69a790cfeca6376396",
+          "source": "Circuit Breaker Pattern in Microservices.pdf",
+          "page": 0,
+          "score_l2": 0.7795500755310059,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Resilience Engineering: The Circuit Breaker Pattern ID: DOC-SYS-403 Domain: System Design and Microservices Version: 1.1"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-14",
+      "topic": "Distributed Streaming & Storage",
+      "question": "How does Apache Kafka optimize storage retention and achieve high throughput on disk?",
+      "expected_source": "DOC-ARC-901.docx",
+      "expected_chunk_id": "b27fbf056a302474aba0005bc3b5a7bb43ca61790358cb93db4db809874b3ec4",
+      "latency_ms": 515.6511999666691,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "b27fbf056a302474aba0005bc3b5a7bb43ca61790358cb93db4db809874b3ec4",
+          "source": "DOC-ARC-901.docx",
+          "page": null,
+          "score_l2": 0.41942209005355835,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Storage, Retention, and Compaction Kafka's storage mechanism is heavily optimized for sequential disk I/O. It relies on "
+        },
+        {
+          "rank": 2,
+          "chunk_id": "505088f255a4f75c0d5db4006c687800ee4c9183bf2908db628c19c493f11fae",
+          "source": "DOC-ARC-901.docx",
+          "page": null,
+          "score_l2": 0.6266118288040161,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Document ID: DOC-ARC-901  Event-Driven Architecture with Apache Kafka  Category: System design and microservices  Versio"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "ce502eb1dc6c3f9d3bb3c44918026e64807f3b3ab027a87e1d304f4b3c8b6b22",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.7384631037712097,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Log Replication: The leader acts as the sole ingress for client requests. It appends the request to its local log and se"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "520eafdebdf9a8061f48a76f0f09898e056fce47ec197405da625c966a63444a",
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "score_l2": 0.8116706609725952,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Paxos and Raft Consensus Algorithms Explained ID: DOC-NET-803 | Category: Distributed Systems and Networking | Version: "
+        },
+        {
+          "rank": 5,
+          "chunk_id": "256cd0ba197b5a3ae0743376e2c54bef97e795cd17d6349704e291d87fc126b6",
+          "source": "Redis Cluster Data Sharding and High Availability.pdf",
+          "page": 0,
+          "score_l2": 0.8168836832046509,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and Redis Version: 1.5 1"
+        }
+      ]
+    },
+    {
+      "question_id": "EVAL-15",
+      "topic": "Python Internals & OOP",
+      "question": "How does Python's ABCMeta metaclass enforce interface implementation contracts in abstract base classes?",
+      "expected_source": "Advanced Metaprogramming with Python Metaclasses.pdf",
+      "expected_chunk_id": "e0338ade8ea7c81b8a41bcc045f5cf5d65e28795744a5bbc65f85ac9dec40710",
+      "latency_ms": 491.8311000801623,
+      "chunk_hit": true,
+      "chunk_rank": 1,
+      "reciprocal_rank": 1.0,
+      "doc_hit": true,
+      "doc_rank": 1,
+      "precision_at_5": 0.4,
+      "retrieved_chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "e0338ade8ea7c81b8a41bcc045f5cf5d65e28795744a5bbc65f85ac9dec40710",
+          "source": "Advanced Metaprogramming with Python Metaclasses.pdf",
+          "page": 1,
+          "score_l2": 0.552750825881958,
+          "is_target_chunk": true,
+          "is_target_doc": true,
+          "snippet": "Similarly, Python's built-in abc (Abstract Base Classes) module uses the ABCMeta metaclass. It inspects the defined clas"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "7f64d7b19967a4e2675b71a2c0473bdb9ff3d2d34b47c45218522eee9eddcec0",
+          "source": "Advanced Metaprogramming with Python Metaclasses.pdf",
+          "page": 0,
+          "score_l2": 0.6433617472648621,
+          "is_target_chunk": false,
+          "is_target_doc": true,
+          "snippet": "Advanced Metaprogramming with Python Metaclasses Document ID: DOC-PY-102  |  Category: Python and Software Engineering  "
+        },
+        {
+          "rank": 3,
+          "chunk_id": "d8b5643d894f56350f28cab1cf22d201f41df909ee756e01dba444a9801786d8",
+          "source": "Implementing Asynchronous Generators in Python.pdf",
+          "page": 0,
+          "score_l2": 0.873264491558075,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing Asynchronous Generators in Python Document ID: DOC-PY-101  |  Category: Python and Software Engineering  | "
+        },
+        {
+          "rank": 4,
+          "chunk_id": "c8e4e2e1c78b94defe9a6fcd40ccb3caa060beb0ea46fb69a790cfeca6376396",
+          "source": "Circuit Breaker Pattern in Microservices.pdf",
+          "page": 0,
+          "score_l2": 0.9263823628425598,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Resilience Engineering: The Circuit Breaker Pattern ID: DOC-SYS-403 Domain: System Design and Microservices Version: 1.1"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "87de67dcbe20c45cb3fe0fb592fe34a9e44ba19d3762f3eb33916143e4be9568",
+          "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "page": 0,
+          "score_l2": 0.9357951879501343,
+          "is_target_chunk": false,
+          "is_target_doc": false,
+          "snippet": "Implementing Zero Trust Network Access (ZTNA) ID: DOC-SEC-602 | Category: Cybersecurity and Authentication | Version: 2."
+        }
+      ]
+    }
+  ]
+}

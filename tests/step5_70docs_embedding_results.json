@@ -1,0 +1,194 @@
+{
+  "status": "PASS",
+  "benchmark_session": "benchmark_70docs_v1",
+  "embedding_provider": "google",
+  "embedding_model": "models/gemini-embedding-001",
+  "embedding_dimensions": 3072,
+  "target_faiss_dir": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\faiss_index\\benchmark_70docs_v1",
+  "total_source_files": 68,
+  "extracted_documents": 85,
+  "total_chunks_submitted": 181,
+  "successfully_embedded_chunks": 181,
+  "failed_chunks": 0,
+  "faiss_vector_count": 181,
+  "reloaded_vector_count": 181,
+  "total_batches": 8,
+  "batch_size": 25,
+  "api_retries": 9,
+  "api_errors_count": 9,
+  "timings": {
+    "document_loading_s": 2.617,
+    "document_splitting_s": 0.227,
+    "total_embedding_time_s": 128.197,
+    "average_batch_time_s": 3.313,
+    "average_chunk_time_ms": 708.27,
+    "total_faiss_indexing_s": 128.349
+  },
+  "persisted_files": {
+    "index_faiss_bytes": 2224173,
+    "index_pkl_bytes": 406129,
+    "ingested_meta_bytes": 14320
+  },
+  "similarity_searches": [
+    {
+      "query_id": "SEARCH-01",
+      "topic": "Steer-by-Wire & ADAS Actuation",
+      "query": "How does steer-by-wire eliminate mechanical steering column linkage and ensure failsafe redundancy?",
+      "latency_ms": 1197.39,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score_l2": 0.4432790279388428,
+          "source": "adas_actuation_and_steer_by_wire.txt",
+          "page": null,
+          "chunk_id": "5a7938984b63eff5bb21067705c6bb9a8fadee3425df3ebc57b7c7a3a960032c",
+          "preview": "Advantages of SbW for Autonomous Vehicles For highly automated vehicles, SbW offers profound advantages. First, the steering ratio"
+        },
+        {
+          "rank": 2,
+          "score_l2": 0.4736745357513428,
+          "source": "adas_actuation_and_steer_by_wire.txt",
+          "page": null,
+          "chunk_id": "bd6fb584694bdb3f9ea3585413d04dd239c0137747ded523d4d508eb2d777961",
+          "preview": "Document ID: DOC-AUTO-4040 Title: ADAS Actuation and Steer-by-Wire Technology Category: Automotive Engineering Version: 1.0.0  Adv"
+        },
+        {
+          "rank": 3,
+          "score_l2": 0.6001813411712646,
+          "source": "automotive_hvac_and_heat_pump_systems.txt",
+          "page": null,
+          "chunk_id": "a9cc6f08f3309375a9a315db021645685557ce20d251699c93ad94597ed449a2",
+          "preview": "Appendix A: ISO 26262 Functional Safety and ASIL Compliance Guidelines In modern automotive engineering, compliance with the ISO 2"
+        }
+      ]
+    },
+    {
+      "query_id": "SEARCH-02",
+      "topic": "EV Battery Management Systems",
+      "query": "What are the primary mechanisms used by Battery Management Systems to prevent thermal runaway in lithium-ion cells?",
+      "latency_ms": 507.05,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score_l2": 0.44674110412597656,
+          "source": "Electric_Vehicle_Battery_Management_Systems_BMS.docx",
+          "page": null,
+          "chunk_id": "c0521306cfeb29d560b782cd404aee50dac50de60698d2857dc9d7b787915a07",
+          "preview": "Thermal Management and Thermal Runaway Mitigation Lithium-ion batteries are highly sensitive to temperature. High temperatures acc"
+        },
+        {
+          "rank": 2,
+          "score_l2": 0.5109818577766418,
+          "source": "Electric_Vehicle_Battery_Management_Systems_BMS.docx",
+          "page": null,
+          "chunk_id": "ba1049bf79aa71512b504fffbe7abbc7bf5417af920d28c804a6a553c8665af7",
+          "preview": "State Estimation: SoC, SoH, and SoP A primary function of the BMS is estimating unmeasurable internal battery states. The State of"
+        },
+        {
+          "rank": 3,
+          "score_l2": 0.5645686388015747,
+          "source": "Electric_Vehicle_Battery_Management_Systems_BMS.docx",
+          "page": null,
+          "chunk_id": "f34558c6265fe50e12cdbc103f5db694324916629462e6a2db20d481710f548f",
+          "preview": "Document ID: Electric_Vehicle_Battery_Management_Systems_BMS  Electric Vehicle Battery Management Systems (BMS)  Category: Automot"
+        }
+      ]
+    },
+    {
+      "query_id": "SEARCH-03",
+      "topic": "Magna Carta & Common Law",
+      "query": "How did Clause 39 of the Magna Carta establish foundational principles of due process and trial by peers?",
+      "latency_ms": 584.36,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score_l2": 0.5496042370796204,
+          "source": "The Magna Carta and the Foundations of Common Law.pdf",
+          "page": 0,
+          "chunk_id": "29fb7fa0160643ec30cc9cef91e1b06453352f20d7bdb1047b21767f06478a9e",
+          "preview": "possessions... except by the lawful judgement of his equals or by the law of the land.\" This established the principle of habeas c"
+        },
+        {
+          "rank": 2,
+          "score_l2": 0.5614148378372192,
+          "source": "The Magna Carta and the Foundations of Common Law.pdf",
+          "page": 0,
+          "chunk_id": "bc61c33e5930b482abcf9222d582e390f5f518cd9ad05c7bd7a2de346d507463",
+          "preview": "The Magna Carta: Constitutional Restraints on Royal Prerogative Document ID: DOC-HIS-1813 Category: British Constitutional History"
+        },
+        {
+          "rank": 3,
+          "score_l2": 0.6346327066421509,
+          "source": "The Magna Carta and the Foundations of Common Law.pdf",
+          "page": 1,
+          "chunk_id": "1ad2e959880fcd391bbaf58f10d4c8d1eb7a8c4a3cfdcf73db7e09162740fd8b",
+          "preview": "4. The Council of Twenty-Five To enforce the charter, Clause 61 established a council of twenty-five barons with the authority to "
+        }
+      ]
+    },
+    {
+      "query_id": "SEARCH-04",
+      "topic": "Distributed Consensus (Paxos vs Raft)",
+      "query": "What are the key differences between Paxos and Raft regarding leader election and understandable decomposition?",
+      "latency_ms": 542.37,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score_l2": 0.46189507842063904,
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "chunk_id": "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "preview": "Paxos and Raft Consensus Algorithms Explained ID: DOC-NET-803 | Category: Distributed Systems and Networking | Version: 2.0 1. The"
+        },
+        {
+          "rank": 2,
+          "score_l2": 0.5270156860351562,
+          "source": "Paxos and Raft Consensus Algorithms.pdf",
+          "page": 0,
+          "chunk_id": "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+          "preview": "Log Replication: The leader acts as the sole ingress for client requests. It appends the request to its local log and sends Append"
+        },
+        {
+          "rank": 3,
+          "score_l2": 0.702220618724823,
+          "source": "DOC-ARC-901.docx",
+          "page": null,
+          "chunk_id": "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+          "preview": "Storage, Retention, and Compaction Kafka's storage mechanism is heavily optimized for sequential disk I/O. It relies on the OS pag"
+        }
+      ]
+    },
+    {
+      "query_id": "SEARCH-05",
+      "topic": "EV Motor Topologies",
+      "query": "What are the operational trade-offs between permanent magnet synchronous motors and induction motors in electric vehicles?",
+      "latency_ms": 528.81,
+      "retrieved": [
+        {
+          "rank": 1,
+          "score_l2": 0.44003787636756897,
+          "source": "electric_vehicle_motor_topologies.txt",
+          "page": null,
+          "chunk_id": "02239555f4b0a7358204db0b46aa044fe0ba170319b06cbc56345475798e5410",
+          "preview": "Document ID: DOC-AUTO-4032 Title: Electric Vehicle Motor Topologies (PMSM and ACIM) Category: Automotive Engineering Version: 1.0."
+        },
+        {
+          "rank": 2,
+          "score_l2": 0.5258229970932007,
+          "source": "electric_vehicle_motor_topologies.txt",
+          "page": null,
+          "chunk_id": "0a69fdba5be1c608664a7ca6a56805b8cb0d2a98253eefc1afb9a79eafd1e56f",
+          "preview": "AC Induction Motors (ACIM) Pioneered for EV use in the original Tesla Model S, AC Induction Motors operate on the principle of ele"
+        },
+        {
+          "rank": 3,
+          "score_l2": 0.702395498752594,
+          "source": "regenerative_braking_and_friction_blending.txt",
+          "page": null,
+          "chunk_id": "09626abd1b071871bb05e452d25ad412d53d051d429a241a0a0ca2bb84b3f158",
+          "preview": "Document ID: DOC-AUTO-4035 Title: Regenerative Braking and Friction Blending Category: Automotive Engineering Version: 1.0.0  The "
+        }
+      ]
+    }
+  ]
+}

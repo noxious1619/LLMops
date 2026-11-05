@@ -1,0 +1,712 @@
+[
+  {
+    "question_id": "Q151",
+    "question": "What is the mathematical formulation of Coulomb's law for the electrostatic force between two point charges, and what is the SI unit of electric charge?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "Coulomb's law states that the electrostatic force between two point charges q1 and q2 separated by distance r is F = k * (|q1 * q2| / r^2), where k is the electrostatic constant (1 / (4 * pi * epsilon_0)). The SI unit of electric charge is the coulomb (C).",
+    "source_documents": [
+      "01_Physics_Electrostatics.txt"
+    ],
+    "relevant_chunk_ids": [
+      "508c5910c2efc09be1dec950b646cca273d96a72d3272ee5b9e8f67ba884c149"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q152",
+    "question": "According to Ohm's law, what is the mathematical formula relating potential difference, electric current, and resistance in a metallic conductor at constant temperature?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "Ohm's law states that potential difference V is directly proportional to current I at constant temperature: V = I * R, where R is resistance in ohms (Ω).",
+    "source_documents": [
+      "02_Physics_Current_Electricity.txt"
+    ],
+    "relevant_chunk_ids": [
+      "312b796990ac7f4104191de9e835f483e84e129ed679ac0846b0ad51cd9eb1e2"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q153",
+    "question": "What is the mathematical equation for the Nernst equation at 298 K relating cell potential to the reaction quotient Q?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "At 298 K, for a cell reaction involving n electrons, the Nernst equation is Ecell = E°cell - (0.0591 / n) * log Q, where E°cell is standard cell potential and Q is the reaction quotient.",
+    "source_documents": [
+      "03_Chemistry_Electrochemistry.txt"
+    ],
+    "relevant_chunk_ids": [
+      "67975abe344d6d2c02f1336e5233c24fc0932e7cc58b31f48c701e2ae39173cb"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q154",
+    "question": "In the DNA double helix, how many hydrogen bonds form between adenine and thymine, and between guanine and cytosine?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "Adenine pairs with thymine through two hydrogen bonds, while guanine pairs with cytosine through three hydrogen bonds.",
+    "source_documents": [
+      "04_Biology_Molecular_Basis_of_Inheritance.txt"
+    ],
+    "relevant_chunk_ids": [
+      "9bafa8be7984513be5077f5d005affd60eb2325cf701391739719b2957fbd17c"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q155",
+    "question": "In human female reproductive biology, what specific anatomical region of the oviduct is the typical site of fertilisation?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "Fertilisation usually occurs in the ampullary-isthmic region of the oviduct (fallopian tube), where a sperm and ovum fuse to form a diploid zygote.",
+    "source_documents": [
+      "05_Biology_Human_Reproduction.txt"
+    ],
+    "relevant_chunk_ids": [
+      "47fdbfe60773dc9331edef1112ff9c7971357c21fd7e90441e17c68ea5d8e7aa"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q156",
+    "question": "What HTTP status code should an API server return when receiving a request with an Idempotency-Key whose transaction state is currently 'processing'?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "The server should reject concurrent requests with a 409 Conflict status or a custom 425 Too Early status to prevent race conditions while the key is in the 'processing' state.",
+    "source_documents": [
+      "Idempotency in RESTful API Design.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "2f8f12846b6ddf432a77e443f42e5e570e3538b6251e2a0427094645e1188619"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q157",
+    "question": "What SQL command syntax creates a path-optimized GIN index on a PostgreSQL JSONB column using jsonb_path_ops?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "The syntax is: CREATE INDEX idx_user_data_path ON users USING GIN (profile_data jsonb_path_ops);",
+    "source_documents": [
+      "Optimizing PostgreSQL JSONB Query Performance.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q158",
+    "question": "Which two African nations successfully maintained their independence during the Scramble for Africa up to 1914?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "By 1914, only Ethiopia (which defeated Italy at the Battle of Adwa) and Liberia remained independent.",
+    "source_documents": [
+      "The Scramble for Africa and the Berlin Conference.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "0d7796cb0f396f2b7ea5cc607b3d1346965b06b256a1afd4c12d4a30fc3f029f"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q159",
+    "question": "What was the official statutory name of the Marshall Plan enacted in 1948, and what dollar amount was injected into post-war Europe?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "It was officially named the European Recovery Program, and the United States injected over $13 billion (over $150 billion in inflation-adjusted currency) into European economies.",
+    "source_documents": [
+      "Cold War Geopolitics_ The Strategy of Containment.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "28c84599ef06a24047f5b776c398c9a2a7b7305a641d1fa2b6f1f978f18a81e7"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q160",
+    "question": "Under Clause 61 of the 1215 Magna Carta, what specific enforcement body was established to seize royal castles and compel the monarch's compliance?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "Clause 61 established a council of twenty-five barons with legal authority to seize royal castles and possessions if the king violated the charter.",
+    "source_documents": [
+      "The Magna Carta and the Foundations of Common Law.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "1ad2e959880fcd391bbaf58f10d4c8d1eb7a8c4a3cfdcf73db7e09162740fd8b"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q161",
+    "question": "According to automotive lightweighting standards, approximately what percentage of weight reduction does aluminum offer compared to conventional steel in vehicle closures?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "Aluminum alloys offer roughly a 40% weight saving over steel in closures and suspension components, providing high corrosion resistance despite lower formability.",
+    "source_documents": [
+      "Automotive Lightweighting and Composite Materials.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "798ff57d588116b0e0f186c52193d21cf7d54a1927ee968ac75291d0b0393408"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q162",
+    "question": "What ceramic phosphor element is used in automotive laser headlights to convert high-energy blue laser diodes into safe white light?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "Blue laser beams are fired through optics onto a specialized phosphor ceramic disk, which fluoresces to produce high-intensity, pure white light.",
+    "source_documents": [
+      "advanced_automotive_lighting_technologies.txt"
+    ],
+    "relevant_chunk_ids": [
+      "c6aa273ccd67951b83d32c4ab68034032d2e2671feffd526e6eb564f2008ff7a"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q163",
+    "question": "In modern electric vehicle thermal management architectures, what is the role of an Octovalve coolant manifold?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "expected_answer": "The Octovalve is a multi-port coolant manifold that unifies cabin HVAC, battery, and powertrain loops, routing and scavenging low-grade waste heat across the vehicle.",
+    "source_documents": [
+      "automotive_hvac_and_heat_pump_systems.txt"
+    ],
+    "relevant_chunk_ids": [
+      "f732afd6db2fbd6540a350d1de94b5af19243817a4c5f2562f76e8a7ef677580"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q164",
+    "question": "What Japanese government slogan summarized the twin industrial and military modernization goals of the Meiji Restoration?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "The slogan was 'Fukoku Kyohei', meaning 'Enrich the Country, Strengthen the Military'.",
+    "source_documents": [
+      "the_meiji_restoration.txt"
+    ],
+    "relevant_chunk_ids": [
+      "50c8846d1f39540905417ee504d8d3e0ef635788a734510250d4e388050282c8"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q165",
+    "question": "At what nominal pressure (in bar and psi) is compressed gaseous hydrogen stored in Type IV composite tanks for passenger fuel cell electric vehicles?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "expected_answer": "Compressed gaseous hydrogen is typically stored at 700 bar (10,000 psi) in Type IV composite cylinders for passenger vehicles, and 350 bar for commercial trucks.",
+    "source_documents": [
+      "FCEV_Hydrogen_Storage_and_Stack_Architecture.docx"
+    ],
+    "relevant_chunk_ids": [
+      "e36278f4f537588dd991101c541a7581b9a2e3073673fe2e22b729f3fffc8e0a"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q166",
+    "question": "How do asynchronous generators in Python (PEP 525) combine coroutine non-blocking behavior with the memory efficiency of iterators?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "Asynchronous generators combine async def and yield to implement the __aiter__ and __anext__ protocols. This allows them to yield data items lazily on demand without buffering the entire dataset in memory, while awaiting non-blocking asynchronous I/O operations between yields.",
+    "source_documents": [
+      "Implementing Asynchronous Generators in Python.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "5aa881d020235daa98d3feb1ceed06f1d610aa67f65250a4d3d55824047b5f60"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q167",
+    "question": "What structural governance weaknesses under the Articles of Confederation prevented the US national government from managing interstate commerce and fiscal debt?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "Under the Articles of Confederation, Congress had no executive branch, no national judiciary, and no authority to levy taxes or regulate interstate commerce. It could only request voluntary requisitions from states, resulting in fiscal paralysis, currency crises, and civil unrest such as Shays' Rebellion.",
+    "source_documents": [
+      "The American Revolution and Constitutional Design.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "0907ab692cbde27364d69fa8e734e02fbf84b7d7d563a91fea4f3533c4d9458d"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q168",
+    "question": "How did the extreme labor shortage following the Black Death shift economic bargaining power from feudal manorial lords to peasant laborers?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "The mortality rate left vast agricultural lands uncultivated, creating severe labor scarcity. Surviving peasants gained unprecedented bargaining leverage to demand higher cash wages, lower rents, and freedom of movement, accelerating the dissolution of feudal serfdom despite aristocratic wage-capping laws.",
+    "source_documents": [
+      "The Black Death and Socioeconomic Transformation.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "49d5f637cb2750824b8de4de707b91c2e5f46b9384f64c548a5b7b6156ab9409"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q169",
+    "question": "How does Vehicle-to-Grid (V2G) bi-directional charging allow electric vehicle fleets to support utility power grid stability?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "V2G uses bi-directional charging protocols (governed by ISO 15118) to allow plugged-in EVs to discharge stored battery energy back into the grid during peak demand hours, providing grid balancing, peak shaving, and frequency regulation.",
+    "source_documents": [
+      "Electric Vehicle Charging Infrastructure.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "3126a728dba6ca836299b3834301ed3c01154e84f0177ffc4984f4d70f6af27a"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q170",
+    "question": "How does a Steer-by-Wire (SbW) system eliminate mechanical linkages while still providing realistic road feel and feedback to the driver?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "SbW replaces the mechanical steering column with digital sensors, ECUs, and dual actuators. A steering wheel actuator synthetically generates resistive force and haptic road feedback to the driver's hands, while road wheel actuators independently execute the turning commands on the steering rack.",
+    "source_documents": [
+      "adas_actuation_and_steer_by_wire.txt"
+    ],
+    "relevant_chunk_ids": [
+      "bd6fb584694bdb3f9ea3585413d04dd239c0137747ded523d4d508eb2d777961"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q171",
+    "question": "What is tire slip angle in vehicle dynamics, and how does it generate the lateral cornering force needed to steer an automobile?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "Slip angle is the angular difference between the physical heading direction of the wheel and the actual velocity vector of the tire contact patch. As the rubber tread deforms across the contact patch, this angular deformation generates lateral cornering force.",
+    "source_documents": [
+      "tire_dynamics_and_slip_angle_modeling.txt"
+    ],
+    "relevant_chunk_ids": [
+      "462ed59a3e47459cd11949a1dab8a95fe460455dff245b6c08a8d3fa8a8b338e"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q172",
+    "question": "What geopolitical and economic pressures drove the Soviet Union and East German leadership to erect the Berlin Wall in August 1961?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "Between 1949 and 1961, roughly 2.7 million East Germans fled to the West via the open border in Berlin. This massive 'brain drain' of skilled professionals and youth threatened the economic survival and political viability of the East German communist state, prompting the border closure.",
+    "source_documents": [
+      "The Berlin Wall and the Iron Curtain.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "dbe38e491e639f869e142aa52382522f1711805139abd0829bf612ba69f7e1b1"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q173",
+    "question": "Why is negative camber gain engineered into double-wishbone suspension geometry during bump and roll travel?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "As the vehicle body rolls in a corner, the suspension compresses (bump). Camber gain tilts the top of the outside tire inward (negative camber), compensating for body roll and keeping the tire tread contact patch flat against the pavement to maximize lateral grip.",
+    "source_documents": [
+      "automotive_suspension_kinematics.txt"
+    ],
+    "relevant_chunk_ids": [
+      "51290e98d37f6c9d2a625126a8c2b5dee69814ba0917c2bee5cf9cb2f3137da0"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q174",
+    "question": "How does transitioning to a centralized zonal compute architecture resolve the bandwidth and fragmentation limits of legacy distributed automotive ECUs?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "Legacy architectures used dozens of disparate, vendor-locked single-function ECUs connected via low-bandwidth CAN buses. Zonal compute consolidates processing into high-performance central compute nodes running Service-Oriented Architecture (SOA), providing the high bandwidth and standardized software needed for over-the-air updates.",
+    "source_documents": [
+      "Software_Defined_Vehicle_SDV_and_OTA_Updates.docx"
+    ],
+    "relevant_chunk_ids": [
+      "5ec3013d18d326f2fd2405f0e3dc62c0cb0f31ce92178336a50f4bb005a3768f"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q175",
+    "question": "How did the 1957 launch of Sputnik 1 trigger technological and structural reorganization within the United States government during the Cold War?",
+    "question_type": "conceptual",
+    "difficulty": "medium",
+    "expected_answer": "The Sputnik launch shattered the US assumption of technological supremacy, demonstrating Soviet ICBM capability. In response, the US government created NASA in 1958, established DARPA, and enacted the National Defense Education Act to fund STEM research and aerospace development.",
+    "source_documents": [
+      "cold_war_space_race.txt"
+    ],
+    "relevant_chunk_ids": [
+      "af0e8a10c75f7f22ec884bdea86adc5a1552ae46f84c4ab7d0f5a2cab2705db7"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q176",
+    "question": "What are the primary differences between PostgreSQL JSON and JSONB data types regarding internal storage format, write overhead, and query re-parsing?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "JSON stores an exact textual copy of the payload, requiring re-parsing on every query execution with minimal write overhead. JSONB parses and converts input into a decomposed binary format, imposing a slight write ingestion overhead but delivering faster query processing, indexability, and duplicate key deduplication.",
+    "source_documents": [
+      "Optimizing PostgreSQL JSONB Query Performance.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q177",
+    "question": "What architectural and infrastructure differences distinguish Dedicated Short-Range Communications (DSRC) from Cellular V2X (C-V2X) in vehicle connectivity?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "DSRC is a Wi-Fi-based protocol (IEEE 802.11p) in the 5.9 GHz band that enables direct vehicle communication with zero cellular subscription requirements or infrastructure dependency. C-V2X is a 3GPP cellular standard leveraging 4G LTE/5G infrastructure with PC5 direct sidelink communication, offering longer range and higher throughput.",
+    "source_documents": [
+      "connected_vehicle_v2x_communication.txt"
+    ],
+    "relevant_chunk_ids": [
+      "a6a2c8f1d69377142786e235de5c63ee9e122edb7df9946377d56142df11e32e"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q178",
+    "question": "How do Permanent Magnet Synchronous Motors (PMSM) and AC Induction Motors (ACIM) compare regarding magnetic rotor construction, peak efficiency, and rare-earth material dependency?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "PMSMs embed permanent magnets (neodymium/dysprosium) into the rotor, offering superior power density and peak efficiency but suffering from high raw material costs and high-speed back-EMF drag. ACIMs use a simple copper/aluminum squirrel cage rotor without rare-earth magnets, offering robust freewheeling and lower cost at the expense of lower low-speed efficiency.",
+    "source_documents": [
+      "electric_vehicle_motor_topologies.txt"
+    ],
+    "relevant_chunk_ids": [
+      "0a69fdba5be1c608664a7ca6a56805b8cb0d2a98253eefc1afb9a79eafd1e56f"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q179",
+    "question": "What are the mechanical distinctions between Dual-Clutch Transmissions (DCT) and Continuously Variable Transmissions (CVT) regarding gear engagement, shift interruption, and power delivery?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "A DCT uses two computer-controlled clutches on concentric shafts (one for odd gears, one for even gears) to pre-select gears for near-instantaneous, seamless power delivery. A CVT uses two conical pulleys connected by a steel belt to continuously vary drive ratios without discrete step gears, maximizing fuel economy but exhibiting the 'rubber band' effect under acceleration.",
+    "source_documents": [
+      "automotive_transmission_systems.txt"
+    ],
+    "relevant_chunk_ids": [
+      "91f8db63f6a31a9d7ee22e08bf22e860430da37a988a2896ced5b102dfd4f0b3"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q180",
+    "question": "How did Roman military engineers adapt their tactics against Carthaginian naval supremacy during the First Punic War through the invention of the corvus?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "Carthage commanded superior seamanship and naval maneuverability, while Rome was purely a land-based infantry power. Rome reverse-engineered captured Carthaginian vessels and installed the 'corvus'—a spiked boarding bridge that latched onto enemy hulls, transforming maritime battles into infantry boarding assaults.",
+    "source_documents": [
+      "The Roman Republic and the Punic Wars.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "537c9ae4a9b470d897c240ec52184f629aaaea22617520595d16675db3751fae"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q181",
+    "question": "What political differences separated the February Revolution from the October Revolution of 1917 in Russia regarding state authority and economic programs?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "The February Revolution was a spontaneous mass uprising that abdicated the Tsar and established a moderate, bourgeois Provisional Government alongside worker Soviets ('Dual Power'). The October Revolution was a planned, armed Bolshevik insurrection that overthrew the Provisional Government, exited World War I, and instituted a socialist dictatorship.",
+    "source_documents": [
+      "The Russian Revolution and the Rise of the Bolsheviks.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "226acd19eb61cb14975b97bfaf99eef4262e9b028ac978963713327a1285d1c4"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q182",
+    "question": "How did Portuguese maritime exploration along the African coast contrast with Spanish transatlantic voyages during the Age of Discovery?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "Portugal pioneered an eastward oceanic route by systematically circumnavigating Africa's Cape of Good Hope to establish coastal trade forts and control the Indian Ocean spice trade. Spain sponsored westward transatlantic navigation, unintentionally encountering the Americas and establishing territorial colonial empires through conquest.",
+    "source_documents": [
+      "The Age of Discovery and Maritime Trade Routes.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "7cc4c4e46579a49454fc5625a4ecc7a7df604f62018d2cde565286ad1500af9a"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q183",
+    "question": "How did the late Roman imperial reliance on barbarian 'foederati' differ from the traditional legionary military system of the early Roman Empire?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "Early Roman legions were highly disciplined citizen-soldiers fighting under standardized Roman doctrine, oaths, and command structures. The late empire's 'foederati' were entire tribal warrior bands settled within Roman borders, fighting under their own chieftains with personal tribal loyalties rather than institutional allegiance to Rome.",
+    "source_documents": [
+      "fall_of_the_western_roman_empire.txt"
+    ],
+    "relevant_chunk_ids": [
+      "a1ec1f500c9397feec4d44c53986c92535c2f3cab95cde1e0fbc5b45aef8caea"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q184",
+    "question": "In autonomous vehicle perception suites, what are the complementary advantages and operational trade-offs between LiDAR and Radar sensors in adverse weather conditions?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "Radar operates at 77 GHz, penetrating heavy fog, rain, and snow to measure distance and Doppler relative speed, but suffers from low angular resolution. LiDAR fires laser pulses to build dense, millimeter-accurate 3D spatial point clouds, but degrades significantly when precipitation and particulate scatter the laser light.",
+    "source_documents": [
+      "Autonomous_Driving_Sensor_Fusion_and_Perception.docx"
+    ],
+    "relevant_chunk_ids": [
+      "b47e28c37c7321de284e99ee75bf79bd69bfc80e56338180955e154f7d8070ac"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q185",
+    "question": "How does a four-stroke Spark Ignition (Otto cycle) engine compare with a Compression Ignition (Diesel cycle) engine in ignition mechanism and expansion ratio efficiency?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_answer": "The Otto cycle mixes air and fuel prior to compression and initiates combustion via an electric spark plug at lower compression ratios. The Diesel cycle compresses pure air to high pressures and temperatures, injecting fuel to achieve auto-ignition, operating at higher compression ratios and achieving greater thermal efficiency.",
+    "source_documents": [
+      "Internal_Combustion_Engine_Thermodynamics.docx"
+    ],
+    "relevant_chunk_ids": [
+      "571efdabb3fd713e20558396a25b40a779f5a3edd083c2b3be28ae9e3b749452"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q186",
+    "question": "How did the Mongol military combine nomadic horse archery with conquered Chinese siege engineering, and what administrative institutions (such as the Yam relay system and Paiza) subsequently secured Eurasian trade during the Pax Mongolica?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "The Mongols organized nomadic cavalry into disciplined decimal units utilizing feigned retreats and compound recurve bows, while integrating Chinese and Persian engineers to operate counterweight trebuchets and gunpowder weapons against fortified cities. Following conquest, the Pax Mongolica stabilized trade through the 'Yam' postal courier relay system and issued 'Paiza' passports guaranteeing diplomatic protection and tariff-free transit.",
+    "source_documents": [
+      "The Mongol Empire and the Pax Mongolica.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "fc3dc99248009a026731b1c7f1bf99c8e9af8424ec50ce3d397c0d3078877d64",
+      "8b5d6f5291be743fcd14d0a5f87a62130bca7279ca2cc4c5f0baf0b065126b72"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q187",
+    "question": "Why are HTTP POST operations non-idempotent by default, and what complete datastore state lifecycle (checking key existence, handling processing states with 409 Conflict, and caching final responses) must an idempotency middleware enforce?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "POST requests create new resources or initiate transactions, meaning duplicate execution alters server state (such as duplicate billing). Idempotency middleware checks the Idempotency-Key: if nonexistent, it stores the key as 'processing'; if currently processing, it rejects concurrent retries with 409 Conflict; once complete, it stores and serves the cached HTTP status and body directly.",
+    "source_documents": [
+      "Idempotency in RESTful API Design.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+      "2f8f12846b6ddf432a77e443f42e5e570e3538b6251e2a0427094645e1188619"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q188",
+    "question": "How does combining asynchronous generator definitions (`async def` with `yield`) and the PEP 525 protocol enable an asynchronous HTTP client to consume paginated REST API responses with stream backpressure?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "Under PEP 525, asynchronous generators implement __aiter__ and __anext__, allowing coroutines to yield data iteratively. In paginated API retrieval, an async for loop yields records individually across fetched pages using httpx.AsyncClient, maintaining a flat memory footprint and naturally pausing upstream network fetching until downstream processing finishes.",
+    "source_documents": [
+      "Implementing Asynchronous Generators in Python.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "5aa881d020235daa98d3feb1ceed06f1d610aa67f65250a4d3d55824047b5f60",
+      "99eaa57dda268f1f674ec178a1ace9655ecec03738f9f1566aad005746bba994"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q189",
+    "question": "How did the Silk Road evolve from Han Dynasty oasis relay trade into a transcontinental commercial corridor under the Mongol Empire, and how did this network facilitate the spread of the Black Death?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "Originating under the Han Dynasty as regional relay networks managed by Sogdian merchants trading silk, glassware, and paper, the Silk Road reached its apex when the Mongol Empire unified Eurasia and protected caravan routes. However, this hyper-connected trade corridor enabled the bacterium Yersinia pestis to travel along merchant routes and military outposts, decimating Eurasian populations.",
+    "source_documents": [
+      "silk_road_trade_networks.txt"
+    ],
+    "relevant_chunk_ids": [
+      "55e36d70e1e65482badd48d1a81a3f77c9b7f2a06250329699202609f650c194",
+      "df9d9f5f76c76fe997059ea2897e7e19be2ce579a9c792f2817219b362e7a648"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q190",
+    "question": "How did textile mechanical inventions and James Watt's separate-condenser steam engine catalyze the growth of the factory system, and what social protests arose against the resulting urbanization and labor conditions?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "Innovations like the spinning jenny, water frame, and Watt's separate-condenser steam engine decoupled manufacturing from rural riverbanks, centralizing production in urban factories. The resulting 14-to-16-hour workdays, dangerous machinery, and child labor spurred intense social resistance, including Luddite machine-breaking and the formation of early trade unions.",
+    "source_documents": [
+      "british_industrial_revolution.txt"
+    ],
+    "relevant_chunk_ids": [
+      "ae41f29d9176986c361fcdedcc5b07e52c3bec3c7d765a62af7434cd02dd3354",
+      "da5fcfcd45287f85b5e09cf329b4255c630ab8b0ff64cdb26825355cabaced64"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q191",
+    "question": "How did vehicle on-board diagnostics evolve from standardized physical 16-pin OBD-II ports into cloud-integrated telematics performing fleet-wide predictive maintenance?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "OBD-II introduced standardized 16-pin DLC connectors and uniform diagnostic trouble codes (DTCs) to monitor emissions and engine parameters locally. Modern telematics integrates cellular modules and CAN interfaces, streaming high-frequency sensor telemetry to cloud platforms where machine learning models predict component failures before breakdowns occur.",
+    "source_documents": [
+      "Automotive On-Board Diagnostics and Telematics.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "508293340903b544577a2a9aff64d78cc1c827b019da088d5491c7917dca3405",
+      "df4b11a737f3e3dbd44c9ac48a3d9aa5337f57963e41aa5ac55824909de142b1"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q192",
+    "question": "What factors limit electric motor regenerative braking, and how do decoupled brake-by-wire systems use pedal simulators and hydraulic actuators to blend friction and regenerative forces imperceptibly?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "Regenerative braking cannot function when the battery is at 100% SoC, during low speeds below 5-10 km/h, or during emergency ABS events. Decoupled brake-by-wire disconnects the brake pedal from hydraulics, using a spring-and-damper simulator for natural driver pedal feel while an electro-hydraulic actuator modulates friction calipers to bridge any torque deficit.",
+    "source_documents": [
+      "regenerative_braking_and_friction_blending.txt"
+    ],
+    "relevant_chunk_ids": [
+      "09626abd1b071871bb05e452d25ad412d53d051d429a241a0a0ca2bb84b3f158",
+      "da07af87a50f62b63bc1e9db8d246ecf67eb4e6bae26c7f22ab3ab3255e65be3"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q193",
+    "question": "How do understeer and oversteer dynamics originate from tire slip angle saturation, and how does Electronic Stability Control (ESC) process sensor data to apply selective individual wheel braking?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "Understeer occurs when front tire slip angles saturate causing the car to push wide; oversteer occurs when rear tires saturate causing the tail to swing out. ESC compares steering angle and vehicle speed against actual yaw rate and lateral acceleration, braking the inside rear wheel to correct understeer or the outside front wheel to counter oversteer.",
+    "source_documents": [
+      "vehicle_dynamics_and_electronic_stability_control.txt"
+    ],
+    "relevant_chunk_ids": [
+      "c513c45cbfc1e01f48d38edc1bb8998a700c57620b2f28cb60ffb672032b1902",
+      "d1530d882da035de26ab58c81b2a09de305486515e2ac6e8a9be3644ebbc58bc"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q194",
+    "question": "What defensive fortifications comprised the Berlin Wall's 'death strip', and what bureaucratic sequence of events on November 9, 1989, caused the sudden opening of the border crossings?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "The barrier featured a 96-mile concrete wall, guard towers, raked sand 'death strips', tripwires, and shoot-to-kill orders. On November 9, 1989, East German spokesman Günter Schabowski mistakenly announced on live television that travel restrictions were lifted 'immediately, without delay', triggering thousands of citizens to overwhelm checkpoint guards who opened the gates.",
+    "source_documents": [
+      "The Berlin Wall and the Iron Curtain.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "a4474096b06437bfdafad3938ecee416ea6f78ad9a8291b74b8ff4b661dac513",
+      "c6a37ce50e59538d58240fcec49fa22dfaa741357bc9a9d56aa4377661b1400a"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q195",
+    "question": "How does an Electric Vehicle Battery Management System (BMS) combine State of Charge (SoC) estimation algorithms with passive and active cell balancing to protect pack integrity?",
+    "question_type": "multi_chunk",
+    "difficulty": "hard",
+    "expected_answer": "The BMS tracks cell voltages, current, and temperature, using Coulomb counting and Extended Kalman Filters (EKF) to estimate SoC accurately. To mitigate cell capacity mismatch, passive balancing bleeds excess energy as heat through resistors, while active balancing shuttles charge from higher-voltage to lower-voltage cells via inductive/capacitive circuits.",
+    "source_documents": [
+      "Electric_Vehicle_Battery_Management_Systems_BMS.docx"
+    ],
+    "relevant_chunk_ids": [
+      "f34558c6265fe50e12cdbc103f5db694324916629462e6a2db20d481710f548f",
+      "ba1049bf79aa71512b504fffbe7abbc7bf5417af920d28c804a6a553c8665af7"
+    ],
+    "requires_multiple_chunks": true
+  },
+  {
+    "question_id": "Q196",
+    "question": "In extreme freezing winter conditions, why does a vehicle heat pump experience a severe drop in heating efficiency (COP), and what secondary mechanisms do advanced EV thermal loops use to scavenge heat when ambient air extraction is thermodynamic unfeasible?",
+    "question_type": "difficult_reasoning",
+    "difficulty": "hard",
+    "expected_answer": "At sub-zero temperatures, the ambient air contains minimal thermal energy and evaporator coils frost over, dropping the heat pump's coefficient of performance (COP). Advanced EV thermal loops solve this by routing refrigerant through coolant heat exchangers to harvest low-grade waste heat from the battery, inverter, and electric drive motors rather than ambient air.",
+    "source_documents": [
+      "automotive_hvac_and_heat_pump_systems.txt"
+    ],
+    "relevant_chunk_ids": [
+      "83d10015e11bb209f9a17cb7fe12ff4bd8b8cfb82891eb6cc1969aa09184a0db"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q197",
+    "question": "Under what high-volume write conditions should a database architect avoid creating a full GIN index on a JSONB column in PostgreSQL, and why is an expression-based B-tree index on an extracted scalar path preferred?",
+    "question_type": "difficult_reasoning",
+    "difficulty": "hard",
+    "expected_answer": "Indexing entire JSONB payloads with GIN creates substantial write amplification and bloats disk space, as every key-value element must be parsed into inverted postings during INSERT/UPDATE operations. If query filters target a single predictable key, a B-tree expression index (e.g. ((data->>'status'))) provides faster lookups with minimal disk footprint and lower write latency.",
+    "source_documents": [
+      "Optimizing PostgreSQL JSONB Query Performance.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q198",
+    "question": "How did the strategic premise of American containment shift between George Kennan's original diplomatic Long Telegram and the adoption of the NSC-68 policy paper during the Cold War?",
+    "question_type": "difficult_reasoning",
+    "difficulty": "hard",
+    "expected_answer": "George Kennan conceived containment as a patient, political and economic effort (like the Marshall Plan) to bolster vital industrial regions and wait out Soviet internal contradictions. Under NSC-68, containment was heavily militarized and universalized based on the Domino Theory, committing the US to worldwide military deterrence, massive conventional/nuclear defense spending, and proxy wars in Asia.",
+    "source_documents": [
+      "Cold War Geopolitics_ The Strategy of Containment.pdf"
+    ],
+    "relevant_chunk_ids": [
+      "ea5fb4b74238dd596452d985f54ecfe8449accff114df9fade08a220e3e6a2a7"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q199",
+    "question": "Applying the physics of the friction circle, why will a vehicle lock its front wheels and plow straight off the track if a driver brakes at 100% traction capacity while initiating steering input?",
+    "question_type": "difficult_reasoning",
+    "difficulty": "hard",
+    "expected_answer": "The friction circle dictates that the vector sum of longitudinal force and lateral cornering force cannot exceed the tire's maximum available grip radius. If 100% of available tire friction is consumed by longitudinal braking, zero friction remains for lateral cornering force, causing the front tires to slide and the vehicle to understeer.",
+    "source_documents": [
+      "tire_dynamics_and_slip_angle_modeling.txt"
+    ],
+    "relevant_chunk_ids": [
+      "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13"
+    ],
+    "requires_multiple_chunks": false
+  },
+  {
+    "question_id": "Q200",
+    "question": "Why does Border Gateway Protocol (BGP) rely on path-vector AS-PATH attributes rather than simple link-state Dijkstra calculations to prevent routing loops across heterogeneous global networks?",
+    "question_type": "difficult_reasoning",
+    "difficulty": "hard",
+    "expected_answer": "Link-state protocols like OSPF require every router in an area to maintain an identical topological database, which does not scale across millions of autonomous internet routes. BGP solves this as a path-vector protocol by appending each Autonomous System Number (ASN) to the AS-PATH attribute; if a router sees its own ASN in the path, it discards the route, preventing loops without requiring global topology synchronization.",
+    "source_documents": [
+      "DOC-NET-802.docx"
+    ],
+    "relevant_chunk_ids": [
+      "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a"
+    ],
+    "requires_multiple_chunks": false
+  }
+]

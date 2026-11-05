@@ -1,0 +1,19 @@
+Document ID: DOC-HIS-101
+Title: The Decline and Fall of the Western Roman Empire
+Category: Ancient European History
+Version: 1.0
+
+1. Introduction
+The fall of the Western Roman Empire was not a single, catastrophic event, but rather a protracted process of systemic decline that culminated in the late 5th century CE. Historians generally use the year 476 CE—when the Germanic chieftain Odoacer deposed the last Western Roman Emperor, Romulus Augustulus—as the definitive endpoint. However, the structural vulnerabilities that led to this collapse had been compounding for centuries, encompassing economic instability, military overextension, and political fragmentation.
+
+2. The Crisis of the Third Century and Administrative Splits
+The seeds of the empire’s dissolution were sown during the Crisis of the Third Century (235–284 CE), a period marked by civil war, hyperinflation, and external invasions. Emperor Diocletian temporarily stabilized the realm by instituting the Tetrarchy (rule of four) in 293 CE, which formally divided the empire's administration into Western and Eastern halves. While this initially improved governability, it ultimately severed the poorer, agrarian Western provinces from the wealthy, urbanized Eastern provinces (which would survive for another millennium as the Byzantine Empire). The West was left with a smaller tax base to fund a disproportionately large border defense.
+
+3. Economic Stagnation and Inflation
+The Western Empire suffered from chronic economic dysfunction. The cessation of rapid territorial expansion meant a drastic reduction in the influx of slaves and plunder, which were the backbone of the Roman agricultural and mining economies. To fund the military, emperors repeatedly debased the currency (the denarius), reducing its silver content. This triggered rampant hyperinflation, disrupting trade and forcing the state to collect taxes in kind. The heavy tax burden fell primarily on the lower classes and the curiales (local civic leaders), leading to widespread evasion and the flight of peasants to the estates of wealthy landowners, foreshadowing medieval feudalism.
+
+4. Military Transformation and the Foederati
+By the 4th and 5th centuries, the composition of the Roman army had fundamentally changed. Unable to recruit sufficient Roman citizens, the state increasingly relied on "foederati"—Germanic mercenary tribes contracted to defend the frontiers in exchange for land and autonomy. While cost-effective in the short term, this policy eroded the loyalty and Romanization of the military. Commanders of barbarian descent, such as Stilicho, held immense political power. When the state failed to pay or honor agreements with these groups, the foederati turned against their employers.
+
+5. The Barbarian Invasions
+The migration of the Huns from the Eurasian steppe in the late 4th century displaced numerous Germanic tribes, forcing them across the Rhine and Danube borders into Roman territory. The Visigoths, fleeing the Huns, inflicted a devastating defeat on the Romans at the Battle of Adrianople (378 CE). In 410 CE, the Visigoth King Alaric sacked Rome, shattering the psychological invincibility of the empire. Subsequent invasions by the Vandals (who seized the critical grain-producing province of North Africa) and the Franks further fractured Roman territory, rendering the central government in Ravenna powerless by 476 CE.

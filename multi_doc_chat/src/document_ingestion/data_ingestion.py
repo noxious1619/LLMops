@@ -62,11 +62,33 @@ class ChatIngestor:
             return d
         return base # fallback: "faiss_index/"
 
-    def _split(self, docs: List[Document], chunk_size=1000, chunk_overlap=200) -> List[Document]:
-        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+    
+    def _split(self, docs: List[Document], chunk_size: int = 500, chunk_overlap: int = 100) -> List[Document]:
+        splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+            encoding_name="cl100k_base",
+            chunk_size=chunk_size,
+            chunk_overlap=chunk_overlap
+        )
         chunks = splitter.split_documents(docs)
-        log.info("Documents split", chunks=len(chunks), chunk_size=chunk_size, overlap=chunk_overlap)
+
+        for index, chunk in enumerate(chunks):
+            c_text = chunk.page_content
+            content_hash = hashlib.sha256(c_text.encode("utf-8")).hexdigest()
+            source = chunk.metadata.get("source", "unknown")
+            page = chunk.metadata.get("page", "unknown")
+            unique_string = f"{source}_{page}_{index}_{content_hash}"
+            chunk_id = hashlib.sha256(unique_string.encode("utf-8")).hexdigest()
+            chunk.metadata["chunk_id"] = chunk_id
+            chunk.metadata["content_hash"] = content_hash
+
+        log.info(
+            "Documents split",
+            chunks=len(chunks),
+            chunk_size=chunk_size,
+            overlap=chunk_overlap
+        )
         return chunks
+
 
     def built_retriver( self,
         uploaded_files: Iterable,
@@ -91,10 +113,10 @@ class ChatIngestor:
             texts = [c.page_content for c in chunks]
             metas = [c.metadata for c in chunks]
 
-            try:
-                vs = fm.load_or_create(texts=texts, metadatas=metas)
-            except Exception:
-                vs = fm.load_or_create(texts=texts, metadatas=metas)
+            vs = fm.load_or_create(
+                texts=texts,
+                metadatas=metas
+            )
 
             added = fm.add_documents(chunks)
             log.info("FAISS index updated", added=added, index=str(self.faiss_dir))
@@ -141,13 +163,25 @@ class FaissManager:
     def _exists(self)-> bool:
         return (self.index_dir / "index.faiss").exists() and (self.index_dir / "index.pkl").exists()
 
+    
     @staticmethod
     def _fingerprint(text: str, md: Dict[str, Any]) -> str:
-        src = md.get("source") or md.get("file_path")
-        rid = md.get("row_id")
-        if src is not None:
-            return f"{src}::{'' if rid is None else rid}"
-        return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+        # Prefer the unique chunk ID
+        chunk_id = md.get("chunk_id")
+
+        if chunk_id:
+            return chunk_id
+
+        # Fallback: source + content hash
+        source = md.get("source") or md.get("file_path") or "unknown"
+
+        content_hash = md.get("content_hash") or hashlib.sha256(
+            text.encode("utf-8")
+        ).hexdigest()
+
+        return f"{source}::{content_hash}"
+
 
     def _save_meta(self):
         self.meta_path.write_text(json.dumps(self._meta, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -182,11 +216,25 @@ class FaissManager:
                 embeddings=self.emb,
                 allow_dangerous_deserialization=True,
             )
+            # Reconcile existing docstore entries into _meta to prevent duplicate additions
+            if hasattr(self.vs, "docstore") and hasattr(self.vs.docstore, "_dict"):
+                updated = False
+                for d in self.vs.docstore._dict.values():
+                    k = self._fingerprint(d.page_content, d.metadata or {})
+                    if k not in self._meta["rows"]:
+                        self._meta["rows"][k] = True
+                        updated = True
+                if updated:
+                    self._save_meta()
             return self.vs
 
 
         if not texts:
             raise DocumentPortalException("No existing FAISS index and no data to create one", sys)
         self.vs = FAISS.from_texts(texts=texts, embedding=self.emb, metadatas=metadatas or [])
+        for t, md in zip(texts, metadatas or [{}] * len(texts)):
+            key = self._fingerprint(t, md)
+            self._meta["rows"][key] = True
         self.vs.save_local(str(self.index_dir))
+        self._save_meta()
         return self.vs

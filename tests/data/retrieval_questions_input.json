@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "question": "What is the fundamental difference between authentication and authorization, and why is relying purely on OAuth 2.0 for identity verification considered a security vulnerability?"
+    },
+    {
+        "id": 2,
+        "question": "How does the Proof Key for Code Exchange (PKCE) extension dynamically generate a cryptographic secret to protect authorization flows in public clients?"
+    },
+    {
+        "id": 3,
+        "question": "What specific claims are required to be validated by resource servers when verifying a JSON Web Token (JWT) issued by an OpenID Connect authorization server?"
+    },
+    {
+        "id": 4,
+        "question": "Why is the Implicit Grant type now deprecated in modern OAuth 2.0 implementations, and what specific token leakage risks does it present via the browser?"
+    },
+    {
+        "id": 5,
+        "question": "How do granular custom scopes in OAuth 2.0 help enforce the Principle of Least Privilege across distributed microservice architectures?"
+    },
+    {
+        "id": 6,
+        "question": "How does the scaled dot-product attention mechanism in Transformer architectures eliminate the need for recurrent structures like RNNs and LSTMs?"
+    },
+    {
+        "id": 7,
+        "question": "In what way does Multi-Head Attention allow a machine learning model to jointly attend to information from different representation subspaces simultaneously?"
+    },
+    {
+        "id": 8,
+        "question": "Why are positional encodings mandatory at the bottom of the encoder and decoder stacks in a Transformer, and how are they typically mathematically structured?"
+    },
+    {
+        "id": 9,
+        "question": "What role does masked self-attention play in the autoregressive generation process of a Transformer's decoder stack?"
+    },
+    {
+        "id": 10,
+        "question": "How do recent advancements like FlashAttention address the quadratic computational and memory complexity bottlenecks inherent in standard Transformer architectures?"
+    },
+    {
+        "id": 11,
+        "question": "How does the Border Gateway Protocol (BGP) evaluate complex path attributes like Weight, Local Preference, and AS-PATH length rather than relying on simple distance metrics?"
+    },
+    {
+        "id": 12,
+        "question": "What is the primary architectural limitation regarding transitivity when managing multiple point-to-point Virtual Private Cloud (VPC) peering connections?"
+    },
+    {
+        "id": 13,
+        "question": "How do BGP communities allow network administrators to tag routes and enforce dynamic routing policies across hybrid cloud boundaries like AWS Direct Connect?"
+    },
+    {
+        "id": 14,
+        "question": "Why does a hub-and-spoke networking architecture utilizing Transit Gateways solve the N*(N-1)/2 administrative burden associated with large-scale VPC peering?"
+    },
+    {
+        "id": 15,
+        "question": "What distinguishes eBGP (External BGP) from iBGP (Internal BGP) when exchanging routes between different Autonomous System Numbers (ASNs)?"
+    },
+    {
+        "id": 16,
+        "question": "In an Event-Driven Architecture, how does Apache Kafka utilize partitions to guarantee strict ordering for events that share the same message key?"
+    },
+    {
+        "id": 17,
+        "question": "How do consumer groups in Kafka facilitate massive scalability, and what occurs during a rebalance if a consumer instance suddenly fails?"
+    },
+    {
+        "id": 18,
+        "question": "What specific guarantees does Kafka's transactional API provide to support Exactly-Once Semantics (EOS) in distributed stream processing applications?"
+    },
+    {
+        "id": 19,
+        "question": "Why is Log Compaction an essential retention strategy for maintaining state stores and enabling microservices to quickly rebuild materialized views upon startup?"
+    },
+    {
+        "id": 20,
+        "question": "What operational burdens are eliminated by modern Kafka deployments transitioning from Apache ZooKeeper to the KRaft (Kafka Raft) consensus protocol?"
+    },
+    {
+        "id": 21,
+        "question": "Why are CI/CD pipelines considered prime targets for supply chain attacks, and how can malicious pull requests bypass traditional runtime security measures?"
+    },
+    {
+        "id": 22,
+        "question": "How does utilizing OpenID Connect (OIDC) to federate identity between GitHub Actions and a cloud provider eliminate the need for storing long-lived static IAM credentials?"
+    },
+    {
+        "id": 23,
+        "question": "What is the operational difference between Static Application Security Testing (SAST) and Dynamic Application Security Testing (DAST) within an automated CI/CD security gateway?"
+    },
+    {
+        "id": 24,
+        "question": "How does applying the Principle of Least Privilege to ephemeral CI/CD build agents prevent cross-job contamination and data exfiltration?"
+    },
+    {
+        "id": 25,
+        "question": "What role do frameworks like In-Toto and Sigstore play in generating verifiable provenance metadata to ensure the integrity of software build artifacts?"
+    },
+    {
+        "id": 26,
+        "question": "How do Python's advanced metaprogramming features, such as metaclasses and decorators, allow developers to dynamically alter class instantiation behavior at runtime?"
+    },
+    {
+        "id": 27,
+        "question": "What are the primary architectural constraints of a RESTful API, and how does HATEOAS enable true client-server decoupling?"
+    },
+    {
+        "id": 28,
+        "question": "How does Python's Global Interpreter Lock (GIL) impact the performance of CPU-bound multi-threaded applications compared to I/O-bound tasks?"
+    },
+    {
+        "id": 29,
+        "question": "In the context of backend architecture, what are the trade-offs of using an API Gateway pattern versus direct client-to-microservice communication?"
+    },
+    {
+        "id": 30,
+        "question": "How can implementing rate limiting algorithms like Token Bucket or Leaky Bucket in a REST API protect upstream Python services from sudden traffic spikes?"
+    },
+    {
+        "id": 31,
+        "question": "What specific advantages does PostgreSQL's Multi-Version Concurrency Control (MVCC) offer over traditional lock-based concurrency mechanisms in high-transaction environments?"
+    },
+    {
+        "id": 32,
+        "question": "How does Redis achieve its ultra-low latency, and what are the durability trade-offs when relying on its in-memory dataset without configuring AOF or RDB persistence?"
+    },
+    {
+        "id": 33,
+        "question": "When designing a distributed database system, how does the CAP theorem force architects to choose between consistency and availability during a network partition?"
+    },
+    {
+        "id": 34,
+        "question": "What is the role of Write-Ahead Logging (WAL) in PostgreSQL, and how does it guarantee data integrity in the event of an unexpected server crash?"
+    },
+    {
+        "id": 35,
+        "question": "How do Redis clusters utilize hash slots to automatically partition data across multiple nodes, ensuring horizontal scalability for caching layers?"
+    },
+    {
+        "id": 36,
+        "question": "What are the core principles of the Saga pattern, and how does it manage distributed transactions across independent microservices without distributed locking?"
+    },
+    {
+        "id": 37,
+        "question": "How does the Circuit Breaker pattern prevent cascading failures in a microservice architecture when a downstream dependency experiences prolonged degradation?"
+    },
+    {
+        "id": 38,
+        "question": "Why is the Strangler Fig pattern considered a low-risk strategy for migrating from a legacy monolithic application to a modern microservices architecture?"
+    },
+    {
+        "id": 39,
+        "question": "What role does Service Mesh architecture play in offloading mutual TLS (mTLS), retries, and telemetry collection from the application code to sidecar proxies?"
+    },
+    {
+        "id": 40,
+        "question": "In system design, how does implementing eventual consistency reduce latency and improve availability compared to strictly enforcing strong consistency across all nodes?"
+    },
+    {
+        "id": 41,
+        "question": "How do Kubernetes control plane components, such as the API Server and Controller Manager, work together to continuously reconcile the cluster's actual state with its desired state?"
+    },
+    {
+        "id": 42,
+        "question": "What is the function of the Raft consensus algorithm within etcd, and why is a quorum required for Kubernetes to maintain reliable cluster configuration data?"
+    },
+    {
+        "id": 43,
+        "question": "How do Kubernetes Ingress controllers dynamically route external HTTP/HTTPS traffic to internal cluster services based on path and host rules?"
+    },
+    {
+        "id": 44,
+        "question": "What is the difference between a Horizontal Pod Autoscaler (HPA) and a Cluster Autoscaler in responding to increased computational workloads in a cloud environment?"
+    },
+    {
+        "id": 45,
+        "question": "How do Kubernetes namespaces and ResourceQuotas provide logical isolation and prevent resource starvation in a multi-tenant DevOps environment?"
+    },
+    {
+        "id": 46,
+        "question": "What are the core tenets of the Zero Trust security model, and how does it fundamentally reject the concept of a secure internal network perimeter?"
+    },
+    {
+        "id": 47,
+        "question": "How does continuous authentication in a Zero Trust architecture evaluate dynamic risk signals, such as device posture and geographic location, before granting access?"
+    },
+    {
+        "id": 48,
+        "question": "Why is micro-segmentation critical in a modern cloud environment, and how does it restrict lateral movement if an attacker breaches a single workload?"
+    },
+    {
+        "id": 49,
+        "question": "How do Identity and Access Management (IAM) policies in AWS or Azure enforce the Principle of Least Privilege for autonomous serverless functions?"
+    },
+    {
+        "id": 50,
+        "question": "What is the role of a Software-Defined Perimeter (SDP) in hiding infrastructure from public visibility and requiring mutual authentication before establishing a connection?"
+    },
+    {
+        "id": 51,
+        "question": "How did James Watt's improvements to the steam engine act as a catalyst for the Industrial Revolution by freeing factories from the constraints of water power?"
+    },
+    {
+        "id": 52,
+        "question": "What were the immediate public health consequences of the rapid, unprecedented urbanization in centers like Manchester and London during the mid-19th century?"
+    },
+    {
+        "id": 53,
+        "question": "How did the shift from the domestic cottage industry to the centralized factory system irrevocably alter the nature and discipline of working-class labor?"
+    },
+    {
+        "id": 54,
+        "question": "In what ways did the accumulation of industrial capital drive 19th-century European colonial expansion and the aggressive search for captive markets?"
+    },
+    {
+        "id": 55,
+        "question": "How did the mass production of high-quality wrought iron via the puddling process facilitate the rapid expansion of global railway networks?"
+    },
+    {
+        "id": 56,
+        "question": "How did the cessation of territorial expansion in the 2nd century CE structurally devastate the Roman economy by halting the influx of slave labor?"
+    },
+    {
+        "id": 57,
+        "question": "What were the long-term socioeconomic effects of the Roman state continuously debasing its currency to maintain its vast military apparatus?"
+    },
+    {
+        "id": 58,
+        "question": "How did the 'barbarization' of the Roman legions with Germanic foederati dilute military discipline and shift loyalty away from the imperial state?"
+    },
+    {
+        "id": 59,
+        "question": "Why did Diocletian’s division of the empire ultimately doom the West by leaving it with the longest borders and the poorest provinces?"
+    },
+    {
+        "id": 60,
+        "question": "In what way did the westward expansion of the Huns act as the primary catalyst for the catastrophic Germanic migrations across Roman frontiers?"
+    },
+    {
+        "id": 61,
+        "question": "How did the arrival of Commodore Perry's 'Black Ships' expose the military weakness of the Tokugawa Shogunate and trigger the Meiji Restoration?"
+    },
+    {
+        "id": 62,
+        "question": "What were the social consequences of dismantling the rigid four-tiered class system and stripping the samurai of their exclusive privileges in Meiji Japan?"
+    },
+    {
+        "id": 63,
+        "question": "How did the Meiji oligarchs utilize the Iwakura Mission to rapidly modernize Japan's industrial, scientific, and administrative capabilities?"
+    },
+    {
+        "id": 64,
+        "question": "In what ways did the Meiji Constitution of 1889 blend Western bicameral institutional forms with traditional Japanese imperial autocracy?"
+    },
+    {
+        "id": 65,
+        "question": "How did the state-sponsored industrialization mantra of 'Fukoku Kyohei' directly prepare Japan for its subsequent imperial expansion in the Sino-Japanese and Russo-Japanese Wars?"
+    },
+    {
+        "id": 66,
+        "question": "How did the deeply regressive tax system of the Ancien Régime place the entire fiscal burden on the Third Estate, leading to the financial collapse of the French state?"
+    },
+    {
+        "id": 67,
+        "question": "What role did the Enlightenment philosophies of Rousseau and Locke play in shaping the Declaration of the Rights of Man and of the Citizen in 1789?"
+    },
+    {
+        "id": 68,
+        "question": "How did the outbreak of war against European monarchies accelerate the radicalization of the French Revolution and the rise of the Jacobins?"
+    },
+    {
+        "id": 69,
+        "question": "What were the primary political and social justifications used by Maximilien Robespierre to institute the Reign of Terror between 1793 and 1794?"
+    },
+    {
+        "id": 70,
+        "question": "How did Napoleon Bonaparte's rise to power consolidate revolutionary gains like legal equality while simultaneously establishing a new authoritarian empire?"
+    },
+    {
+        "id": 71,
+        "question": "How did the logistics of the Silk Road rely on a relay system of oasis cities and caravanserai rather than end-to-end transport by single merchants?"
+    },
+    {
+        "id": 72,
+        "question": "In what ways did the Silk Road serve as the primary conduit for the spread of Buddhism from northern India into China, Korea, and Japan?"
+    },
+    {
+        "id": 73,
+        "question": "How did the westward transmission of Chinese papermaking technology revolutionize administration and knowledge retention during the Islamic Golden Age?"
+    },
+    {
+        "id": 74,
+        "question": "What role did merchant caravans on the Silk Road play as epidemiological vectors for pandemics like the Plague of Justinian and the Black Death?"
+    },
+    {
+        "id": 75,
+        "question": "How did the collapse of the Mongol Empire's Pax Mongolica contribute to the eventual decline of the terrestrial Silk Road in the 15th century?"
+    },
+    {
+        "id": 76,
+        "question": "How did the Corpus Juris Civilis (Justinian Code) rationalize centuries of conflicting Roman laws and influence modern Western legal systems?"
+    },
+    {
+        "id": 77,
+        "question": "What strategic advantages allowed the Byzantine Empire and its capital, Constantinople, to survive for a millennium after the fall of the Western Roman Empire?"
+    },
+    {
+        "id": 78,
+        "question": "How did the Iconoclastic Controversy fracture Byzantine society and permanently strain relations between the Eastern Orthodox and Roman Catholic churches?"
+    },
+    {
+        "id": 79,
+        "question": "In what ways did Byzantine diplomacy and the 'theme system' of military provinces protect the empire's frontiers against Arab and Slavic incursions?"
+    },
+    {
+        "id": 80,
+        "question": "What were the catastrophic geopolitical consequences of the Fourth Crusade's sack of Constantinople in 1204 for the Byzantine Empire's longevity?"
+    },
+    {
+        "id": 81,
+        "question": "How did the Defenestration of Prague ignite the underlying religious and political tensions that erupted into the Thirty Years' War in 1618?"
+    },
+    {
+        "id": 82,
+        "question": "Why did Catholic France, under Cardinal Richelieu, intervene on the side of Protestant powers during the later stages of the Thirty Years' War?"
+    },
+    {
+        "id": 83,
+        "question": "How did the widespread use of mercenary armies during the Thirty Years' War lead to unprecedented demographic and economic devastation across the Holy Roman Empire?"
+    },
+    {
+        "id": 84,
+        "question": "In what way did the Peace of Westphalia (1648) establish the modern concept of state sovereignty and the principle of cuius regio, eius religio?"
+    },
+    {
+        "id": 85,
+        "question": "How did the conclusion of the Thirty Years' War permanently cripple the centralized authority of the Holy Roman Emperor over the German states?"
+    },
+    {
+        "id": 86,
+        "question": "How did the Aztec Empire utilize the 'chinampa' system of agriculture to sustain the massive urban population of its capital, Tenochtitlan?"
+    },
+    {
+        "id": 87,
+        "question": "What role did the Aztec practice of extracting heavy tribute and human sacrifices from subjugated tribes play in facilitating Hernán Cortés's conquest?"
+    },
+    {
+        "id": 88,
+        "question": "How did the introduction of Old World pathogens, particularly smallpox, completely destabilize Aztec military and political leadership during the Spanish siege?"
+    },
+    {
+        "id": 89,
+        "question": "In what ways did superior Spanish metallurgy, combined with the use of horses and indigenous alliances, overcome the numerical superiority of the Aztec forces?"
+    },
+    {
+        "id": 90,
+        "question": "What were the immediate cultural and architectural impacts of the Spanish completely razing Tenochtitlan to construct Mexico City on its ruins?"
+    },
+    {
+        "id": 91,
+        "question": "How did the brutal conditions of the French sugar colony of Saint-Domingue lay the demographic groundwork for the Haitian Revolution?"
+    },
+    {
+        "id": 92,
+        "question": "What strategic military tactics did Toussaint Louverture employ to defeat rival factions, Spanish forces, and eventually the British expeditionary army?"
+    },
+    {
+        "id": 93,
+        "question": "How did the ideological rhetoric of the French Revolution inadvertently inspire both the free people of color and the enslaved population in Haiti to demand universal rights?"
+    },
+    {
+        "id": 94,
+        "question": "Why did Napoleon Bonaparte's attempt to reinstate slavery in the French colonies culminate in the catastrophic defeat of General Leclerc's forces in Haiti?"
+    },
+    {
+        "id": 95,
+        "question": "What were the long-term economic consequences of the global diplomatic isolation and crippling indemnity imposed on post-revolutionary Haiti by France?"
+    },
+    {
+        "id": 96,
+        "question": "How did Stalin's first Five-Year Plan attempt to radically transform the Soviet Union from an agrarian society into an industrial powerhouse overnight?"
+    },
+    {
+        "id": 97,
+        "question": "What were the devastating humanitarian and agricultural consequences of the forced collectivization of the kulaks and Soviet peasantry in the 1930s?"
+    },
+    {
+        "id": 98,
+        "question": "How did Gosplan (the State Planning Committee) calculate material balances and set rigid production quotas across the entire Soviet command economy?"
+    },
+    {
+        "id": 99,
+        "question": "In what ways did the Soviet command economy struggle with innovation and quality control due to the absence of market pricing signals and consumer feedback?"
+    },
+    {
+        "id": 100,
+        "question": "How did the prioritization of heavy industry and military production structurally deprive Soviet citizens of basic consumer goods throughout the Cold War?"
+    },
+    {
+        "id": 101,
+        "question": "How does the non-destructive bitwise arbitration mechanism in the CAN bus protocol ensure that critical messages, like ABS commands, always win priority without data loss?"
+    },
+    {
+        "id": 102,
+        "question": "Why was the transition from Classical CAN to CAN FD (Flexible Data-Rate) necessary to support the bandwidth demands of modern ADAS and powertrain controllers?"
+    },
+    {
+        "id": 103,
+        "question": "In what way do Zonal Architectures simplify physical wiring harnesses by replacing dozens of local ECUs with high-speed Automotive Ethernet backbones?"
+    },
+    {
+        "id": 104,
+        "question": "How does the Secure Onboard Communication (SecOC) module utilize a Message Authentication Code (MAC) and Freshness Value to prevent replay attacks on a CAN network?"
+    },
+    {
+        "id": 105,
+        "question": "Why is the strict master-slave architecture of the Local Interconnect Network (LIN) preferred over CAN for non-critical applications like window lifters and climate control panels?"
+    },
+    {
+        "id": 106,
+        "question": "How do advanced Battery Management Systems (BMS) utilize Extended Kalman Filters (EKF) and Coulomb counting to dynamically estimate a battery's State of Charge (SoC)?"
+    },
+    {
+        "id": 107,
+        "question": "What is the mechanical difference between passive cell balancing using bleed resistors and active cell balancing using DC-DC converters in an EV battery pack?"
+    },
+    {
+        "id": 108,
+        "question": "How does a BMS rapidly detect the onset of thermal runaway, and what immediate protocols are triggered to ensure occupant safety under UN GTR No. 20?"
+    },
+    {
+        "id": 109,
+        "question": "Why must the BMS manage pre-charge circuits before closing the main electromechanical contactors connecting the battery to the high-voltage motor inverter?"
+    },
+    {
+        "id": 110,
+        "question": "How does continuous monitoring of high-voltage isolation resistance by the BMS prevent lethal shock hazards from the vehicle's low-voltage chassis ground?"
+    },
+    {
+        "id": 111,
+        "question": "What are the inherent environmental limitations of automotive cameras, and how does operating in the 77 GHz band allow radar to overcome these weather-related weaknesses?"
+    },
+    {
+        "id": 112,
+        "question": "How do early sensor fusion algorithms utilize deep neural networks to extract combined features directly from raw camera pixels, LiDAR point clouds, and radar reflections?"
+    },
+    {
+        "id": 113,
+        "question": "Why is standard GPS insufficient for autonomous lane positioning, and how do High-Definition (HD) Maps combined with LiDAR structural data achieve centimeter-level localization?"
+    },
+    {
+        "id": 114,
+        "question": "In autonomous motion planning, how does the system balance complex optimization problems like safety constraints, vehicle kinematic limits, and passenger comfort (minimizing jerk)?"
+    },
+    {
+        "id": 115,
+        "question": "What is the function of a Model Predictive Control (MPC) algorithm in translating planned trajectories into precise physical steering and acceleration commands?"
+    },
+    {
+        "id": 116,
+        "question": "How do the Miller and Atkinson thermodynamic cycles extract more work from combustion gases by keeping the intake valve open longer into the compression stroke?"
+    },
+    {
+        "id": 117,
+        "question": "How does Gasoline Direct Injection (GDI) cool the cylinder charge through the latent heat of vaporization, thereby reducing engine knock and allowing for higher compression ratios?"
+    },
+    {
+        "id": 118,
+        "question": "What role does Variable Geometry Turbine (VGT) technology play in dynamically altering the exhaust flow area to minimize turbo lag at low engine RPMs?"
+    },
+    {
+        "id": 119,
+        "question": "Why do Three-Way Catalytic Converters (TWC) require the Engine Control Unit to maintain a highly precise stoichiometric air-fuel ratio (Lambda = 1.0) via wideband oxygen sensors?"
+    },
+    {
+        "id": 120,
+        "question": "How do Selective Catalytic Reduction (SCR) systems utilize Diesel Exhaust Fluid (DEF) to chemically decompose harmful NOx emissions into nitrogen gas and water?"
+    },
+    {
+        "id": 121,
+        "question": "How does flow separation at the rear of a vehicle create a chaotic, low-pressure wake region that acts as a vacuum and significantly increases pressure drag?"
+    },
+    {
+        "id": 122,
+        "question": "In what ways do active aerodynamic features, such as deployable rear wings and active grille shutters, dynamically alter a vehicle's drag and downforce profiles?"
+    },
+    {
+        "id": 123,
+        "question": "How does accelerating air under a smooth vehicle undercarriage generate significant negative lift (downforce) through Ground Effect without incurring a massive drag penalty?"
+    },
+    {
+        "id": 124,
+        "question": "What role do advanced turbulence models like Detached Eddy Simulation (DES) play in helping Computational Fluid Dynamics (CFD) software accurately visualize wake behavior?"
+    },
+    {
+        "id": 125,
+        "question": "Why are geometric features like Kammbacks and vortex generators utilized by designers to artificially trip the boundary layer and control where airflow cleanly separates?"
+    },
+    {
+        "id": 126,
+        "question": "How does the platinum catalyst at the anode of a PEM fuel cell split hydrogen molecules into protons and electrons to generate an electric current?"
+    },
+    {
+        "id": 127,
+        "question": "Why is a robust Air Management System containing chemical filters and a humidifier critical to maintaining the health and proton conductivity of a fuel cell's polymer membrane?"
+    },
+    {
+        "id": 128,
+        "question": "How do Type IV composite cylinders utilize high-density polymer liners and miles of carbon fiber wrapping to safely store gaseous hydrogen at 700 bar (10,000 psi)?"
+    },
+    {
+        "id": 129,
+        "question": "What is the function of the Thermal Pressure Relief Device (TPRD) installed on hydrogen storage tanks in the event of a catastrophic vehicle fire?"
+    },
+    {
+        "id": 130,
+        "question": "Why are Fuel Cell Electric Vehicles (FCEVs) fundamentally hybrid architectures that rely on high-power lithium-ion batteries to capture regenerative braking and bridge transient power lag?"
+    },
+    {
+        "id": 131,
+        "question": "How does the Dual-Core Lockstep (DCLS) architecture within automotive microcontrollers detect transient faults like cosmic radiation bit flips to meet ASIL D safety standards?"
+    },
+    {
+        "id": 132,
+        "question": "What is the primary function of Error-Correcting Code (ECC) logic when protecting critical Static RAM (SRAM) memory sectors in high-reliability embedded control units?"
+    },
+    {
+        "id": 133,
+        "question": "How does the AUTOSAR layered software architecture decouple application logic from underlying microcontroller hardware via the Runtime Environment (RTE) and Basic Software (BSW) layers?"
+    },
+    {
+        "id": 134,
+        "question": "Why is the automotive industry shifting from flat ECU networks to Zonal Architectures powered by server-grade High-Performance Computers (HPCs) running POSIX-compliant operating systems?"
+    },
+    {
+        "id": 135,
+        "question": "How do Pulse Width Modulation (PWM) modules allow an engine control unit to precisely manipulate actuators like fuel injectors and motor drivers?"
+    },
+    {
+        "id": 136,
+        "question": "How does the Stribeck curve illustrate the transition from low-friction Hydrodynamic Lubrication to high-friction Boundary Lubrication during engine cold starts or extreme loads?"
+    },
+    {
+        "id": 137,
+        "question": "In what ways do Extreme Pressure (EP) additives like Zinc Dialkyldithiophosphate (ZDDP) chemically react to form a sacrificial tribofilm and prevent catastrophic metal welding?"
+    },
+    {
+        "id": 138,
+        "question": "Why are Diamond-Like Carbon (DLC) coatings utilized on valvetrain components to allow for the use of ultra-low viscosity engine oils (like 0W-16) without accelerating wear?"
+    },
+    {
+        "id": 139,
+        "question": "How does the extreme rotational speed of EV traction motors induce Electrical Discharge Machining (EDM) pitting on bearing raceways, and how do ceramic rolling elements mitigate this?"
+    },
+    {
+        "id": 140,
+        "question": "What physical phenomenon occurs at the tire-road contact patch during Elastohydrodynamic Lubrication (hydroplaning), causing a total loss of steering and braking friction?"
+    },
+    {
+        "id": 141,
+        "question": "How do engineered crumple zones utilize progressive plastic deformation to increase the duration of an impact pulse and decrease the peak deceleration forces felt by occupants?"
+    },
+    {
+        "id": 142,
+        "question": "Why are Ultra-High-Strength Steels (UHSS), such as hot-stamped boron steel, critical for constructing the rigid passenger safety cell and preventing catastrophic cabin intrusion?"
+    },
+    {
+        "id": 143,
+        "question": "How do pyrotechnic pretensioners and mechanical load limiters work together in modern three-point seatbelts to firmly restrain occupants while preventing severe thoracic injury?"
+    },
+    {
+        "id": 144,
+        "question": "What is the role of solid-state MEMS accelerometers in supplying the central Restraint Control Module (RCM) with the high-G deceleration data required to trigger airbags within 20 milliseconds?"
+    },
+    {
+        "id": 145,
+        "question": "How do Finite Element Analysis (FEA) solvers running on supercomputers simulate the highly nonlinear, dynamic physics of a crash before physical tooling is ever manufactured?"
+    },
+    {
+        "id": 146,
+        "question": "How does the transition to a Service-Oriented Architecture (SOA) via protocols like SOME/IP allow software developers to write hardware-agnostic applications for Software-Defined Vehicles?"
+    },
+    {
+        "id": 147,
+        "question": "In what way does a dual-bank (A/B) memory architecture guarantee that a vehicle can safely roll back to a known-good software version if a remote Over-The-Air (OTA) update fails?"
+    },
+    {
+        "id": 148,
+        "question": "How do Continuous Integration and Continuous Deployment (CI/CD) pipelines utilize Hardware-in-the-Loop (HIL) simulators to automatically validate new automotive software prior to OTA deployment?"
+    },
+    {
+        "id": 149,
+        "question": "What role does the vehicle's telemetry data play in feeding the OEM's cloud infrastructure (Digital Twin) to train better machine learning models and identify predictive maintenance issues?"
+    },
+    {
+        "id": 150,
+        "question": "Why do international regulations like UN R156 mandate that automakers maintain a certified Software Update Management System (SUMS) for managing OTA deployments?"
+    }
+]

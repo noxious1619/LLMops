@@ -1,0 +1,9 @@
+metric,step9_original_gt,corrected_gt_same_retrieval,fresh_run_corrected_gt,delta_explanation
+Hit Rate@5,100.0%,100.0%,100.0%,Remains 100% across all runs due to small corpus clustering.
+Macro Recall@5,100.0%,100.0%,100.0%,Remains 100% (87.6% single-chunk degeneracy + 2-chunk doc clustering).
+Micro Recall@5,100.0%,100.0%,100.0%,All 200 ground-truth chunks retrieved in top 5.
+Rank 1 Accuracy,78.65% (140/178),79.78% (142/178),79.78% (142/178),+1.13% increase (+2 hits) from correcting Q12 and Q15 mapping shift.
+MRR,0.8834,0.889,0.889,+0.0056 improvement due to Q12 and Q15 moving from Rank 2 to Rank 1.
+Precision@5,22.47%,22.47%,22.47%,Identical precision: 200 relevant chunks retrieved across 890 positions.
+nDCG@5,91.34%,91.75%,91.75%,+0.86% improvement in ranking quality from correcting Q12 and Q15 to Rank 1.
+Min-Sufficient Coverage,N/A,100.0%,100.0%,100% of questions retrieved their minimum sufficient evidence set.

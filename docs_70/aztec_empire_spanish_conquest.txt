@@ -1,0 +1,19 @@
+Document ID: DOC-HIS-2823
+Title: The Aztec Empire and the Spanish Conquest
+Category: Mesoamerican History and Colonialism
+Version: 1.0
+
+1. The Aztec Triple Alliance and Tenochtitlan
+Prior to European contact, the Aztec Empire (the Mexica) was the dominant political and military force in central Mexico. The empire was not a single, unified state but a tributary confederation formed in 1428, known as the Triple Alliance, comprising the city-states of Tenochtitlan, Texcoco, and Tlacopan. The capital, Tenochtitlan (modern-day Mexico City), was an engineering marvel. Built on an island in Lake Texcoco, it was larger than most contemporary European cities, boasting a population of over 200,000. The Aztecs sustained this dense urban population through the use of "chinampas," highly productive artificial agricultural islands built on the shallow lakebed.
+
+2. Militarism, Tribute, and Religion
+The Aztec political economy relied heavily on continuous military conquest. Conquered city-states were forced to pay heavy tribute in the form of luxury goods, textiles, foodstuffs, and human captives. This tribute system generated immense resentment among subjugated populations. Religion was deeply intertwined with Aztec militarism. The state religion was centered around the worship of Huitzilopochtli, the sun and war god, who required regular offerings of human blood to sustain the cosmos and prevent the end of the world. This theological necessity justified aggressive military campaigns known as "Flower Wars," designed explicitly to capture enemy warriors for ritual sacrifice.
+
+3. The Arrival of Hernán Cortés and Indigenous Alliances
+In 1519, the Spanish conquistador Hernán Cortés landed on the Gulf Coast of Mexico with a small expeditionary force of approximately 500 men, 16 horses, and a few cannons. While technologically superior in steel weaponry and firearms, the Spanish forces were vastly outnumbered. Cortés’s ultimate success hinged entirely on his ability to exploit the deep-seated political divisions within the Aztec Empire. Aided by an indigenous translator known as La Malinche (Doña Marina), Cortés forged crucial military alliances with powerful tribute-paying states that despised Aztec rule, most notably the Tlaxcalans, who provided tens of thousands of auxiliary warriors to the Spanish cause.
+
+4. The Fall of Moctezuma II and the Noche Triste
+Upon arriving at Tenochtitlan, Cortés and his men were initially received by Emperor Moctezuma II. In a bold stroke, Cortés took Moctezuma hostage within his own palace, attempting to rule the empire through the captive emperor. Tensions eventually boiled over, leading to Moctezuma’s death and a bloody uprising. The Spanish and their Tlaxcalan allies were forced to flee the city during the disastrous "Noche Triste" (Night of Sorrows) in 1520, suffering heavy casualties. Cortés retreated to Tlaxcala to regroup, construct shallow-draft brigantines for naval warfare on the lake, and prepare for a massive counter-offensive.
+
+5. The Siege of Tenochtitlan and the Role of Smallpox
+The deciding factor in the conquest was not European military tactics, but epidemiology. During the Spanish retreat, the smallpox virus—inadvertently introduced by the Europeans—swept through Tenochtitlan and the surrounding regions. Having no natural immunity, the indigenous population was devastated; an estimated 40% of the city’s inhabitants died, including Moctezuma’s successor, Cuitláhuac, paralyzing the Aztec military and political command. In 1521, Cortés returned and laid siege to the plague-ravaged city for 93 days. Starved, diseased, and cut off from freshwater, the defenders under the final emperor, Cuauhtémoc, ultimately surrendered, marking the end of the Aztec Empire and the beginning of 300 years of Spanish colonial rule in the Americas.
