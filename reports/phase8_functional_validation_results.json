@@ -1,0 +1,153 @@
+{
+  "timestamp": "2026-11-05T06:19:13Z",
+  "pre_integrity": {
+    "faiss_hash": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+    "pkl_hash": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+    "verified": true
+  },
+  "categories": {
+    "Q_SPEC_REDIS": {
+      "category": "Category A: Exact Technical Specifications",
+      "question": "How many hash slots are used in a Redis Cluster and what function is used to calculate the slot for a key?",
+      "expectation": "16,384 slots (0 to 16383), CRC16 modulo 16384.",
+      "retrieved_chunk_count": 5,
+      "retrieved_chunk_ids": [
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+        "a9cc6f08f3309375a9a315db021645685557ce20d251699c93ad94597ed449a2"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\automotive_hvac_and_heat_pump_systems.txt"
+      ],
+      "retrieval_latency_sec": 0.758,
+      "total_latency_sec": 7.449,
+      "answer": "A Redis Cluster uses exactly 16,384 hash slots. To calculate which hash slot a particular key belongs to, Redis uses the CRC16 checksum of the key, modulo 16384."
+    },
+    "Q1": {
+      "category": "Category B: Conceptual and Comparative",
+      "question": "What is the fundamental difference between authentication and authorization, and why is relying purely on OAuth 2.0 for identity verification considered a security vulnerability?",
+      "expectation": "Authn identifies identity, authz grants permissions; OAuth 2.0 is an authorization framework, not an authentication protocol.",
+      "retrieved_chunk_count": 5,
+      "retrieved_chunk_ids": [
+        "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+        "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+        "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+        "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+        "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-SEC-601.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-SEC-601.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Zero Trust Network Access (ZTNA) Implementation.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-DEV-1003.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_CAN_Bus_Architecture_and_Diagnostics.docx"
+      ],
+      "retrieval_latency_sec": 0.523,
+      "total_latency_sec": 8.351,
+      "answer": "OAuth 2.0 is strictly designed for authorization (delegated access), whereas authentication is used to verify user identity. Relying purely on OAuth 2.0 for identity verification leads to security vulnerabilities because it is not designed for identity verification, a gap that OpenID Connect (OIDC) bridges by introducing the ID Token."
+    },
+    "Q11": {
+      "category": "Category C: Technical Acronyms and Abbreviations",
+      "question": "How does the Border Gateway Protocol (BGP) evaluate complex path attributes like Weight, Local Preference, and AS-PATH length rather than relying on simple distance metrics?",
+      "expectation": "BGP path selection order: highest Weight, highest Local Preference, shortest AS-PATH, etc.",
+      "retrieved_chunk_count": 5,
+      "retrieved_chunk_ids": [
+        "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+        "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+        "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13",
+        "51290e98d37f6c9d2a625126a8c2b5dee69814ba0917c2bee5cf9cb2f3137da0",
+        "2a4f819b64cfd80289c9ac38126b0aedf0e7a09c718634c753778e5b928fd71e"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\tire_dynamics_and_slip_angle_modeling.txt",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\automotive_suspension_kinematics.txt",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Configuring K8s HPA for Custom Metrics.pdf"
+      ],
+      "retrieval_latency_sec": 0.666,
+      "total_latency_sec": 10.488,
+      "answer": "I don't know."
+    },
+    "Q42": {
+      "category": "Category D: Multi-Chunk Evidence Retrieval",
+      "question": "What is the function of the Raft consensus algorithm within etcd, and why is a quorum required for Kubernetes to maintain reliable cluster configuration data?",
+      "expectation": "Consensus on state/log replication; quorum (n/2 + 1) prevents split-brain and ensures majority agreement on configuration.",
+      "retrieved_chunk_count": 5,
+      "retrieved_chunk_ids": [
+        "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Configuring K8s HPA for Custom Metrics.pdf"
+      ],
+      "retrieval_latency_sec": 0.776,
+      "total_latency_sec": 9.282,
+      "answer": "I don't know."
+    },
+    "Q_NEGATIVE": {
+      "category": "Category E: Unanswerable / Out-of-Domain (Negative Test)",
+      "question": "What is the exact rotational period, surface gravity, and atmospheric chemical composition of exoplanet Kepler-186f?",
+      "expectation": "System must state the provided documents/context do not contain this information.",
+      "retrieved_chunk_count": 5,
+      "retrieved_chunk_ids": [
+        "8def58aeec74b321fbe308cf8adee112eed670a696fb46bb8ed65919834b6422",
+        "a7716efcea82f962e3c307cbb512ae06febaf81d367cfe5dd603fd30e484e8dc",
+        "e36278f4f537588dd991101c541a7581b9a2e3073673fe2e22b729f3fffc8e0a",
+        "462ed59a3e47459cd11949a1dab8a95fe460455dff245b6c08a8d3fa8a8b338e",
+        "67975abe344d6d2c02f1336e5233c24fc0932e7cc58b31f48c701e2ae39173cb"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_Tribology_Friction_and_Wear.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_Tribology_Friction_and_Wear.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\FCEV_Hydrogen_Storage_and_Stack_Architecture.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\tire_dynamics_and_slip_angle_modeling.txt",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\03_Chemistry_Electrochemistry.txt"
+      ],
+      "retrieval_latency_sec": 0.761,
+      "total_latency_sec": 6.896,
+      "answer": "I don't know."
+    }
+  },
+  "conversational_history": {
+    "turn_1": {
+      "question": "What is the primary role of the Leader node in the Raft consensus algorithm used by etcd?",
+      "answer": "In the Raft consensus algorithm, the leader acts as the sole ingress for client requests. It appends incoming requests to its local log and sends AppendEntries RPCs to follower nodes. The leader commits the entry and applies it to its state machine only after a majority of followers acknowledge the write."
+    },
+    "turn_2": {
+      "question": "What happens if it becomes partitioned from the rest of the cluster?",
+      "answer": "If the leader is partitioned from the rest of the cluster and followers stop receiving heartbeats, a follower will become a candidate. This candidate increments a term counter and requests votes from the cluster. If it secures a majority vote, it becomes the new leader."
+    },
+    "history_length": 4
+  },
+  "fallback_validation": {
+    "dense_mode_success": true,
+    "dense_mode_answer": "There are exactly 16,384 hash slots in a Redis Cluster.",
+    "bm25_failure_recovered_docs": 5,
+    "bm25_fallback_chunk_ids": [
+      "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+      "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+      "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+      "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+      "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d"
+    ]
+  },
+  "post_integrity": {
+    "faiss_hash": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+    "pkl_hash": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+    "verified": true
+  }
+}

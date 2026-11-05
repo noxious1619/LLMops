@@ -3,7 +3,12 @@ embedding_model:
   model_name: "models/gemini-embedding-001"
 
 retriever:
-  top_k: 10
+  mode: "hybrid"  # options: "hybrid", "dense"
+  fallback_to_dense: true
+  top_k: 5
+  dense_k: 10
+  sparse_k: 10
+  rrf_k: 60
   search_type: "mmr"
   fetch_k: 20
   lambda_mult: 0.5

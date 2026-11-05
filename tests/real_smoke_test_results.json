@@ -1,0 +1,604 @@
+[
+  {
+    "query_id": "Q11",
+    "category": "Technical Acronyms & Path Attributes",
+    "query": "How does the Border Gateway Protocol (BGP) evaluate complex path attributes like Weight, Local Preference, and AS-PATH length rather than relying on simple distance metrics?",
+    "expected_doc": "DOC-NET-802.docx",
+    "faiss_count": 10,
+    "bm25_count": 10,
+    "unique_fused_count": 17,
+    "final_count": 5,
+    "dense_cids": [
+      "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+      "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+      "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+      "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+      "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+      "c2c72e8570028b522abcad2bf930e2a9fcacf0a61464dd797562979dc46a0032",
+      "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+      "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+      "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+      "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13"
+    ],
+    "sparse_cids": [
+      "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+      "51290e98d37f6c9d2a625126a8c2b5dee69814ba0917c2bee5cf9cb2f3137da0",
+      "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7",
+      "2ca317582a4ed1e261d05713ebcf532af9150ae827a9d56f4e8ff86690890571",
+      "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+      "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+      "b47e28c37c7321de284e99ee75bf79bd69bfc80e56338180955e154f7d8070ac",
+      "83d10015e11bb209f9a17cb7fe12ff4bd8b8cfb82891eb6cc1969aa09184a0db",
+      "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+      "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944"
+    ],
+    "top_5": [
+      {
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "chunk_id": "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+        "source": "DOC-NET-802.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+          "chunk_id": "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+          "content_hash": "b7f6a183673187c7e7360b392081453fbe7433c9712a46f2619edafa95178013"
+        },
+        "dense_rank": 1,
+        "sparse_rank": 1,
+        "preview": "Document ID: DOC-NET-802  BGP Routing and VPC Peering Fundamentals  Category: Distributed systems an"
+      },
+      {
+        "rank": 2,
+        "score": 0.0315136476426799,
+        "chunk_id": "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+        "source": "DOC-NET-802.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+          "chunk_id": "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+          "content_hash": "27aa87e2c8499d2e17c5f0d868f60aa7ebe7f742b59d58f8aaea79573e0bc364"
+        },
+        "dense_rank": 2,
+        "sparse_rank": 5,
+        "preview": "VPC Peering Architecture VPC Peering is a networking connection between two Virtual Private Clouds t"
+      },
+      {
+        "rank": 3,
+        "score": 0.02877846790890269,
+        "chunk_id": "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+        "source": "Paxos and Raft Consensus Algorithms.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T23:07:20+00:00",
+          "title": "Paxos and Raft Consensus Algorithms",
+          "moddate": "2026-10-31T23:07:20+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+          "total_pages": 1,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+          "content_hash": "b44f0f372f82923d8ac968d3e1c9c19c44266c259aa9046a609577ce4a1b6688"
+        },
+        "dense_rank": 9,
+        "sparse_rank": 10,
+        "preview": "Log Replication: The leader acts as the sole ingress for client requests. It appends the request to "
+      },
+      {
+        "rank": 4,
+        "score": 0.016129032258064516,
+        "chunk_id": "51290e98d37f6c9d2a625126a8c2b5dee69814ba0917c2bee5cf9cb2f3137da0",
+        "source": "automotive_suspension_kinematics.txt",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\automotive_suspension_kinematics.txt",
+          "chunk_id": "51290e98d37f6c9d2a625126a8c2b5dee69814ba0917c2bee5cf9cb2f3137da0",
+          "content_hash": "3240339c8705279c15455a924410452a759c64f3b5783f794e8360c305b71380"
+        },
+        "dense_rank": null,
+        "sparse_rank": 2,
+        "preview": "Document ID: DOC-AUTO-4039 Title: Automotive Suspension Kinematics and Damping Category: Automotive "
+      },
+      {
+        "rank": 5,
+        "score": 0.015873015873015872,
+        "chunk_id": "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7",
+        "source": "Optimizing PostgreSQL JSONB Query Performance.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T22:59:24+00:00",
+          "title": "Optimizing PostgreSQL JSONB Query Performance",
+          "moddate": "2026-10-31T22:59:24+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "total_pages": 2,
+          "page": 1,
+          "page_label": "2",
+          "chunk_id": "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7",
+          "content_hash": "ee6aa3322564aaee3b8862d93fbf2d95ffaea2b0530a52044ab8c0350d360ee5"
+        },
+        "dense_rank": null,
+        "sparse_rank": 3,
+        "preview": "-- Creating a path-optimized GIN index CREATE INDEX idx_user_data_path ON users USING GIN (profile_d"
+      }
+    ]
+  },
+  {
+    "query_id": "Q35",
+    "category": "Specific Technology & Mechanism",
+    "query": "How do Redis clusters utilize hash slots to automatically partition data across multiple nodes, ensuring horizontal scalability for caching layers?",
+    "expected_doc": "Redis Cluster Data Sharding and High Availability.pdf",
+    "faiss_count": 10,
+    "bm25_count": 10,
+    "unique_fused_count": 15,
+    "final_count": 5,
+    "dense_cids": [
+      "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+      "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+      "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+      "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+      "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+      "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+      "2f8f12846b6ddf432a77e443f42e5e570e3538b6251e2a0427094645e1188619",
+      "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+      "2a4f819b64cfd80289c9ac38126b0aedf0e7a09c718634c753778e5b928fd71e",
+      "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944"
+    ],
+    "sparse_cids": [
+      "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+      "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+      "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79",
+      "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+      "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+      "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+      "852f839a7b727c539d505733f836ef4de8b351d1858be9cbe1814f2db6f75106",
+      "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+      "1a4c9a66a5b35d013f951b49a001f39483547c76e524af5ad09f61b0508d2f69",
+      "43c58a917239ca8def27dbbf923a696b2b5a037ee6e22f1e6d638afdcec35787"
+    ],
+    "top_5": [
+      {
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "chunk_id": "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "source": "Redis Cluster Data Sharding and High Availability.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T23:06:47+00:00",
+          "title": "Redis Cluster Data Sharding and High Availability",
+          "moddate": "2026-10-31T23:06:47+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+          "total_pages": 1,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "content_hash": "ce56273507dac9baf33e999bbb69c23f76494014618c8af906172f52797aa829"
+        },
+        "dense_rank": 1,
+        "sparse_rank": 1,
+        "preview": "Redis Cluster: Data Sharding and High Availability ID: DOC-DB-316 Category: MongoDB, PostgreSQL and "
+      },
+      {
+        "rank": 2,
+        "score": 0.03225806451612903,
+        "chunk_id": "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+        "source": "Redis Cluster Data Sharding and High Availability.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T23:06:47+00:00",
+          "title": "Redis Cluster Data Sharding and High Availability",
+          "moddate": "2026-10-31T23:06:47+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+          "total_pages": 1,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "content_hash": "d3c5ded42afccd7bbdbf0e68065a2567bd15a0939e5ff0f38cce277a8bf61384"
+        },
+        "dense_rank": 2,
+        "sparse_rank": 2,
+        "preview": "Attempting a cross-slot operation will result in a CROSSSLOT error. To bypass this limitation, devel"
+      },
+      {
+        "rank": 3,
+        "score": 0.03125,
+        "chunk_id": "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "source": "DOC-ARC-901.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+          "chunk_id": "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+          "content_hash": "f84409717f253732a9230512d4653cd322eacc79352a45b0f769734b99b557fc"
+        },
+        "dense_rank": 4,
+        "sparse_rank": 4,
+        "preview": "Storage, Retention, and Compaction Kafka's storage mechanism is heavily optimized for sequential dis"
+      },
+      {
+        "rank": 4,
+        "score": 0.029857397504456328,
+        "chunk_id": "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+        "source": "Configuring K8s HPA for Custom Metrics.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T22:59:40+00:00",
+          "title": "Configuring K8s HPA for Custom Metrics",
+          "moddate": "2026-10-31T22:59:40+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Configuring K8s HPA for Custom Metrics.pdf",
+          "total_pages": 2,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+          "content_hash": "f7072865df760f47671d30f625dddcf985b74a61f429ed56191581e3160c9e16"
+        },
+        "dense_rank": 6,
+        "sparse_rank": 8,
+        "preview": "Configuring Kubernetes Horizontal Pod Autoscaler (HPA) for Custom Metrics Document ID: DOC-CLD-510  "
+      },
+      {
+        "rank": 5,
+        "score": 0.029857397504456328,
+        "chunk_id": "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+        "source": "Idempotency in RESTful API Design.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T22:59:15+00:00",
+          "title": "Idempotency in RESTful API Design",
+          "moddate": "2026-10-31T22:59:15+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Idempotency in RESTful API Design.pdf",
+          "total_pages": 2,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+          "content_hash": "bf7b220becbb60ce0789cfc8ecffc737230aae00dfa0ca137cbdedcda8445ca7"
+        },
+        "dense_rank": 8,
+        "sparse_rank": 6,
+        "preview": "Idempotency in RESTful API Design: Principles and Implementation ID: DOC-API-204 Category: REST APIs"
+      }
+    ]
+  },
+  {
+    "query_id": "Q1",
+    "category": "Conceptual Architecture & Identity",
+    "query": "What is the fundamental difference between authentication and authorization, and why is relying purely on OAuth 2.0 for identity verification considered a security vulnerability?",
+    "expected_doc": "DOC-SEC-601.docx",
+    "faiss_count": 10,
+    "bm25_count": 10,
+    "unique_fused_count": 14,
+    "final_count": 5,
+    "dense_cids": [
+      "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+      "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+      "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+      "abbd14f422c29228cda0acb0f38145ea437ce0c1b316dd3f7e543b90336c76a9",
+      "5ce9389233fbb4504a09ccd643f3b5f5d4be9e4bd1c8e1290aebc7d1e7bf8e43",
+      "a77d380a565168993f101b07cbc35a20237dace9a45be1244626df0295cf34e4",
+      "4c4520618106b2a6636b6c69365541be92f7a37172a0a0f2abe405f5389da8ce",
+      "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be",
+      "2e35bb3875a65c980d57f71b25b25e85fc01f1c073ec3a01ae6b9cba58365657",
+      "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3"
+    ],
+    "sparse_cids": [
+      "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+      "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+      "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+      "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+      "abbd14f422c29228cda0acb0f38145ea437ce0c1b316dd3f7e543b90336c76a9",
+      "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be",
+      "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13",
+      "462ed59a3e47459cd11949a1dab8a95fe460455dff245b6c08a8d3fa8a8b338e",
+      "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+      "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437"
+    ],
+    "top_5": [
+      {
+        "rank": 1,
+        "score": 0.03252247488101534,
+        "chunk_id": "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+        "source": "DOC-SEC-601.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-SEC-601.docx",
+          "chunk_id": "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+          "content_hash": "a5efa4c6a600be11605dabcdd2b9d2b568b49914cdde5d8faa97451b4362d24f"
+        },
+        "dense_rank": 1,
+        "sparse_rank": 2,
+        "preview": "Token Management and JWT Validation Access Tokens issued by the authorization server should be short"
+      },
+      {
+        "rank": 2,
+        "score": 0.03252247488101534,
+        "chunk_id": "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+        "source": "DOC-SEC-601.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-SEC-601.docx",
+          "chunk_id": "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+          "content_hash": "be102de1bcec582778466c7b847a1be52b53a5804f50421ba3f80c44e6b1f834"
+        },
+        "dense_rank": 2,
+        "sparse_rank": 1,
+        "preview": "Document ID: DOC-SEC-601  OAuth 2.0 and OpenID Connect Implementation Guide  Category: Cybersecurity"
+      },
+      {
+        "rank": 3,
+        "score": 0.031746031746031744,
+        "chunk_id": "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+        "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T23:06:39+00:00",
+          "title": "Zero Trust Network Access (ZTNA) Implementation",
+          "moddate": "2026-10-31T23:06:39+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "total_pages": 1,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+          "content_hash": "75ffa7be725a8e20ce25a83f31842d8a2c73865918f61f5c0c9395d7994292dc"
+        },
+        "dense_rank": 3,
+        "sparse_rank": 3,
+        "preview": "Implementing Zero Trust Network Access (ZTNA) ID: DOC-SEC-602 | Category: Cybersecurity and Authenti"
+      },
+      {
+        "rank": 4,
+        "score": 0.031009615384615385,
+        "chunk_id": "abbd14f422c29228cda0acb0f38145ea437ce0c1b316dd3f7e543b90336c76a9",
+        "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T23:06:39+00:00",
+          "title": "Zero Trust Network Access (ZTNA) Implementation",
+          "moddate": "2026-10-31T23:06:39+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "total_pages": 1,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "abbd14f422c29228cda0acb0f38145ea437ce0c1b316dd3f7e543b90336c76a9",
+          "content_hash": "f352b8e53777462d61a02dd716182adc7af2f839fd3828389804deda897c946f"
+        },
+        "dense_rank": 4,
+        "sparse_rank": 5,
+        "preview": "with the organization's Identity Provider (IdP) to enforce Multi-Factor Authentication (MFA). Only a"
+      },
+      {
+        "rank": 5,
+        "score": 0.029910714285714284,
+        "chunk_id": "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+        "source": "DOC-DEV-1003.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-DEV-1003.docx",
+          "chunk_id": "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+          "content_hash": "4280c072eff8cc11206d324925bfe4aebf643952cc2a0222be51d58ead666b8e"
+        },
+        "dense_rank": 10,
+        "sparse_rank": 4,
+        "preview": "Document ID: DOC-DEV-1003  CI/CD Pipeline Security and Secret Management  Category: Cloud computing "
+      }
+    ]
+  },
+  {
+    "query_id": "Q10",
+    "category": "Exact Terminology & Hardware Constraints",
+    "query": "How do recent advancements like FlashAttention address the quadratic computational and memory complexity bottlenecks inherent in standard Transformer architectures?",
+    "expected_doc": "DOC-ML-705.docx",
+    "faiss_count": 10,
+    "bm25_count": 10,
+    "unique_fused_count": 17,
+    "final_count": 5,
+    "dense_cids": [
+      "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+      "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+      "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+      "91f8db63f6a31a9d7ee22e08bf22e860430da37a988a2896ced5b102dfd4f0b3",
+      "c3ef5cc8980977acb264ddbc532d9cbca5232bf82dfc9c95aa3ae9687aa416bd",
+      "df4b11a737f3e3dbd44c9ac48a3d9aa5337f57963e41aa5ac55824909de142b1",
+      "a9cc6f08f3309375a9a315db021645685557ce20d251699c93ad94597ed449a2",
+      "fb820c76206d172e23879c37109af0dbdcda0dc328266311c6144b7c718f30b0",
+      "8a7c80747f20cf1972bdd23c0f34269360daffac2f1ab1f968e9522a560783f9",
+      "484202eca101ee6747be19dc5751091adb0f82ed82af926e25244c5e1c5f343a"
+    ],
+    "sparse_cids": [
+      "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+      "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+      "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+      "571efdabb3fd713e20558396a25b40a779f5a3edd083c2b3be28ae9e3b749452",
+      "9fd4d2c2321eafc2d8e9db96962bbecfab0fcdb377f39191f2cd54ecea451c1c",
+      "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+      "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+      "ea2892fe43278879f78f4f64327852003699719ae0277e6e26880986fce4a155",
+      "f52b1a07d289005f4b4f96b391ffb38f6d1eb74aad8ea48b1bb3bcbf4bef51c0",
+      "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90"
+    ],
+    "top_5": [
+      {
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "chunk_id": "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+        "source": "DOC-ML-705.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ML-705.docx",
+          "chunk_id": "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+          "content_hash": "a7162a5a22c150efec034ef1bb732d9f92157f41c8e8ba3a8c58dd54b70702e0"
+        },
+        "dense_rank": 1,
+        "sparse_rank": 1,
+        "preview": "Positional Encoding Because Transformers lack inherent recurrence or convolution, they are permutati"
+      },
+      {
+        "rank": 2,
+        "score": 0.03225806451612903,
+        "chunk_id": "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+        "source": "DOC-ML-705.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ML-705.docx",
+          "chunk_id": "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+          "content_hash": "6fb27d845b96ce830d6aabb8e0378ce1383298e98b45e30eb7e7a847f6c56309"
+        },
+        "dense_rank": 2,
+        "sparse_rank": 2,
+        "preview": "Document ID: DOC-ML-705  Transformer Architectures and Attention Mechanisms  Category: Machine learn"
+      },
+      {
+        "rank": 3,
+        "score": 0.031024531024531024,
+        "chunk_id": "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+        "source": "Automotive_ECU_Architecture_and_Microcontrollers.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_ECU_Architecture_and_Microcontrollers.docx",
+          "chunk_id": "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+          "content_hash": "ba53e1b593d8cf24302000e6c7cdd26adc5aaf457b518e1c69709584a0f49719"
+        },
+        "dense_rank": 3,
+        "sparse_rank": 6,
+        "preview": "Transition to Zonal Architectures and High-Performance Computers (HPCs) The proliferation of ECUs ha"
+      },
+      {
+        "rank": 4,
+        "score": 0.015873015873015872,
+        "chunk_id": "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+        "source": "DOC-NET-802.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+          "chunk_id": "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+          "content_hash": "27aa87e2c8499d2e17c5f0d868f60aa7ebe7f742b59d58f8aaea79573e0bc364"
+        },
+        "dense_rank": null,
+        "sparse_rank": 3,
+        "preview": "VPC Peering Architecture VPC Peering is a networking connection between two Virtual Private Clouds t"
+      },
+      {
+        "rank": 5,
+        "score": 0.015625,
+        "chunk_id": "571efdabb3fd713e20558396a25b40a779f5a3edd083c2b3be28ae9e3b749452",
+        "source": "Internal_Combustion_Engine_Thermodynamics.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Internal_Combustion_Engine_Thermodynamics.docx",
+          "chunk_id": "571efdabb3fd713e20558396a25b40a779f5a3edd083c2b3be28ae9e3b749452",
+          "content_hash": "a38fb58073bceee3ac27397c02d3cc454d48092685ac561c56aa490ece0a5548"
+        },
+        "dense_rank": null,
+        "sparse_rank": 4,
+        "preview": "Document ID: Internal_Combustion_Engine_Thermodynamics  Internal Combustion Engine Thermodynamics  C"
+      }
+    ]
+  },
+  {
+    "query_id": "Q48",
+    "category": "Semantic Matching & Security Policy",
+    "query": "Why is micro-segmentation critical in a modern cloud environment, and how does it restrict lateral movement if an attacker breaches a single workload?",
+    "expected_doc": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+    "faiss_count": 10,
+    "bm25_count": 10,
+    "unique_fused_count": 16,
+    "final_count": 5,
+    "dense_cids": [
+      "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+      "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+      "abbd14f422c29228cda0acb0f38145ea437ce0c1b316dd3f7e543b90336c76a9",
+      "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+      "8997c0eea7851885cc63b8e771ece8c742e3d535172e3ce83517ecc65af409b9",
+      "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+      "4c4520618106b2a6636b6c69365541be92f7a37172a0a0f2abe405f5389da8ce",
+      "e1f0e1040a0de22aa334e26695f5abe064e14fa2b85c6f0d46bee5041d89400c",
+      "a77d380a565168993f101b07cbc35a20237dace9a45be1244626df0295cf34e4",
+      "2e35bb3875a65c980d57f71b25b25e85fc01f1c073ec3a01ae6b9cba58365657"
+    ],
+    "sparse_cids": [
+      "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+      "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+      "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13",
+      "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+      "c513c45cbfc1e01f48d38edc1bb8998a700c57620b2f28cb60ffb672032b1902",
+      "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+      "462ed59a3e47459cd11949a1dab8a95fe460455dff245b6c08a8d3fa8a8b338e",
+      "c3ef5cc8980977acb264ddbc532d9cbca5232bf82dfc9c95aa3ae9687aa416bd",
+      "b47e28c37c7321de284e99ee75bf79bd69bfc80e56338180955e154f7d8070ac",
+      "c44cf8f4de75143797f962ccb732388082db3f0f6cc0f2acee91309b07922b3e"
+    ],
+    "top_5": [
+      {
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "chunk_id": "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+        "source": "Zero Trust Network Access (ZTNA) Implementation.pdf",
+        "metadata": {
+          "producer": "Skia/PDF m136",
+          "creator": "Chromium",
+          "creationdate": "2026-10-31T23:06:39+00:00",
+          "title": "Zero Trust Network Access (ZTNA) Implementation",
+          "moddate": "2026-10-31T23:06:39+00:00",
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "total_pages": 1,
+          "page": 0,
+          "page_label": "1",
+          "chunk_id": "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+          "content_hash": "75ffa7be725a8e20ce25a83f31842d8a2c73865918f61f5c0c9395d7994292dc"
+        },
+        "dense_rank": 1,
+        "sparse_rank": 1,
+        "preview": "Implementing Zero Trust Network Access (ZTNA) ID: DOC-SEC-602 | Category: Cybersecurity and Authenti"
+      },
+      {
+        "rank": 2,
+        "score": 0.031754032258064516,
+        "chunk_id": "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+        "source": "DOC-DEV-1003.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-DEV-1003.docx",
+          "chunk_id": "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+          "content_hash": "4280c072eff8cc11206d324925bfe4aebf643952cc2a0222be51d58ead666b8e"
+        },
+        "dense_rank": 4,
+        "sparse_rank": 2,
+        "preview": "Document ID: DOC-DEV-1003  CI/CD Pipeline Security and Secret Management  Category: Cloud computing "
+      },
+      {
+        "rank": 3,
+        "score": 0.031754032258064516,
+        "chunk_id": "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+        "source": "DOC-NET-802.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+          "chunk_id": "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+          "content_hash": "27aa87e2c8499d2e17c5f0d868f60aa7ebe7f742b59d58f8aaea79573e0bc364"
+        },
+        "dense_rank": 2,
+        "sparse_rank": 4,
+        "preview": "VPC Peering Architecture VPC Peering is a networking connection between two Virtual Private Clouds t"
+      },
+      {
+        "rank": 4,
+        "score": 0.030303030303030304,
+        "chunk_id": "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+        "source": "DOC-NET-802.docx",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+          "chunk_id": "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+          "content_hash": "b7f6a183673187c7e7360b392081453fbe7433c9712a46f2619edafa95178013"
+        },
+        "dense_rank": 6,
+        "sparse_rank": 6,
+        "preview": "Document ID: DOC-NET-802  BGP Routing and VPC Peering Fundamentals  Category: Distributed systems an"
+      },
+      {
+        "rank": 5,
+        "score": 0.015873015873015872,
+        "chunk_id": "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13",
+        "source": "tire_dynamics_and_slip_angle_modeling.txt",
+        "metadata": {
+          "source": "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\tire_dynamics_and_slip_angle_modeling.txt",
+          "chunk_id": "040551bbd2e194573c36e2b912cdf828bec0c43afbe38eb87d64718015d13c13",
+          "content_hash": "b4198603945791cf6ade93ec3ee02de3b30674bce0df72405d998104dc325cbd"
+        },
+        "dense_rank": null,
+        "sparse_rank": 3,
+        "preview": "Load Transfer and the Friction Circle Tire grip is heavily dependent on the vertical load (normal fo"
+      }
+    ]
+  }
+]

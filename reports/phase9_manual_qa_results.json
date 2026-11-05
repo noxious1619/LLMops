@@ -1,0 +1,356 @@
+{
+  "timestamp": "2026-11-05T12:01:36Z",
+  "total_tests": 15,
+  "passed": 13,
+  "failed": 2,
+  "pre_check": {
+    "faiss_hash": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+    "pkl_hash": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+    "verified": true
+  },
+  "post_check": {
+    "faiss_hash": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+    "pkl_hash": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+    "verified": true
+  },
+  "test_results": [
+    {
+      "id": "TC-01",
+      "category": "Exact keyword query",
+      "question": "What is the CRC16 checksum function and modulo 16384 used for in Redis Cluster?",
+      "expected": "Exact matching of CRC16 and 16384; retrieves Redis sharding chunk; explains hash slot mapping.",
+      "actual_answer": "In Redis Cluster, the CRC16 checksum of a key, modulo 16384, is used to calculate which specific hash slot a key belongs to.",
+      "retrieved_chunk_ids": [
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+        "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Optimizing PostgreSQL JSONB Query Performance.pdf"
+      ],
+      "latency_sec": 8.209,
+      "status": "PASS",
+      "notes": "BM25 exact token matching on CRC16 and 16384."
+    },
+    {
+      "id": "TC-02",
+      "category": "Semantic query",
+      "question": "How do modern transformer networks avoid processing words sequentially one by one like older recurrent models did?",
+      "expected": "Dense retrieval connects paraphrased query to scaled dot-product parallel attention chunk without exact keywords.",
+      "actual_answer": "Transformers eliminate the need for sequential recurrent structures by relying entirely on self-attention mechanisms to draw global dependencies between inputs and outputs simultaneously. Because this mechanism makes them inherently permutation invariant, positional encodings are added to the input embeddings to inject positional information about sequence order.",
+      "retrieved_chunk_ids": [
+        "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+        "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+        "5aa881d020235daa98d3feb1ceed06f1d610aa67f65250a4d3d55824047b5f60",
+        "b30cf9566a02a1d15c3fa3fac1526598a8449be681c279fa6867c4c3cfdd9526",
+        "9bafa8be7984513be5077f5d005affd60eb2325cf701391739719b2957fbd17c"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ML-705.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ML-705.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Implementing Asynchronous Generators in Python.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\The Saga Pattern for Distributed Transactions.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\04_Biology_Molecular_Basis_of_Inheritance.txt"
+      ],
+      "latency_sec": 8.012,
+      "status": "PASS",
+      "notes": "Semantic vector search connects 'avoid processing words sequentially' to self-attention mechanism."
+    },
+    {
+      "id": "TC-03",
+      "category": "Acronym query",
+      "question": "What does the AS-PATH attribute indicate in BGP routing and how is it used?",
+      "expected": "BM25 exact token matching retrieves BGP DOC-NET-802 chunk 1b7bb4ab at Rank 1 and describes AS-PATH attribute.",
+      "actual_answer": "I don't know.",
+      "retrieved_chunk_ids": [
+        "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+        "a157a627b100733735d25dadb8d04b1a64dc3d9d97ad3ab3075b62286237d608",
+        "abbd14f422c29228cda0acb0f38145ea437ce0c1b316dd3f7e543b90336c76a9",
+        "2ca317582a4ed1e261d05713ebcf532af9150ae827a9d56f4e8ff86690890571",
+        "df9d9f5f76c76fe997059ea2897e7e19be2ce579a9c792f2817219b362e7a648"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-NET-802.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Zero Trust Network Access (ZTNA) Implementation.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Autonomous_Driving_Sensor_Fusion_and_Perception.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\silk_road_trade_networks.txt"
+      ],
+      "latency_sec": 10.99,
+      "status": "FAIL",
+      "notes": "Handles technical networking acronyms BGP and AS-PATH."
+    },
+    {
+      "id": "TC-04",
+      "category": "Technical specification",
+      "question": "What are the exact hash slot boundaries in Redis Cluster, specifically the minimum and maximum slot index numbers?",
+      "expected": "Returns exact configuration specification: 16,384 total slots ranging from index 0 to 16,383.",
+      "actual_answer": "I don't know.",
+      "retrieved_chunk_ids": [
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+        "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7",
+        "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+        "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Optimizing PostgreSQL JSONB Query Performance.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Optimizing PostgreSQL JSONB Query Performance.pdf"
+      ],
+      "latency_sec": 9.775,
+      "status": "FAIL",
+      "notes": "Verifies exact numeric parameters without hallucination or rounded off approximations."
+    },
+    {
+      "id": "TC-05",
+      "category": "Multi-chunk question",
+      "question": "How do Redis clusters utilize hash slots to automatically partition data across multiple nodes, ensuring horizontal scalability for caching layers?",
+      "expected": "Retrieves complementary chunks 8fe98fe0 (slot calculation) and d677ad5a (node assignment/resharding) in Top-5.",
+      "actual_answer": "Redis Cluster partitions data by dividing the dataset into exactly 16,384 hash slots, with each master node responsible for a contiguous subset of these slots. To assign a key to a slot, Redis calculates the CRC16 checksum of the key modulo 16384. If a client connects to a node that does not hold the slot for a requested key, the node replies with a -MOVED redirection error to point the client to the correct node.",
+      "retrieved_chunk_ids": [
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "a9cc6f08f3309375a9a315db021645685557ce20d251699c93ad94597ed449a2",
+        "2a4f819b64cfd80289c9ac38126b0aedf0e7a09c718634c753778e5b928fd71e"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\automotive_hvac_and_heat_pump_systems.txt",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Configuring K8s HPA for Custom Metrics.pdf"
+      ],
+      "latency_sec": 8.903,
+      "status": "PASS",
+      "notes": "Both target multi-chunk IDs retrieved in Top-5: True."
+    },
+    {
+      "id": "TC-06",
+      "category": "Conversational follow-up",
+      "question": "Turn 1: 'What is the primary role of the Leader node in the Raft consensus algorithm used by etcd?' -> Turn 2: 'What happens if it becomes partitioned from the rest of the cluster?'",
+      "expected": "Pronoun 'it' contextualized to Raft leader; retrieves partition election chunk fa81afb5; explains failover.",
+      "actual_answer": "If the leader is partitioned and followers stop receiving heartbeats, a follower will become a candidate, increment its term counter, and request votes. If the candidate secures a majority vote, it becomes the new leader.",
+      "retrieved_chunk_ids": [
+        "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+        "a9cc6f08f3309375a9a315db021645685557ce20d251699c93ad94597ed449a2"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Paxos and Raft Consensus Algorithms.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\automotive_hvac_and_heat_pump_systems.txt"
+      ],
+      "latency_sec": 12.606,
+      "status": "PASS",
+      "notes": "Query contextualizer correctly resolved 'it' to Raft leader across turns."
+    },
+    {
+      "id": "TC-07",
+      "category": "Negative control",
+      "question": "What is the rotational period, atmospheric chemical composition, and surface gravity of the exoplanet Kepler-186f?",
+      "expected": "Refuses to hallucinate on out-of-domain topic; responds with 'I don't know.' per QA prompt guidelines.",
+      "actual_answer": "I don't know.",
+      "retrieved_chunk_ids": [
+        "8def58aeec74b321fbe308cf8adee112eed670a696fb46bb8ed65919834b6422",
+        "a7716efcea82f962e3c307cbb512ae06febaf81d367cfe5dd603fd30e484e8dc",
+        "e36278f4f537588dd991101c541a7581b9a2e3073673fe2e22b729f3fffc8e0a",
+        "1b0f1a5005edf40931b1703af7267379547d8ceb7ef6672f0c0a20e9ab065307",
+        "67975abe344d6d2c02f1336e5233c24fc0932e7cc58b31f48c701e2ae39173cb"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_Tribology_Friction_and_Wear.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_Tribology_Friction_and_Wear.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\FCEV_Hydrogen_Storage_and_Stack_Architecture.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-HIS-2116.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\03_Chemistry_Electrochemistry.txt"
+      ],
+      "latency_sec": 8.868,
+      "status": "PASS",
+      "notes": "Zero hallucination verified against prompt instructions."
+    },
+    {
+      "id": "TC-08",
+      "category": "Long query",
+      "question": "In a microservice-based architecture subject to cascading distributed failures, how does the Circuit Breaker design pattern manage state transitions across Closed, Open, and Half-Open states to protect downstream services, and what specific conditions trigger the transition from Open back to Closed?",
+      "expected": "Complex multi-sentence query retrieves Circuit Breaker chunks; explains state transitions and trial calls.",
+      "actual_answer": "The Circuit Breaker transitions from Closed to Open when the failure rate exceeds a predefined threshold, failing calls fast to give the downstream service time to recover before moving to Half-Open after a configurable sleep duration. In the Half-Open state, it permits a limited number of test requests to pass through to the downstream service. If these test requests succeed, the downstream service is deemed healthy, which triggers the breaker to reset back to the Closed state.",
+      "retrieved_chunk_ids": [
+        "8997c0eea7851885cc63b8e771ece8c742e3d535172e3ce83517ecc65af409b9",
+        "e1f0e1040a0de22aa334e26695f5abe064e14fa2b85c6f0d46bee5041d89400c",
+        "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79",
+        "01d5ddb21233bbb1557a28dc3e73e4c96d9b55b416ffc75f40e8dbd0e6b72ef9",
+        "ba1049bf79aa71512b504fffbe7abbc7bf5417af920d28c804a6a553c8665af7"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Circuit Breaker Pattern in Microservices.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Circuit Breaker Pattern in Microservices.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\The Saga Pattern for Distributed Transactions.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Electric_Vehicle_Battery_Management_Systems_BMS.docx"
+      ],
+      "latency_sec": 10.441,
+      "status": "PASS",
+      "notes": "Successfully parsed and processed 48-word technical query."
+    },
+    {
+      "id": "TC-09",
+      "category": "Repeated query",
+      "question": "What is the fundamental difference between authentication and authorization, and why is relying purely on OAuth 2.0 for identity verification considered a security vulnerability?",
+      "expected": "3 identical runs produce identical Top-5 retrieved chunk IDs and semantically identical answers.",
+      "actual_answer": "OAuth 2.0 is strictly designed for authorization (delegated access to user accounts) rather than authentication, which involves verifying an end-user's identity. Relying purely on OAuth 2.0 for identity verification can lead to security vulnerabilities because it lacks the identity layer and user claims provided by protocols like OpenID Connect (OIDC).",
+      "retrieved_chunk_ids": [
+        "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+        "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+        "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+        "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+        "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be"
+      ],
+      "retrieved_sources": [],
+      "latency_sec": 9.694,
+      "status": "PASS",
+      "notes": "Deterministic retrieval verified across 3 distinct sessions: True."
+    },
+    {
+      "id": "TC-10",
+      "category": "Source grounding",
+      "question": "How do recent advancements like FlashAttention address the quadratic computational and memory complexity bottlenecks inherent in standard Transformer architectures?",
+      "expected": "Retrieves chunk 21880320; answer is strictly grounded in the document (tiling, SRAM/HBM IO reduction).",
+      "actual_answer": "Recent advancements like FlashAttention address the quadratic complexity bottleneck through hardware-aware algorithms or sparse attention patterns. This optimization allows standard Transformer architectures to scale efficiently, enabling context lengths of up to millions of tokens in modern Large Language Models.",
+      "retrieved_chunk_ids": [
+        "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+        "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+        "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+        "4c4520618106b2a6636b6c69365541be92f7a37172a0a0f2abe405f5389da8ce"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ML-705.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ML-705.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_ECU_Architecture_and_Microcontrollers.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive Lightweighting and Composite Materials.pdf"
+      ],
+      "latency_sec": 8.296,
+      "status": "PASS",
+      "notes": "Verified factual alignment against Attention and Transformer Architectures text."
+    },
+    {
+      "id": "TC-11",
+      "category": "Dense retrieval mode",
+      "question": "How many hash slots are used in a Redis Cluster? (mode='dense')",
+      "expected": "Bypasses BM25 and RRF; retrieves purely from FAISS dense vectorstore; answers with 16,384.",
+      "actual_answer": "There are exactly 16,384 hash slots in a Redis Cluster.",
+      "retrieved_chunk_ids": [
+        "FAISS direct dense retrieval"
+      ],
+      "retrieved_sources": [
+        "faiss_index/benchmark_70docs_v1"
+      ],
+      "latency_sec": 8.196,
+      "status": "PASS",
+      "notes": "Retrieval mode verified: dense."
+    },
+    {
+      "id": "TC-12",
+      "category": "BM25 failure fallback",
+      "question": "Simulated BM25 runtime crash with fallback_to_dense=True",
+      "expected": "Catches BM25 exception, logs warning, falls back to dense candidates without raising error.",
+      "actual_answer": "Recovered 5 chunks via dense fallback. Top chunk: 8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+      "retrieved_chunk_ids": [
+        "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+        "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+        "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+        "e320f233ad9da405c293119cce9125271acbb3d72dd72e59bc1b58b37b2cc3e0",
+        "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Redis Cluster Data Sharding and High Availability.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Optimizing PostgreSQL JSONB Query Performance.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Configuring K8s HPA for Custom Metrics.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-ARC-901.docx"
+      ],
+      "latency_sec": 0.928,
+      "status": "PASS",
+      "notes": "Graceful degradation without process crash."
+    },
+    {
+      "id": "TC-13",
+      "category": "Session isolation",
+      "question": "What is the secret cryptographic salt for Project Aegis?",
+      "expected": "Session Alpha answers from its private docstore; Session Beta cannot access it and responds 'I don't know.'",
+      "actual_answer": "Session Alpha: 'The secret cryptographic salt for Project Aegis is AEGIS_SAL...' | Session Beta: 'I don't know.'",
+      "retrieved_chunk_ids": [
+        "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+        "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be",
+        "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+        "4c4520618106b2a6636b6c69365541be92f7a37172a0a0f2abe405f5389da8ce",
+        "67975abe344d6d2c02f1336e5233c24fc0932e7cc58b31f48c701e2ae39173cb"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-DEV-1003.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive_CAN_Bus_Architecture_and_Diagnostics.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-SEC-601.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive Lightweighting and Composite Materials.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\03_Chemistry_Electrochemistry.txt"
+      ],
+      "latency_sec": 7.272,
+      "status": "PASS",
+      "notes": "Verified zero cross-session document leakage across FAISS and session-matched BM25."
+    },
+    {
+      "id": "TC-14",
+      "category": "Empty or vague query",
+      "question": "14A: '   ' (whitespace) | 14B: 'Tell me more about it.'",
+      "expected": "14A rejected with HTTP 400 Bad Request; 14B handled without crashing (HTTP 200 safe refusal).",
+      "actual_answer": "14A Status: 400 ({\"detail\":\"Message cannot be empty\"}) | 14B Answer: 'I don't know.'",
+      "retrieved_chunk_ids": [
+        "338dcd656d360d58cbb8b17014a058f9eeca1569f4879ca5bce5bede964d2c9b",
+        "508293340903b544577a2a9aff64d78cc1c827b019da088d5491c7917dca3405",
+        "eb6aea15e7834ba5efbb4bc81947d939a62effcd5253fb4af36b8bd760186f87",
+        "47fdbfe60773dc9331edef1112ff9c7971357c21fd7e90441e17c68ea5d8e7aa",
+        "9bafa8be7984513be5077f5d005affd60eb2325cf701391739719b2957fbd17c"
+      ],
+      "retrieved_sources": [
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\DOC-HIS-2217.docx",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\Automotive On-Board Diagnostics and Telematics.pdf",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\connected_vehicle_v2x_communication.txt",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\05_Biology_Human_Reproduction.txt",
+        "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\docs_70\\04_Biology_Molecular_Basis_of_Inheritance.txt"
+      ],
+      "latency_sec": 11.789,
+      "status": "PASS",
+      "notes": "Input boundary validation enforced."
+    },
+    {
+      "id": "TC-15",
+      "category": "API response",
+      "question": "How does Redis hashing work?",
+      "expected": "HTTP 200; JSON response strictly conforms to {'answer': str}; SESSIONS updated with user/assistant turns.",
+      "actual_answer": "Redis Cluster uses 16,384 deterministic Hash Slots to partition data across nodes. To determine which slot a key belongs...",
+      "retrieved_chunk_ids": [
+        "API contract verified"
+      ],
+      "retrieved_sources": [
+        "/chat"
+      ],
+      "latency_sec": 11.655,
+      "status": "PASS",
+      "notes": "Contract verified: keys=['answer'], session_turns=2."
+    }
+  ]
+}
