@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-07T16:12:56.072004Z",
+    "evaluator": "Phase 9 Forensic Precision@5 Audit Engine",
+    "total_questions_audited": 178,
+    "total_retrieved_slots_audited": 890,
+    "theoretical_max_precision_at_5": 22.47,
+    "observed_exact_precision_at_5": 22.36,
+    "expanded_semantic_precision_at_5": 27.3,
+    "contextual_precision_at_5": 56.52,
+    "useful_context_rate_at_5": 56.52,
+    "redundancy_rate_at_5": 4.72,
+    "irrelevant_chunk_rate_at_5": 6.97
+  },
+  "mathematical_ceiling_analysis": {
+    "total_group_a_questions": 178,
+    "total_retrieved_positions": 890,
+    "questions_with_1_gt_chunk": 156,
+    "questions_with_2_gt_chunks": 22,
+    "total_canonical_gt_chunks": 200,
+    "theoretical_maximum_micro_precision_pct": 22.4719,
+    "theoretical_maximum_macro_precision_pct": 22.4719,
+    "observed_retrieved_exact_matches": 199,
+    "missed_ground_truth_chunks": 1,
+    "ceiling_efficiency_pct": 99.5
+  },
+  "per_question_exact_match_distribution": {
+    "0_of_5_relevant_chunks": 0,
+    "1_of_5_relevant_chunks": 157,
+    "2_of_5_relevant_chunks": 21,
+    "3_of_5_relevant_chunks": 0,
+    "4_of_5_relevant_chunks": 0,
+    "5_of_5_relevant_chunks": 0
+  },
+  "classification_summary": {
+    "exact_match_chunks": 199,
+    "semantically_relevant_chunks": 44,
+    "supporting_context_chunks": 260,
+    "partially_relevant_chunks": 283,
+    "redundant_chunks": 42,
+    "irrelevant_chunks": 62
+  },
+  "precision_measurements": {
+    "original_exact_match_precision": {
+      "micro_pct": 22.36,
+      "macro_pct": 22.36,
+      "numerator": 199,
+      "denominator": 890
+    },
+    "expanded_semantic_precision": {
+      "micro_pct": 27.3,
+      "macro_pct": 27.3,
+      "numerator": 243,
+      "denominator": 890
+    },
+    "contextual_precision": {
+      "micro_pct": 56.52,
+      "macro_pct": 56.52,
+      "numerator": 503,
+      "denominator": 890
+    },
+    "strict_precision": {
+      "micro_pct": 27.3,
+      "macro_pct": 27.3,
+      "numerator": 243,
+      "denominator": 890
+    },
+    "useful_context_rate": {
+      "micro_pct": 56.52,
+      "macro_pct": 56.52,
+      "numerator": 503,
+      "denominator": 890
+    },
+    "redundancy_rate": {
+      "micro_pct": 4.72,
+      "macro_pct": 4.72,
+      "numerator": 42,
+      "denominator": 890
+    },
+    "partially_relevant_rate": {
+      "micro_pct": 31.8,
+      "numerator": 283,
+      "denominator": 890
+    },
+    "irrelevant_chunk_rate": {
+      "micro_pct": 6.97,
+      "macro_pct": 6.97,
+      "numerator": 62,
+      "denominator": 890
+    }
+  },
+  "rank_wise_distribution": {
+    "rank_1": {
+      "EXACT_MATCH": 162,
+      "SEMANTICALLY_RELEVANT": 9,
+      "SUPPORTING_CONTEXT": 7
+    },
+    "rank_2": {
+      "SUPPORTING_CONTEXT": 85,
+      "EXACT_MATCH": 33,
+      "PARTIALLY_RELEVANT": 27,
+      "SEMANTICALLY_RELEVANT": 29,
+      "IRRELEVANT": 2,
+      "REDUNDANT": 2
+    },
+    "rank_3": {
+      "SUPPORTING_CONTEXT": 63,
+      "PARTIALLY_RELEVANT": 83,
+      "IRRELEVANT": 13,
+      "REDUNDANT": 14,
+      "SEMANTICALLY_RELEVANT": 4,
+      "EXACT_MATCH": 1
+    },
+    "rank_4": {
+      "PARTIALLY_RELEVANT": 82,
+      "IRRELEVANT": 17,
+      "SUPPORTING_CONTEXT": 64,
+      "REDUNDANT": 10,
+      "EXACT_MATCH": 3,
+      "SEMANTICALLY_RELEVANT": 2
+    },
+    "rank_5": {
+      "PARTIALLY_RELEVANT": 91,
+      "IRRELEVANT": 30,
+      "SUPPORTING_CONTEXT": 41,
+      "REDUNDANT": 16
+    }
+  },
+  "score_wise_distribution": {
+    "< -5.0": {
+      "PARTIALLY_RELEVANT": 229,
+      "IRRELEVANT": 56,
+      "SUPPORTING_CONTEXT": 95,
+      "REDUNDANT": 17,
+      "EXACT_MATCH": 1,
+      "SEMANTICALLY_RELEVANT": 3
+    },
+    "[-5.0, 0.0)": {
+      "SUPPORTING_CONTEXT": 137,
+      "PARTIALLY_RELEVANT": 53,
+      "SEMANTICALLY_RELEVANT": 14,
+      "EXACT_MATCH": 24,
+      "REDUNDANT": 18,
+      "IRRELEVANT": 6
+    },
+    "[0.0, 3.0)": {
+      "EXACT_MATCH": 63,
+      "SUPPORTING_CONTEXT": 21,
+      "SEMANTICALLY_RELEVANT": 17,
+      "PARTIALLY_RELEVANT": 1,
+      "REDUNDANT": 7
+    },
+    "[3.0, 6.0)": {
+      "EXACT_MATCH": 82,
+      "SUPPORTING_CONTEXT": 7,
+      "SEMANTICALLY_RELEVANT": 8
+    },
+    ">= 6.0": {
+      "EXACT_MATCH": 29,
+      "SEMANTICALLY_RELEVANT": 2
+    }
+  }
+}

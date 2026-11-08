@@ -1,0 +1,650 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-07T15:50:26.765896Z",
+    "evaluator": "Phase 7 Hybrid Retrieval + Cross-Encoder Reranking Evaluation Pipeline",
+    "retriever_architecture": "Hybrid (FAISS Top-10 + BM25 Top-10 via RRF k=60 to 20 candidates) + CrossEncoder (ms-marco-MiniLM-L-6-v2) Top-5",
+    "dense_model": "models/gemini-embedding-001 (3072 dims)",
+    "sparse_model": "BM25Okapi",
+    "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "reranker_batch_size": 5,
+    "rrf_constant": 60,
+    "candidate_k": 20,
+    "final_k": 5,
+    "dense_k": 10,
+    "sparse_k": 10,
+    "total_corpus_chunks": 181,
+    "total_corpus_documents": 68,
+    "total_questions": 200,
+    "group_a_count": 178,
+    "group_b_count": 5,
+    "group_c_count": 17,
+    "hardware_profile": {
+      "device": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+      "cuda_available": true,
+      "init_vram_mb": 86.65,
+      "peak_vram_mb": 140.06,
+      "final_vram_mb": 94.78,
+      "vram_delta_mb": 8.12,
+      "total_vram_mb": 6143.5
+    },
+    "pre_snapshots": {
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\faiss_index\\benchmark_70docs_v1\\index.faiss": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\faiss_index\\benchmark_70docs_v1\\index.pkl": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\data\\bm25_index\\bm25_index.pkl": "9bf695fafd18f60555439acc1ab6795cf715e51b45094762896f10d87aca707d",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\data\\bm25_index\\bm25_manifest.json": "85f28f36887af22dd5320c7f84d7964333d18de02c86a57ee6861ba3e3a2590d",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\data\\bm25_corpus\\bm25_corpus_70docs_181chunks.json": "fc4bd84f95adf9f6e1e718bf768e2b1d2d47597db07dd0dc76e309a97b316e14",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\tests\\retrieval_ground_truth_200_corrected_v1.json": "0b0cd9d97eb7f16d7b90fc9d0db274472114de3f23d6c2e9667671c7778876a2"
+    },
+    "post_snapshots": {
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\faiss_index\\benchmark_70docs_v1\\index.faiss": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\faiss_index\\benchmark_70docs_v1\\index.pkl": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\data\\bm25_index\\bm25_index.pkl": "9bf695fafd18f60555439acc1ab6795cf715e51b45094762896f10d87aca707d",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\data\\bm25_index\\bm25_manifest.json": "85f28f36887af22dd5320c7f84d7964333d18de02c86a57ee6861ba3e3a2590d",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\data\\bm25_corpus\\bm25_corpus_70docs_181chunks.json": "fc4bd84f95adf9f6e1e718bf768e2b1d2d47597db07dd0dc76e309a97b316e14",
+      "C:\\Users\\Dishant Pandey\\Desktop\\Resume\\LLM_OPS\\tests\\retrieval_ground_truth_200_corrected_v1.json": "0b0cd9d97eb7f16d7b90fc9d0db274472114de3f23d6c2e9667671c7778876a2"
+    },
+    "eval_duration_seconds": 159.67,
+    "total_retries": 0
+  },
+  "metrics": {
+    "group_a_verified_primary": {
+      "cohort_name": "Group A (Verified Primary)",
+      "total_questions": 178,
+      "completed": 178,
+      "failed": 0,
+      "candidate_hit_at_20": 178,
+      "candidate_hit_rate_at_20": 100.0,
+      "macro_candidate_recall_at_20": 100.0,
+      "micro_candidate_recall_at_20": 100.0,
+      "hits_at_5": 178,
+      "hit_rate_at_5": 100.0,
+      "rank_1_hits": 162,
+      "rank_1_accuracy": 91.01,
+      "mrr": 0.9537,
+      "macro_recall_at_5": 99.72,
+      "micro_recall_at_5": 99.5,
+      "precision_at_5": 22.36,
+      "ndcg_at_5": 96.25,
+      "minimum_sufficient_coverage_rate": 99.44,
+      "total_gt_chunks": 200,
+      "total_relevant_retrieved": 199,
+      "latency_breakdown_ms": {
+        "dense": {
+          "mean": 545.44,
+          "p50": 535.59,
+          "p95": 615.06,
+          "min": 483.5,
+          "max": 1175.93
+        },
+        "sparse": {
+          "mean": 1.53,
+          "p50": 1.4,
+          "p95": 2.37,
+          "min": 0.91,
+          "max": 2.99
+        },
+        "rrf": {
+          "mean": 0.12,
+          "p50": 0.1,
+          "p95": 0.21,
+          "min": 0.07,
+          "max": 0.31
+        },
+        "candidate_retrieval": {
+          "mean": 547.09,
+          "p50": 537.33,
+          "p95": 616.21,
+          "min": 484.63,
+          "max": 1178.39
+        },
+        "rerank": {
+          "mean": 101.15,
+          "p50": 96.97,
+          "p95": 146.75,
+          "min": 68.27,
+          "max": 236.24
+        },
+        "total_retrieval": {
+          "mean": 648.24,
+          "p50": 638.41,
+          "p95": 724.41,
+          "min": 563.92,
+          "max": 1289.16
+        }
+      }
+    },
+    "group_b_partially_supported": {
+      "cohort_name": "Group B (Partially Supported)",
+      "total_questions": 5,
+      "completed": 5,
+      "failed": 0,
+      "candidate_hit_at_20": 5,
+      "candidate_hit_rate_at_20": 100.0,
+      "macro_candidate_recall_at_20": 100.0,
+      "micro_candidate_recall_at_20": 100.0,
+      "hits_at_5": 5,
+      "hit_rate_at_5": 100.0,
+      "rank_1_hits": 5,
+      "rank_1_accuracy": 100.0,
+      "mrr": 1.0,
+      "macro_recall_at_5": 100.0,
+      "micro_recall_at_5": 100.0,
+      "precision_at_5": 32.0,
+      "ndcg_at_5": 100.0,
+      "minimum_sufficient_coverage_rate": 100.0,
+      "total_gt_chunks": 8,
+      "total_relevant_retrieved": 8,
+      "latency_breakdown_ms": {
+        "dense": {
+          "mean": 561.66,
+          "p50": 535.2,
+          "p95": 682.41,
+          "min": 522.93,
+          "max": 682.41
+        },
+        "sparse": {
+          "mean": 1.42,
+          "p50": 1.24,
+          "p95": 2.03,
+          "min": 1.18,
+          "max": 2.03
+        },
+        "rrf": {
+          "mean": 0.11,
+          "p50": 0.1,
+          "p95": 0.18,
+          "min": 0.09,
+          "max": 0.18
+        },
+        "candidate_retrieval": {
+          "mean": 563.19,
+          "p50": 536.75,
+          "p95": 683.72,
+          "min": 524.2,
+          "max": 683.72
+        },
+        "rerank": {
+          "mean": 89.19,
+          "p50": 84.85,
+          "p95": 111.33,
+          "min": 70.22,
+          "max": 111.33
+        },
+        "total_retrieval": {
+          "mean": 652.39,
+          "p50": 621.59,
+          "p95": 779.58,
+          "min": 612.37,
+          "max": 779.58
+        }
+      }
+    },
+    "group_c_negative_controls": {
+      "cohort_name": "Group C (Negative Control)",
+      "total_questions": 17,
+      "completed": 17,
+      "failed": 0,
+      "candidate_hit_at_20": 0,
+      "candidate_hit_rate_at_20": 0.0,
+      "macro_candidate_recall_at_20": null,
+      "micro_candidate_recall_at_20": null,
+      "hits_at_5": 0,
+      "hit_rate_at_5": 0.0,
+      "rank_1_hits": 0,
+      "rank_1_accuracy": 0.0,
+      "mrr": 0.0,
+      "macro_recall_at_5": null,
+      "micro_recall_at_5": null,
+      "precision_at_5": 0.0,
+      "ndcg_at_5": 0.0,
+      "minimum_sufficient_coverage_rate": 0.0,
+      "total_gt_chunks": 0,
+      "total_relevant_retrieved": 0,
+      "latency_breakdown_ms": {
+        "dense": {
+          "mean": 541.01,
+          "p50": 542.3,
+          "p95": 565.31,
+          "min": 503.5,
+          "max": 565.31
+        },
+        "sparse": {
+          "mean": 1.47,
+          "p50": 1.31,
+          "p95": 2.08,
+          "min": 1.06,
+          "max": 2.08
+        },
+        "rrf": {
+          "mean": 0.12,
+          "p50": 0.11,
+          "p95": 0.28,
+          "min": 0.08,
+          "max": 0.28
+        },
+        "candidate_retrieval": {
+          "mean": 542.6,
+          "p50": 543.72,
+          "p95": 566.55,
+          "min": 504.8,
+          "max": 566.55
+        },
+        "rerank": {
+          "mean": 97.84,
+          "p50": 92.78,
+          "p95": 152.47,
+          "min": 73.23,
+          "max": 152.47
+        },
+        "total_retrieval": {
+          "mean": 640.44,
+          "p50": 636.94,
+          "p95": 694.88,
+          "min": 595.99,
+          "max": 694.88
+        }
+      }
+    },
+    "overall_all_200": {
+      "cohort_name": "Overall (All 200 Questions)",
+      "total_questions": 200,
+      "completed": 200,
+      "failed": 0,
+      "candidate_hit_at_20": 183,
+      "candidate_hit_rate_at_20": 91.5,
+      "macro_candidate_recall_at_20": 100.0,
+      "micro_candidate_recall_at_20": 100.0,
+      "hits_at_5": 183,
+      "hit_rate_at_5": 91.5,
+      "rank_1_hits": 167,
+      "rank_1_accuracy": 83.5,
+      "mrr": 0.8738,
+      "macro_recall_at_5": 99.73,
+      "micro_recall_at_5": 99.52,
+      "precision_at_5": 20.7,
+      "ndcg_at_5": 88.16,
+      "minimum_sufficient_coverage_rate": 91.0,
+      "total_gt_chunks": 208,
+      "total_relevant_retrieved": 207,
+      "latency_breakdown_ms": {
+        "dense": {
+          "mean": 545.47,
+          "p50": 536.72,
+          "p95": 615.06,
+          "min": 483.5,
+          "max": 1175.93
+        },
+        "sparse": {
+          "mean": 1.53,
+          "p50": 1.38,
+          "p95": 2.37,
+          "min": 0.91,
+          "max": 2.99
+        },
+        "rrf": {
+          "mean": 0.12,
+          "p50": 0.1,
+          "p95": 0.22,
+          "min": 0.07,
+          "max": 0.31
+        },
+        "candidate_retrieval": {
+          "mean": 547.11,
+          "p50": 538.28,
+          "p95": 616.21,
+          "min": 484.63,
+          "max": 1178.39
+        },
+        "rerank": {
+          "mean": 100.57,
+          "p50": 96.35,
+          "p95": 146.75,
+          "min": 68.27,
+          "max": 236.24
+        },
+        "total_retrieval": {
+          "mean": 647.68,
+          "p50": 637.03,
+          "p95": 724.41,
+          "min": 563.92,
+          "max": 1289.16
+        }
+      }
+    }
+  },
+  "negative_control_audit": {
+    "total_negative_queries": 17,
+    "total_slots_retrieved": 85,
+    "chunks_matching_any_known_corpus_gt": 81,
+    "false_positive_retrieval_rate": 0.0,
+    "score_statistics": {
+      "mean_score": -5.9182,
+      "min_score": -10.1865,
+      "max_score": 0.1006,
+      "p50_score": -5.8884
+    }
+  },
+  "non_rank_1_analysis": [
+    {
+      "question_id": "Q8",
+      "question": "Why are positional encodings mandatory at the bottom of the encoder and decoder stacks in a Transformer, and how are they typically mathematically structured?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437"
+      ],
+      "retrieved_top1_chunk": "21880320ccdaac1f0a28a16942516c1b42f1ff236eb7ba6c4c44a6b9ec9ad3e6",
+      "retrieved_top1_score": 7.456496,
+      "retrieved_top1_source": "DOC-ML-705.docx",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        5,
+        13,
+        6
+      ]
+    },
+    {
+      "question_id": "Q48",
+      "question": "Why is micro-segmentation critical in a modern cloud environment, and how does it restrict lateral movement if an attacker breaches a single workload?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120"
+      ],
+      "retrieved_top1_chunk": "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3",
+      "retrieved_top1_score": -4.093485,
+      "retrieved_top1_source": "DOC-DEV-1003.docx",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "question_id": "Q52",
+      "question": "What were the immediate public health consequences of the rapid, unprecedented urbanization in centers like Manchester and London during the mid-19th century?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "1b0f1a5005edf40931b1703af7267379547d8ceb7ef6672f0c0a20e9ab065307"
+      ],
+      "retrieved_top1_chunk": "da5fcfcd45287f85b5e09cf329b4255c630ab8b0ff64cdb26825355cabaced64",
+      "retrieved_top1_score": 3.23398,
+      "retrieved_top1_source": "british_industrial_revolution.txt",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        6,
+        3,
+        9
+      ]
+    },
+    {
+      "question_id": "Q53",
+      "question": "How did the shift from the domestic cottage industry to the centralized factory system irrevocably alter the nature and discipline of working-class labor?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "1b0f1a5005edf40931b1703af7267379547d8ceb7ef6672f0c0a20e9ab065307"
+      ],
+      "retrieved_top1_chunk": "da5fcfcd45287f85b5e09cf329b4255c630ab8b0ff64cdb26825355cabaced64",
+      "retrieved_top1_score": 3.461075,
+      "retrieved_top1_source": "british_industrial_revolution.txt",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        8,
+        3,
+        6
+      ]
+    },
+    {
+      "question_id": "Q55",
+      "question": "How did the mass production of high-quality wrought iron via the puddling process facilitate the rapid expansion of global railway networks?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "1b0f1a5005edf40931b1703af7267379547d8ceb7ef6672f0c0a20e9ab065307"
+      ],
+      "retrieved_top1_chunk": "ae41f29d9176986c361fcdedcc5b07e52c3bec3c7d765a62af7434cd02dd3354",
+      "retrieved_top1_score": 0.000464,
+      "retrieved_top1_source": "british_industrial_revolution.txt",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        9,
+        5,
+        14
+      ]
+    },
+    {
+      "question_id": "Q65",
+      "question": "How did the state-sponsored industrialization mantra of 'Fukoku Kyohei' directly prepare Japan for its subsequent imperial expansion in the Sino-Japanese and Russo-Japanese Wars?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "aeb5d6a85cfb7b3ab2f098a416784783a809ed0cc9421432b8b8040a39fec926",
+        "2a08c3f6222ffcf49a5ad56503b188aaadfe0862c3a76c6a591b9115169a09b9"
+      ],
+      "retrieved_top1_chunk": "50c8846d1f39540905417ee504d8d3e0ef635788a734510250d4e388050282c8",
+      "retrieved_top1_score": 4.284386,
+      "retrieved_top1_source": "the_meiji_restoration.txt",
+      "retrieved_original_rrf_ranks": [
+        1,
+        3,
+        4,
+        2,
+        6
+      ]
+    },
+    {
+      "question_id": "Q75",
+      "question": "How did the collapse of the Mongol Empire's Pax Mongolica contribute to the eventual decline of the terrestrial Silk Road in the 15th century?",
+      "first_relevant_rank": 4,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "81d2cff6ed566308fa3483ea4713e38fd84aa00cd3f437736997e547a56f33b5"
+      ],
+      "retrieved_top1_chunk": "df9d9f5f76c76fe997059ea2897e7e19be2ce579a9c792f2817219b362e7a648",
+      "retrieved_top1_score": 5.407926,
+      "retrieved_top1_source": "silk_road_trade_networks.txt",
+      "retrieved_original_rrf_ranks": [
+        2,
+        3,
+        4,
+        1,
+        8
+      ]
+    },
+    {
+      "question_id": "Q85",
+      "question": "How did the conclusion of the Thirty Years' War permanently cripple the centralized authority of the Holy Roman Emperor over the German states?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "a2205e36bef07fdee8edd5d55ceda7d36bd3469ed6806dee277be34b4e5ebbd2"
+      ],
+      "retrieved_top1_chunk": "27bd1db7c0d8f3fc7c5d01971e58117a5cded545b9fc02028f4e9f46bd3a03a9",
+      "retrieved_top1_score": -0.264847,
+      "retrieved_top1_source": "thirty_years_war_and_westphalia.txt",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        8,
+        9,
+        5
+      ]
+    },
+    {
+      "question_id": "Q99",
+      "question": "In what ways did the Soviet command economy struggle with innovation and quality control due to the absence of market pricing signals and consumer feedback?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "8816857cf5bb6451c16ae7c97bd88b37f8a0cfbaccaedc554edcd1559fb0ebc6"
+      ],
+      "retrieved_top1_chunk": "dda33a0bc078d5009aab85242faac83aaf4884a45af061845f690df540ab424f",
+      "retrieved_top1_score": -0.452657,
+      "retrieved_top1_source": "soviet_command_economy_and_five_year_plans.txt",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        13,
+        7,
+        4
+      ]
+    },
+    {
+      "question_id": "Q100",
+      "question": "How did the prioritization of heavy industry and military production structurally deprive Soviet citizens of basic consumer goods throughout the Cold War?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "8816857cf5bb6451c16ae7c97bd88b37f8a0cfbaccaedc554edcd1559fb0ebc6"
+      ],
+      "retrieved_top1_chunk": "dda33a0bc078d5009aab85242faac83aaf4884a45af061845f690df540ab424f",
+      "retrieved_top1_score": -0.415427,
+      "retrieved_top1_source": "soviet_command_economy_and_five_year_plans.txt",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        4,
+        6,
+        3
+      ]
+    },
+    {
+      "question_id": "Q103",
+      "question": "In what way do Zonal Architectures simplify physical wiring harnesses by replacing dozens of local ECUs with high-speed Automotive Ethernet backbones?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "5e15540954da5192643bffc63846359cf7082f967edcb8a50dd9405ef88f6017"
+      ],
+      "retrieved_top1_chunk": "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+      "retrieved_top1_score": 3.967373,
+      "retrieved_top1_source": "Automotive_ECU_Architecture_and_Microcontrollers.docx",
+      "retrieved_original_rrf_ranks": [
+        2,
+        1,
+        3,
+        5,
+        10
+      ]
+    },
+    {
+      "question_id": "Q174",
+      "question": "How does transitioning to a centralized zonal compute architecture resolve the bandwidth and fragmentation limits of legacy distributed automotive ECUs?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "5ec3013d18d326f2fd2405f0e3dc62c0cb0f31ce92178336a50f4bb005a3768f"
+      ],
+      "retrieved_top1_chunk": "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44",
+      "retrieved_top1_score": 2.23738,
+      "retrieved_top1_source": "Automotive_ECU_Architecture_and_Microcontrollers.docx",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "question_id": "Q178",
+      "question": "How do Permanent Magnet Synchronous Motors (PMSM) and AC Induction Motors (ACIM) compare regarding magnetic rotor construction, peak efficiency, and rare-earth material dependency?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "0a69fdba5be1c608664a7ca6a56805b8cb0d2a98253eefc1afb9a79eafd1e56f"
+      ],
+      "retrieved_top1_chunk": "02239555f4b0a7358204db0b46aa044fe0ba170319b06cbc56345475798e5410",
+      "retrieved_top1_score": 4.752998,
+      "retrieved_top1_source": "electric_vehicle_motor_topologies.txt",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        3,
+        7,
+        6
+      ]
+    },
+    {
+      "question_id": "Q181",
+      "question": "What political differences separated the February Revolution from the October Revolution of 1917 in Russia regarding state authority and economic programs?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "226acd19eb61cb14975b97bfaf99eef4262e9b028ac978963713327a1285d1c4"
+      ],
+      "retrieved_top1_chunk": "7b0b026d058fb88fbfa6a9d0ff86e6f86768bd11b76585733b8a54dd268fef29",
+      "retrieved_top1_score": 0.394594,
+      "retrieved_top1_source": "The Russian Revolution and the Rise of the Bolsheviks.pdf",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        3,
+        6,
+        4
+      ]
+    },
+    {
+      "question_id": "Q182",
+      "question": "How did Portuguese maritime exploration along the African coast contrast with Spanish transatlantic voyages during the Age of Discovery?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "7cc4c4e46579a49454fc5625a4ecc7a7df604f62018d2cde565286ad1500af9a"
+      ],
+      "retrieved_top1_chunk": "8094f9bdc311a87ffcb602bc4d0e416dc9425bf463c46fa7f71f80b24887f9b4",
+      "retrieved_top1_score": 3.891288,
+      "retrieved_top1_source": "The Age of Discovery and Maritime Trade Routes.pdf",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        3,
+        5,
+        11
+      ]
+    },
+    {
+      "question_id": "Q198",
+      "question": "How did the strategic premise of American containment shift between George Kennan's original diplomatic Long Telegram and the adoption of the NSC-68 policy paper during the Cold War?",
+      "first_relevant_rank": 2,
+      "hit_at_5": true,
+      "candidate_hit_at_20": true,
+      "ground_truth_chunks": [
+        "ea5fb4b74238dd596452d985f54ecfe8449accff114df9fade08a220e3e6a2a7"
+      ],
+      "retrieved_top1_chunk": "cbea36887cdde79535302ba9e1c45f74d1aec8a48c4eaea7ae4039fc642efdad",
+      "retrieved_top1_score": 2.977013,
+      "retrieved_top1_source": "Cold War Geopolitics_ The Strategy of Containment.pdf",
+      "retrieved_original_rrf_ranks": [
+        1,
+        2,
+        3,
+        7,
+        6
+      ]
+    }
+  ]
+}

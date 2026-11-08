@@ -71,18 +71,30 @@ class HybridRetriever(Runnable[str, List[Document]]):
         self.rrf_k = rrf_k
         self.fallback_to_dense = fallback_to_dense
 
-    def _fetch_dense(self, query: str) -> List[Document]:
+    def _fetch_dense(self, query: str, k: Optional[int] = None) -> List[Document]:
         """Fetch top candidates from the dense FAISS retriever."""
         if self.faiss_retriever is None:
             return []
 
+        limit = k if (k is not None and k > 0) else self.dense_k
+
         docs: Any
         if hasattr(self.faiss_retriever, "invoke"):
-            docs = self.faiss_retriever.invoke(query)
+            search_kwargs = getattr(self.faiss_retriever, "search_kwargs", None)
+            if k is not None and isinstance(search_kwargs, dict):
+                orig_k = search_kwargs.get("k")
+                try:
+                    search_kwargs["k"] = k
+                    docs = self.faiss_retriever.invoke(query)
+                finally:
+                    if orig_k is not None:
+                        search_kwargs["k"] = orig_k
+            else:
+                docs = self.faiss_retriever.invoke(query)
         elif hasattr(self.faiss_retriever, "get_relevant_documents"):
             docs = self.faiss_retriever.get_relevant_documents(query)
         elif hasattr(self.faiss_retriever, "similarity_search"):
-            docs = self.faiss_retriever.similarity_search(query, k=self.dense_k)
+            docs = self.faiss_retriever.similarity_search(query, k=limit)
         elif callable(self.faiss_retriever):
             docs = self.faiss_retriever(query)
         else:
@@ -96,20 +108,22 @@ class HybridRetriever(Runnable[str, List[Document]]):
                 f"Dense FAISS retriever returned invalid type {type(docs).__name__}; expected list of Documents."
             )
 
-        # Enforce maximum of dense_k candidates
-        return docs[:self.dense_k]
+        # Enforce maximum of limit candidates
+        return docs[:limit]
 
-    def _fetch_sparse(self, query: str) -> List[Document]:
+    def _fetch_sparse(self, query: str, k: Optional[int] = None) -> List[Document]:
         """Fetch top candidates from the sparse BM25 retriever."""
         if self.bm25_retriever is None:
             return []
 
+        limit = k if (k is not None and k > 0) else self.sparse_k
+
         try:
             docs: Any
             if hasattr(self.bm25_retriever, "retrieve_documents"):
-                docs = self.bm25_retriever.retrieve_documents(query, top_k=self.sparse_k)
+                docs = self.bm25_retriever.retrieve_documents(query, top_k=limit)
             elif hasattr(self.bm25_retriever, "retrieve"):
-                raw_entries = self.bm25_retriever.retrieve(query, top_k=self.sparse_k)
+                raw_entries = self.bm25_retriever.retrieve(query, top_k=limit)
                 if not isinstance(raw_entries, list):
                     raise TypeError(
                         f"Sparse BM25 retriever returned invalid type {type(raw_entries).__name__}; expected list."
@@ -136,8 +150,8 @@ class HybridRetriever(Runnable[str, List[Document]]):
                     f"Sparse BM25 retriever returned invalid type {type(docs).__name__}; expected list of Documents."
                 )
 
-            # Enforce maximum of sparse_k candidates
-            return docs[:self.sparse_k]
+            # Enforce maximum of limit candidates
+            return docs[:limit]
 
         except Exception as e:
             if self.fallback_to_dense:
@@ -183,6 +197,88 @@ class HybridRetriever(Runnable[str, List[Document]]):
         """
         results_with_scores = self.retrieve_with_scores(query)
         return [r.document for r in results_with_scores]
+
+    def retrieve_candidates_with_scores(
+        self, query: str, candidate_k: int = 20
+    ) -> List[RRFResult]:
+        """
+        Execute hybrid retrieval and return fused candidates with RRF scores up to candidate_k.
+        FAISS Dense retrieval requests Top-10 (dense_k) and BM25 Sparse retrieval requests
+        Top-10 (sparse_k). Both result lists are combined using RRF (rrf_k=60) and deduplicated
+        using chunk_id, yielding a fused pool of up to candidate_k (20) unique documents.
+
+        Preserves all original document metadata while annotating original dense rank,
+        sparse rank, RRF score, and RRF rank.
+
+        Args:
+            query: User search query string.
+            candidate_k: Maximum number of fused candidate chunks to return (default: 20).
+
+        Returns:
+            List of RRFResult namedtuples (document, score, rank) up to candidate_k.
+        """
+        if not query or not query.strip() or candidate_k <= 0:
+            return []
+
+        clean_query = query.strip()
+        # Strictly request Top-10 from FAISS dense and Top-10 from BM25 sparse
+        dense_docs = self._fetch_dense(clean_query, k=self.dense_k)
+        sparse_docs = self._fetch_sparse(clean_query, k=self.sparse_k)
+
+        # Map 1-based ranks
+        dense_rank_map: Dict[str, int] = {}
+        for rank_0, doc in enumerate(dense_docs):
+            cid = doc.metadata.get("chunk_id")
+            if cid and cid not in dense_rank_map:
+                dense_rank_map[cid] = rank_0 + 1
+
+        sparse_rank_map: Dict[str, int] = {}
+        for rank_0, doc in enumerate(sparse_docs):
+            cid = doc.metadata.get("chunk_id")
+            if cid and cid not in sparse_rank_map:
+                sparse_rank_map[cid] = rank_0 + 1
+
+        fused = reciprocal_rank_fusion([dense_docs, sparse_docs], k=self.rrf_k)
+        candidates = fused[:candidate_k]
+
+        annotated_results: List[RRFResult] = []
+        for item in candidates:
+            cid = item.document.metadata.get("chunk_id", "")
+            meta = dict(item.document.metadata)
+            meta["original_dense_rank"] = dense_rank_map.get(cid)
+            meta["dense_rank"] = dense_rank_map.get(cid)
+            meta["original_sparse_rank"] = sparse_rank_map.get(cid)
+            meta["sparse_rank"] = sparse_rank_map.get(cid)
+            meta["original_rrf_rank"] = item.rank
+            meta["original_rrf_score"] = item.score
+
+            annotated_doc = Document(
+                page_content=item.document.page_content,
+                metadata=meta,
+            )
+            annotated_results.append(
+                RRFResult(
+                    document=annotated_doc,
+                    score=item.score,
+                    rank=item.rank,
+                )
+            )
+
+        return annotated_results
+
+    def retrieve_candidates(self, query: str, candidate_k: int = 20) -> List[Document]:
+        """
+        Execute hybrid retrieval and return up to candidate_k Document chunks for reranking.
+        Preserves all original document metadata and annotates dense/sparse/RRF ranks.
+
+        Args:
+            query: User search query string.
+            candidate_k: Number of candidate chunks to retrieve for reranking (default: 20).
+
+        Returns:
+            List of Document objects (up to candidate_k) sorted by RRF score descending.
+        """
+        return [r.document for r in self.retrieve_candidates_with_scores(query, candidate_k=candidate_k)]
 
     def invoke(self, input: str, config: Optional[Any] = None) -> List[Document]:
         """LangChain LCEL runnable interface compatibility."""

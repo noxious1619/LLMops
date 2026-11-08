@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-11-07T13:30:54Z",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "pytorch_version": "2.14.1+cu126",
+  "gpu_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "total_vram_mb": 6143.5,
+  "model_id": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "gpu_benchmark": {
+    "load_time_s": 20.9388,
+    "ram_load_delta_mb": 139.95,
+    "vram_load_allocated_mb": 86.65,
+    "vram_load_reserved_mb": 104.0,
+    "batch_4": {
+      "total_time_ms": 77.58,
+      "per_pair_ms": 3.88,
+      "throughput_pairs_per_sec": 257.81,
+      "peak_vram_mb": 99.63
+    },
+    "batch_5": {
+      "total_time_ms": 32.45,
+      "per_pair_ms": 1.62,
+      "throughput_pairs_per_sec": 616.36,
+      "peak_vram_mb": 101.22
+    },
+    "sample_scores": [
+      7.2167,
+      -10.8747,
+      10.1476,
+      -11.222,
+      4.4605
+    ]
+  },
+  "cpu_benchmark": {
+    "load_time_s": 2.4382,
+    "ram_load_delta_mb": 94.22,
+    "total_time_ms": 146.78,
+    "per_pair_ms": 7.34,
+    "throughput_pairs_per_sec": 136.26,
+    "sample_scores": [
+      7.2167,
+      -10.8747,
+      10.1476,
+      -11.222,
+      4.4605
+    ]
+  }
+}

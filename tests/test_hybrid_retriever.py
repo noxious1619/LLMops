@@ -333,3 +333,52 @@ def test_15_no_second_index_created():
     assert faiss_mtime_before == faiss_mtime_after
     assert bm25_mtime_before == bm25_mtime_after
 
+
+def test_16_retrieve_candidates_dense_10_sparse_10_rrf_20():
+    """16. Verify candidate retrieval requests exactly Top-10 from dense and Top-10 from sparse."""
+    # 10 dense candidates
+    dense_docs = [make_doc(f"dense_{i}") for i in range(1, 11)]
+    # 10 sparse candidates with 3 overlaps (dense_1, dense_2, dense_3)
+    sparse_docs = [
+        make_doc("dense_1"),
+        make_doc("dense_2"),
+        make_doc("dense_3"),
+    ] + [make_doc(f"sparse_{i}") for i in range(4, 11)]
+
+    dense_mock = MockDenseRetriever(dense_docs)
+    sparse_mock = MockSparseRetriever(sparse_docs)
+
+    retriever = HybridRetriever(
+        faiss_retriever=dense_mock,
+        bm25_retriever=sparse_mock,
+        dense_k=10,
+        sparse_k=10,
+        final_k=5,
+        rrf_k=60,
+    )
+
+    candidates = retriever.retrieve_candidates("test query", candidate_k=20)
+
+    # 10 dense + 10 sparse with 3 overlapping = 17 unique chunks
+    assert len(candidates) == 17
+    # All chunk_ids are unique
+    chunk_ids = [c.metadata["chunk_id"] for c in candidates]
+    assert len(set(chunk_ids)) == 17
+
+    # Top candidates are the ones that appeared in both lists
+    assert chunk_ids[0] in ["dense_1", "dense_2", "dense_3"]
+    assert chunk_ids[1] in ["dense_1", "dense_2", "dense_3"]
+    assert chunk_ids[2] in ["dense_1", "dense_2", "dense_3"]
+
+    # Metadata verified
+    for c in candidates:
+        assert "original_dense_rank" in c.metadata
+        assert "original_sparse_rank" in c.metadata
+        assert "original_rrf_rank" in c.metadata
+        assert "original_rrf_score" in c.metadata
+
+    # Backward compatibility: retrieve() still returns exactly Top-5
+    top5 = retriever.retrieve("test query")
+    assert len(top5) == 5
+
+

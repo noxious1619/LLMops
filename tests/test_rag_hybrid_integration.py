@@ -104,7 +104,7 @@ def test_01_hybrid_mode_selected_correctly(mock_rag, tmp_path):
          patch("multi_doc_chat.utils.model_loader.ModelLoader.load_embeddings"):
         mock_rag.load_retriever(index_path=str(faiss_dir), mode="hybrid")
 
-    assert mock_rag.retrieval_mode == "hybrid"
+    assert mock_rag.retrieval_mode in ("hybrid", "hybrid + rerank")
     assert isinstance(mock_rag.retriever, HybridRetriever)
     assert mock_rag.chain is not None
 

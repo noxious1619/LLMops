@@ -1,0 +1,1248 @@
+{
+  "timestamp": "2026-11-07T15:29:04Z",
+  "pipeline": "FAISS Top-10 + BM25 Top-10 -> RRF(k=60) -> Deduplicate (up to 20) -> MiniLM Cross-Encoder (batch size 5, RTX 3050 cuda:0) -> Top-5 -> Gemini LLM",
+  "summary": {
+    "total_tests": 18,
+    "passed": 17,
+    "failed": 1,
+    "pass_rate": "94.4%",
+    "avg_total_latency_ms": 7826.95,
+    "avg_rerank_latency_ms": 318.04,
+    "avg_retrieval_latency_ms": 940.69
+  },
+  "checksums": {
+    "index.faiss": "246209c421d0cd78817082c2190c1a1143a1ce7857e17ac8474426469b7b780a",
+    "index.pkl": "33419862b54be18c6c88586f3537b9ce897ac618d9bbcfa1f5b1f67f60cd2621",
+    "bm25_index.pkl": "9bf695fafd18f60555439acc1ab6795cf715e51b45094762896f10d87aca707d",
+    "bm25_corpus_70docs_181chunks.json": "fc4bd84f95adf9f6e1e718bf768e2b1d2d47597db07dd0dc76e309a97b316e14"
+  },
+  "test_cases": [
+    {
+      "test_id": "TC-01",
+      "category": "Category A: Exact Keyword",
+      "question": "What is the CRC16 checksum function and modulo 16384 used for in Redis Cluster?",
+      "turn": null,
+      "session_id": "session_tc_01",
+      "wall_time_seconds": 6.53,
+      "status": "PASS",
+      "answer": "In Redis Cluster, the CRC16 checksum of a key modulo 16384 is used to calculate which hash slot a particular key belongs to.",
+      "expected_topics": [
+        "CRC16",
+        "16384",
+        "hash slot",
+        "Redis Cluster"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What is the CRC16 checksum function and modulo 16384 used for in Redis Cluster?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 15,
+        "candidates_passed_to_reranker": 15,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          3.9684555530548096,
+          -0.28789904713630676,
+          -9.006500244140625,
+          -9.339899063110352,
+          -10.022960662841797
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+          "ba1049bf79aa71512b504fffbe7abbc7bf5417af920d28c804a6a553c8665af7",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Electric_Vehicle_Battery_Management_Systems_BMS.docx",
+          "Paxos and Raft Consensus Algorithms.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1038.17,
+        "rerank_latency_ms": 257.54,
+        "total_retrieval_latency_ms": 1295.72,
+        "llm_latency_ms": 5230.32,
+        "total_request_latency_ms": 6526.04
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 86.65,
+          "reserved_mb": 104.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 176.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-02",
+      "category": "Category A: Exact Keyword",
+      "question": "What is the difference between eBGP and iBGP in how they route between Autonomous Systems?",
+      "turn": null,
+      "session_id": "session_tc_02",
+      "wall_time_seconds": 7.19,
+      "status": "PASS",
+      "answer": "eBGP (External BGP) is used to exchange routes between different Autonomous System Numbers (ASNs). In contrast, iBGP (Internal BGP) operates exclusively within a single ASN.",
+      "expected_topics": [
+        "eBGP",
+        "iBGP",
+        "ASN",
+        "Autonomous System",
+        "routes"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What is the difference between eBGP and iBGP in how they route between Autonomous Systems?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 17,
+        "candidates_passed_to_reranker": 17,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          4.69953727722168,
+          -4.287385940551758,
+          -4.331640243530273,
+          -6.997913360595703,
+          -7.945106029510498
+        ],
+        "final_chunk_ids": [
+          "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a",
+          "2ca317582a4ed1e261d05713ebcf532af9150ae827a9d56f4e8ff86690890571",
+          "b47e28c37c7321de284e99ee75bf79bd69bfc80e56338180955e154f7d8070ac",
+          "eb6aea15e7834ba5efbb4bc81947d939a62effcd5253fb4af36b8bd760186f87",
+          "462ed59a3e47459cd11949a1dab8a95fe460455dff245b6c08a8d3fa8a8b338e"
+        ],
+        "source_documents": [
+          "DOC-NET-802.docx",
+          "Autonomous_Driving_Sensor_Fusion_and_Perception.docx",
+          "Autonomous_Driving_Sensor_Fusion_and_Perception.docx",
+          "connected_vehicle_v2x_communication.txt",
+          "tire_dynamics_and_slip_angle_modeling.txt"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1023.96,
+        "rerank_latency_ms": 340.25,
+        "total_retrieval_latency_ms": 1364.21,
+        "llm_latency_ms": 5827.13,
+        "total_request_latency_ms": 7191.34
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 176.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-03",
+      "category": "Category B: Semantic Rephrasing",
+      "question": "In a distributed cache like Redis Cluster, how does the system assign keys to partitions without a central coordinator?",
+      "turn": null,
+      "session_id": "session_tc_03",
+      "wall_time_seconds": 7.32,
+      "status": "PASS",
+      "answer": "Redis Cluster assigns keys to partitions using a deterministic concept called Hash Slots, which total 16,384 in the cluster. The system calculates which hash slot a key belongs to by taking the CRC16 checksum of the key modulo 16384. Each master node is responsible for a contiguous subset of these 16,384 hash slots.",
+      "expected_topics": [
+        "hash slots",
+        "CRC16",
+        "Redis Cluster",
+        "modulo",
+        "16384"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "In a distributed cache like Redis Cluster, how does the system assign keys to partitions without a central coordinator?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 14,
+        "candidates_passed_to_reranker": 14,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          2.424123764038086,
+          -2.119217872619629,
+          -3.9990272521972656,
+          -4.933585166931152,
+          -7.3015336990356445
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "01d5ddb21233bbb1557a28dc3e73e4c96d9b55b416ffc75f40e8dbd0e6b72ef9",
+          "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "The Saga Pattern for Distributed Transactions.pdf",
+          "DOC-ARC-901.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 929.1,
+        "rerank_latency_ms": 375.66,
+        "total_retrieval_latency_ms": 1304.77,
+        "llm_latency_ms": 6010.54,
+        "total_request_latency_ms": 7315.31
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-04",
+      "category": "Category B: Semantic Rephrasing",
+      "question": "How do consensus protocols like Raft ensure that replica nodes maintain consistent state and handle leader failures?",
+      "turn": null,
+      "session_id": "session_tc_04",
+      "wall_time_seconds": 7.24,
+      "status": "PASS",
+      "answer": "Raft ensures consistent state through log replication, where a strong leader appends client requests to its log and sends `AppendEntries` RPCs to followers, committing entries only after a majority acknowledge them. To handle leader failures, if a follower stops receiving heartbeats, it becomes a candidate, increments a term counter, and requests votes from other nodes. A candidate that secures a majority vote—restricted to nodes possessing all committed entries—becomes the new leader.",
+      "expected_topics": [
+        "consensus",
+        "leader",
+        "heartbeat",
+        "candidate",
+        "election",
+        "log replication"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "How do consensus protocols like Raft ensure that replica nodes maintain consistent state and handle leader failures?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 14,
+        "candidates_passed_to_reranker": 14,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          6.082910537719727,
+          4.402002811431885,
+          -2.3468017578125,
+          -3.3197038173675537,
+          -6.40040397644043
+        ],
+        "final_chunk_ids": [
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+          "8997c0eea7851885cc63b8e771ece8c742e3d535172e3ce83517ecc65af409b9"
+        ],
+        "source_documents": [
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "DOC-ARC-901.docx",
+          "Circuit Breaker Pattern in Microservices.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1130.93,
+        "rerank_latency_ms": 320.25,
+        "total_retrieval_latency_ms": 1451.19,
+        "llm_latency_ms": 5788.7,
+        "total_request_latency_ms": 7239.89
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-05",
+      "category": "Category C: Technical Acronyms",
+      "question": "What is the role of JWT in stateless authentication architectures?",
+      "turn": null,
+      "session_id": "session_tc_05",
+      "wall_time_seconds": 6.87,
+      "status": "PASS",
+      "answer": "In stateless authentication architectures, JWTs (JSON Web Tokens) are used to structure access tokens so that resource servers can perform stateless validation without contacting an authorization server. They also serve as ID Tokens in OpenID Connect (OIDC) to contain claims about the authenticated user. Resource servers statelessly verify JWTs by validating their signature with the issuer's public keys and checking claims such as issuer, audience, and expiration.",
+      "expected_topics": [
+        "JWT",
+        "JSON Web Token",
+        "stateless",
+        "signature",
+        "claims"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What is the role of JWT in stateless authentication architectures?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 17,
+        "candidates_passed_to_reranker": 17,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          2.8323984146118164,
+          1.972678780555725,
+          -5.822465419769287,
+          -8.056632041931152,
+          -8.47449779510498
+        ],
+        "final_chunk_ids": [
+          "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+          "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+          "6896e97a707d0bef56bb25d6eb6196ac68323256222589325c809b9d22bc1120",
+          "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be",
+          "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44"
+        ],
+        "source_documents": [
+          "DOC-SEC-601.docx",
+          "DOC-SEC-601.docx",
+          "Zero Trust Network Access (ZTNA) Implementation.pdf",
+          "Automotive_CAN_Bus_Architecture_and_Diagnostics.docx",
+          "Automotive_ECU_Architecture_and_Microcontrollers.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1103.49,
+        "rerank_latency_ms": 228.06,
+        "total_retrieval_latency_ms": 1331.56,
+        "llm_latency_ms": 5537.51,
+        "total_request_latency_ms": 6869.07
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-06",
+      "category": "Category C: Technical Acronyms",
+      "question": "How does OAuth PKCE prevent authorization code interception attacks?",
+      "turn": null,
+      "session_id": "session_tc_06",
+      "wall_time_seconds": 7.02,
+      "status": "PASS",
+      "answer": "OAuth PKCE mitigates authorization code interception attacks by dynamically generating a cryptographic secret (`code_verifier`) and its hash (`code_challenge`) for every authorization request. This mechanism eliminates the need to store static client secrets in public clients.",
+      "expected_topics": [
+        "PKCE",
+        "code_verifier",
+        "code_challenge",
+        "authorization code",
+        "interception"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "How does OAuth PKCE prevent authorization code interception attacks?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 14,
+        "candidates_passed_to_reranker": 14,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          3.662837028503418,
+          -3.2694082260131836,
+          -8.278159141540527,
+          -9.117851257324219,
+          -9.976872444152832
+        ],
+        "final_chunk_ids": [
+          "52bdf06f633f8c418ab5fc7b94a6c909300e2d6e885fa1f42a5d30d32189909c",
+          "43b797c8775027b6544d311db6ad96ffde3a00176cede483d455713c8c262014",
+          "2c34c06a03c47854fd2b53fc11d03525f2475bedbf0a1be883a13f5dff4493be",
+          "4c4520618106b2a6636b6c69365541be92f7a37172a0a0f2abe405f5389da8ce",
+          "7cea7ee15c7756363551c59110f6198c662a82c61ccbe96e4c74b6c3a63072b3"
+        ],
+        "source_documents": [
+          "DOC-SEC-601.docx",
+          "DOC-SEC-601.docx",
+          "Automotive_CAN_Bus_Architecture_and_Diagnostics.docx",
+          "Automotive Lightweighting and Composite Materials.pdf",
+          "DOC-DEV-1003.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1138.55,
+        "rerank_latency_ms": 382.18,
+        "total_retrieval_latency_ms": 1520.73,
+        "llm_latency_ms": 5501.4,
+        "total_request_latency_ms": 7022.14
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-07",
+      "category": "Category D: Numerical & Configuration Specifics",
+      "question": "What is the exact number of hash slots used in Redis clustering and how are they calculated using CRC16?",
+      "turn": null,
+      "session_id": "session_tc_07",
+      "wall_time_seconds": 6.24,
+      "status": "PASS",
+      "answer": "There are exactly 16,384 hash slots in a Redis Cluster. To calculate which hash slot a key belongs to, Redis computes the CRC16 checksum of the key modulo 16384.",
+      "expected_topics": [
+        "16384",
+        "16,384",
+        "CRC16",
+        "modulo",
+        "hash slot"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What is the exact number of hash slots used in Redis clustering and how are they calculated using CRC16?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 17,
+        "candidates_passed_to_reranker": 17,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          5.834604263305664,
+          3.102134943008423,
+          -6.760082721710205,
+          -9.525578498840332,
+          -10.585256576538086
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Idempotency in RESTful API Design.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 745.66,
+        "rerank_latency_ms": 359.32,
+        "total_retrieval_latency_ms": 1104.99,
+        "llm_latency_ms": 5137.4,
+        "total_request_latency_ms": 6242.38
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-08",
+      "category": "Category D: Numerical & Configuration Specifics",
+      "question": "What specific operator classes does PostgreSQL support for GIN index creation on JSONB columns, and what are their differences?",
+      "turn": null,
+      "session_id": "session_tc_08",
+      "wall_time_seconds": 7.58,
+      "status": "PASS",
+      "answer": "PostgreSQL supports two operator classes for GIN indexes on JSONB data: `jsonb_ops` (the default) and `jsonb_path_ops`. The `jsonb_ops` class indexes every key and value, supporting a broad range of operators including `@>`, `?`, `?|`, and `?&`. Conversely, `jsonb_path_ops` creates hashes of JSON paths, resulting in smaller index sizes and faster lookups, but it only supports the contains (`@>`) operator.",
+      "expected_topics": [
+        "jsonb_ops",
+        "jsonb_path_ops",
+        "GIN",
+        "@>",
+        "PostgreSQL"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What specific operator classes does PostgreSQL support for GIN index creation on JSONB columns, and what are their differences?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 17,
+        "candidates_passed_to_reranker": 17,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          5.825965404510498,
+          3.596416473388672,
+          -4.8857550621032715,
+          -9.038786888122559,
+          -9.041715621948242
+        ],
+        "final_chunk_ids": [
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+          "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7",
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "6dabecdc77d82deff1518bd17a7de293663fe9aebe76100e65b37f0136813dd9"
+        ],
+        "source_documents": [
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Advanced Metaprogramming with Python Metaclasses.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 564.97,
+        "rerank_latency_ms": 376.69,
+        "total_retrieval_latency_ms": 941.66,
+        "llm_latency_ms": 6636.23,
+        "total_request_latency_ms": 7577.89
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-09",
+      "category": "Category E: Multi-chunk Synthesis",
+      "question": "How do Redis clusters utilize hash slots to automatically partition data across multiple nodes and how are hash tags used for multi-key operations?",
+      "turn": null,
+      "session_id": "session_tc_09",
+      "wall_time_seconds": 9.44,
+      "status": "PASS",
+      "answer": "Redis Cluster automatically partitions data by dividing the cluster into 16,384 hash slots, assigning a contiguous subset of slots to each master node, and determining a key's slot using its CRC16 checksum modulo 16384. Because multi-key operations require all involved keys to map to the exact same hash slot, developers use Hash Tags by enclosing a substring of the key in curly braces `{}`. Redis then only hashes the content inside the braces, guaranteeing that keys with identical tags map to the same hash slot.",
+      "expected_topics": [
+        "hash slots",
+        "nodes",
+        "hash tags",
+        "{...}",
+        "CROSSSLOT",
+        "CRC16"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "How do Redis clusters utilize hash slots to automatically partition data across multiple nodes and how are hash tags used for multi-key operations?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 15,
+        "candidates_passed_to_reranker": 15,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          7.899693965911865,
+          5.278420925140381,
+          -4.442252159118652,
+          -7.332842826843262,
+          -7.667858600616455
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+          "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Idempotency in RESTful API Design.pdf",
+          "DOC-ARC-901.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 926.88,
+        "rerank_latency_ms": 253.43,
+        "total_retrieval_latency_ms": 1180.32,
+        "llm_latency_ms": 8257.0,
+        "total_request_latency_ms": 9437.32
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-10",
+      "category": "Category E: Multi-chunk Synthesis",
+      "question": "In a microservice-based architecture subject to cascading distributed failures, how does the Circuit Breaker design pattern manage state transitions across Closed, Open, and Half-Open states to protect downstream services, and what specific conditions trigger the transition from Open back to Closed?",
+      "turn": null,
+      "session_id": "session_tc_10",
+      "wall_time_seconds": 9.53,
+      "status": "PASS",
+      "answer": "The Circuit Breaker tracks failure rates in the **Closed** state and trips to **Open** (failing requests immediately) if failures exceed a predefined threshold within a specific time window. After a configurable sleep duration in the Open state, it transitions to **Half-Open**, allowing a limited number of test requests to pass through to the downstream service. The transition back to **Closed** is triggered if these test requests succeed, confirming the downstream service is healthy.",
+      "expected_topics": [
+        "Closed",
+        "Open",
+        "Half-Open",
+        "threshold",
+        "sleep window",
+        "test requests",
+        "reset"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "In a microservice-based architecture subject to cascading distributed failures, how does the Circuit Breaker design pattern manage state transitions across Closed, Open, and Half-Open states to protect downstream services, and what specific conditions trigger the transition from Open back to Closed?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 15,
+        "candidates_passed_to_reranker": 15,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          6.400169372558594,
+          0.47528162598609924,
+          -0.6866436004638672,
+          -1.928331732749939,
+          -5.212427616119385
+        ],
+        "final_chunk_ids": [
+          "8997c0eea7851885cc63b8e771ece8c742e3d535172e3ce83517ecc65af409b9",
+          "01d5ddb21233bbb1557a28dc3e73e4c96d9b55b416ffc75f40e8dbd0e6b72ef9",
+          "e1f0e1040a0de22aa334e26695f5abe064e14fa2b85c6f0d46bee5041d89400c",
+          "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d"
+        ],
+        "source_documents": [
+          "Circuit Breaker Pattern in Microservices.pdf",
+          "The Saga Pattern for Distributed Transactions.pdf",
+          "Circuit Breaker Pattern in Microservices.pdf",
+          "DOC-ARC-901.docx",
+          "Paxos and Raft Consensus Algorithms.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 809.88,
+        "rerank_latency_ms": 348.48,
+        "total_retrieval_latency_ms": 1158.38,
+        "llm_latency_ms": 8371.87,
+        "total_request_latency_ms": 9530.25
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-11",
+      "category": "Category E: Multi-chunk Synthesis",
+      "question": "How do Paxos and Raft handle distributed consensus and what are the key differences in how they elect leaders?",
+      "turn": null,
+      "session_id": "session_tc_11",
+      "wall_time_seconds": 9.02,
+      "status": "PASS",
+      "answer": "Paxos handles distributed consensus using a two-phase process (Prepare and Accept phases) involving Proposers, Acceptors, and Learners, whereas Raft achieves consensus by decomposing the problem into leader election, log replication, and safety constraints. Unlike Paxos, Raft explicitly enforces a strong leader paradigm where nodes operate as a Leader, Follower, or Candidate. In Raft, a candidate becomes leader by securing a majority vote when heartbeats stop, restricted strictly to candidates that possess all committed log entries.",
+      "expected_topics": [
+        "Paxos",
+        "Raft",
+        "consensus",
+        "leader",
+        "proposer",
+        "acceptor",
+        "term",
+        "heartbeat"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "How do Paxos and Raft handle distributed consensus and what are the key differences in how they elect leaders?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 16,
+        "candidates_passed_to_reranker": 16,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          5.848520278930664,
+          3.8145318031311035,
+          -6.086400032043457,
+          -9.21219539642334,
+          -10.327542304992676
+        ],
+        "final_chunk_ids": [
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "292066dc7c69798a3380b1876022bfb5eee267baf2b976dc4c1d25294b22d944",
+          "bf0ac02d6d2430e6ae8938c34264e322dc054712c345184459f16ab7cc385f90",
+          "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79",
+          "8997c0eea7851885cc63b8e771ece8c742e3d535172e3ce83517ecc65af409b9"
+        ],
+        "source_documents": [
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "DOC-ARC-901.docx",
+          "DOC-ARC-901.docx",
+          "Circuit Breaker Pattern in Microservices.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1030.78,
+        "rerank_latency_ms": 402.17,
+        "total_retrieval_latency_ms": 1432.96,
+        "llm_latency_ms": 7584.96,
+        "total_request_latency_ms": 9017.91
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-12",
+      "category": "Category F: Conversational Follow-up",
+      "question": "How does Redis Cluster distribute keys across nodes?",
+      "turn": 1,
+      "session_id": "session_conversational_multi_turn",
+      "wall_time_seconds": 6.97,
+      "status": "PASS",
+      "answer": "Redis Cluster distributes keys across nodes using 16,384 deterministic Hash Slots. A key's hash slot is determined by taking the CRC16 checksum of the key modulo 16384. Each master node in the cluster is then assigned a contiguous subset of these hash slots to store and manage.",
+      "expected_topics": [
+        "16384",
+        "hash slots",
+        "CRC16",
+        "master nodes"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "How does Redis Cluster distribute keys across nodes?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 14,
+        "candidates_passed_to_reranker": 14,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          6.204906463623047,
+          3.5888659954071045,
+          -0.626724898815155,
+          -7.506222724914551,
+          -8.91392707824707
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+          "0e811e581ced7119128b98f30050ce497a1a8e22a49f70f651722d8188387a44"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Automotive_ECU_Architecture_and_Microcontrollers.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 825.71,
+        "rerank_latency_ms": 382.8,
+        "total_retrieval_latency_ms": 1208.53,
+        "llm_latency_ms": 5760.05,
+        "total_request_latency_ms": 6968.58
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-13",
+      "category": "Category F: Conversational Follow-up",
+      "question": "What happens when one of those nodes fails?",
+      "turn": 2,
+      "session_id": "session_conversational_multi_turn",
+      "wall_time_seconds": 8.05,
+      "status": "PASS",
+      "answer": "When a majority of master nodes determine that a master node is unreachable, an automatic failover is triggered. The cluster promotes one of the failing master's replica nodes to become the new master and assigns the corresponding hash slots to it. This process allows the cluster to continue operating without manual intervention.",
+      "expected_topics": [
+        "failover",
+        "replica",
+        "promotion",
+        "heartbeat",
+        "cluster"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What happens when one of the nodes in a Redis Cluster fails?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 16,
+        "candidates_passed_to_reranker": 16,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          3.8412766456604004,
+          0.895092248916626,
+          -1.5781958103179932,
+          -9.862008094787598,
+          -9.95484447479248
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267",
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Idempotency in RESTful API Design.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 813.55,
+        "rerank_latency_ms": 301.33,
+        "total_retrieval_latency_ms": 1114.89,
+        "llm_latency_ms": 6930.79,
+        "total_request_latency_ms": 8045.67
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-14",
+      "category": "Category F: Conversational Follow-up",
+      "question": "How does the cluster recover and redistribute its slots after the failure?",
+      "turn": 3,
+      "session_id": "session_conversational_multi_turn",
+      "wall_time_seconds": 7.23,
+      "status": "PASS",
+      "answer": "During an automatic failover, the cluster promotes one of the failing master's replicas to become the new master. The cluster then assigns the corresponding hash slots of the failed master directly to this newly promoted node. This allows the cluster to recover and continue operating without manual intervention.",
+      "expected_topics": [
+        "resharding",
+        "slots",
+        "replica",
+        "cluster meet",
+        "redistribute",
+        "promotion"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "How does a Redis Cluster recover and redistribute its hash slots following a node failure?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 15,
+        "candidates_passed_to_reranker": 15,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          4.55091667175293,
+          2.7101023197174072,
+          -6.975218772888184,
+          -8.197915077209473,
+          -8.662473678588867
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "8997c0eea7851885cc63b8e771ece8c742e3d535172e3ce83517ecc65af409b9",
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "Circuit Breaker Pattern in Microservices.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 747.71,
+        "rerank_latency_ms": 399.61,
+        "total_retrieval_latency_ms": 1147.33,
+        "llm_latency_ms": 6079.17,
+        "total_request_latency_ms": 7226.5
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-15",
+      "category": "Category G: Long-form Complex Queries",
+      "question": "In a high-throughput distributed system using Redis Cluster with 16384 hash slots, explain how key partitioning works using CRC16, how hash tags like {user123} force keys to the same slot, and what happens to client requests during slot migration between master nodes.",
+      "turn": null,
+      "session_id": "session_tc_15",
+      "wall_time_seconds": 11.91,
+      "status": "FAIL",
+      "answer": "I don't know.",
+      "expected_topics": [
+        "16384",
+        "CRC16",
+        "hash tags",
+        "ASK",
+        "MOVED",
+        "migration",
+        "slot"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "In a high-throughput distributed system using Redis Cluster with 16384 hash slots, explain how key partitioning works using CRC16, how hash tags like {user123} force keys to the same slot, and what happens to client requests during slot migration between master nodes.",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 15,
+        "candidates_passed_to_reranker": 15,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 3,
+        "rerank_scores": [
+          5.137794017791748,
+          2.301760196685791,
+          -3.849040985107422,
+          -3.950727939605713,
+          -5.9561614990234375
+        ],
+        "final_chunk_ids": [
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "d677ad5a6af375b666c2931f4b264eb9198b9c95b8f95c351c12c912f073ef3e",
+          "fa81afb510b5e9653d7e8d85d00fe5d614780f0b92eda8d7067770c72bc62a8d",
+          "fc47d6826d6479fc5537b2757a86bfad6efc502ae623118e9735c535a09f0c79",
+          "f68b34102d3febe65ef6abc4acc041cd06b25ab5c6004f1495b1fd6fdddfa267"
+        ],
+        "source_documents": [
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "Paxos and Raft Consensus Algorithms.pdf",
+          "DOC-ARC-901.docx",
+          "Idempotency in RESTful API Design.pdf"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1033.55,
+        "rerank_latency_ms": 212.79,
+        "total_retrieval_latency_ms": 1246.34,
+        "llm_latency_ms": 10665.14,
+        "total_request_latency_ms": 11911.48
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-16",
+      "category": "Category G: Long-form Complex Queries",
+      "question": "Explain PostgreSQL indexing strategies for semi-structured data, comparing B-tree, GIN with jsonb_ops, and GIN with jsonb_path_ops, including which operators each index type supports and their performance characteristics.",
+      "turn": null,
+      "session_id": "session_tc_16",
+      "wall_time_seconds": 9.71,
+      "status": "PASS",
+      "answer": "GIN with default `jsonb_ops` indexes every key and value, supporting `@>`, `?`, `?|`, and `?&` operators for broad queries, though it incurs high disk space usage and write overhead. GIN with `jsonb_path_ops` hashes JSON paths to deliver smaller index sizes and faster performance specifically for `@>` queries, but it does not support existence operators (`?`). For queries consistently targeting a single path via the `->>` operator, B-tree expression indexes use standard comparison functions while consuming significantly less disk space and executing faster writes than GIN indexes.",
+      "expected_topics": [
+        "GIN",
+        "jsonb_ops",
+        "jsonb_path_ops",
+        "B-tree",
+        "@>",
+        "?",
+        "performance",
+        "storage"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "Explain PostgreSQL indexing strategies for semi-structured data, comparing B-tree, GIN with jsonb_ops, and GIN with jsonb_path_ops, including which operators each index type supports and their performance characteristics.",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 17,
+        "candidates_passed_to_reranker": 17,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          4.3749847412109375,
+          3.622180461883545,
+          -5.327071189880371,
+          -7.3141398429870605,
+          -8.252228736877441
+        ],
+        "final_chunk_ids": [
+          "d3f77f3938f38a18806d4a98462a444bc22cd52eb827593e0fae31c5750e03b7",
+          "a52e45de2997b4a33d4c1947cc65bb889f8bb579b6e99ae0ca920093c4111c3e",
+          "8fe98fe0f57db4c76d57719dae44a5a2ed87964ae99a469787a1e883d4f7cee7",
+          "01d5ddb21233bbb1557a28dc3e73e4c96d9b55b416ffc75f40e8dbd0e6b72ef9",
+          "1b7bb4ab53ce1fcdd372c9c6c64fe2debfc9a5100a952a3ccf756ff75a7a424a"
+        ],
+        "source_documents": [
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Optimizing PostgreSQL JSONB Query Performance.pdf",
+          "Redis Cluster Data Sharding and High Availability.pdf",
+          "The Saga Pattern for Distributed Transactions.pdf",
+          "DOC-NET-802.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 985.14,
+        "rerank_latency_ms": 394.96,
+        "total_retrieval_latency_ms": 1380.11,
+        "llm_latency_ms": 8328.64,
+        "total_request_latency_ms": 9708.74
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-17",
+      "category": "Category H: Negative Controls",
+      "question": "What are the fundamental principles of quantum computing and quantum entanglement?",
+      "turn": null,
+      "session_id": "session_tc_17",
+      "wall_time_seconds": 6.28,
+      "status": "PASS",
+      "answer": "I don't know.",
+      "expected_topics": [
+        "I don't know"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What are the fundamental principles of quantum computing and quantum entanglement?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 17,
+        "candidates_passed_to_reranker": 17,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          -10.438153266906738,
+          -10.672733306884766,
+          -10.726411819458008,
+          -10.860626220703125,
+          -10.928281784057617
+        ],
+        "final_chunk_ids": [
+          "1d4c8f712dc8a0e5c3bd27f00bbc62fd0742053956a567e7fd190f24bf76ffa5",
+          "312b796990ac7f4104191de9e835f483e84e129ed679ac0846b0ad51cd9eb1e2",
+          "508c5910c2efc09be1dec950b646cca273d96a72d3272ee5b9e8f67ba884c149",
+          "690a06854d38b428952c5cc9857578db8c5ca5105a373fc341c8e2247b5c7437",
+          "1e0105d5e84410c6e3dd80aaafd5a287bb1d95740c22f6c3074d61a9353171f9"
+        ],
+        "source_documents": [
+          "Vehicle_Aerodynamics_and_Computational_Fluid_Dynamics.docx",
+          "02_Physics_Current_Electricity.txt",
+          "01_Physics_Electrostatics.txt",
+          "DOC-ML-705.docx",
+          "Automotive_Crashworthiness_and_Structural_Safety.docx"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 1183.29,
+        "rerank_latency_ms": 128.1,
+        "total_retrieval_latency_ms": 1311.4,
+        "llm_latency_ms": 4965.04,
+        "total_request_latency_ms": 6276.44
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 182.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 184.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    },
+    {
+      "test_id": "TC-18",
+      "category": "Category H: Negative Controls",
+      "question": "What was the exact numerical budget deficit in French livres and the cannon artillery specifications at the Battle of Valmy during the French Revolution?",
+      "turn": null,
+      "session_id": "session_tc_18",
+      "wall_time_seconds": 6.78,
+      "status": "PASS",
+      "answer": "I don't know.",
+      "expected_topics": [
+        "I don't know"
+      ],
+      "diagnostics": {
+        "retrieval_mode": "hybrid + rerank",
+        "query": "What was the exact numerical budget deficit in French livres and the cannon artillery specifications at the Battle of Valmy during the French Revolution?",
+        "faiss_candidate_count": 10,
+        "bm25_candidate_count": 10,
+        "combined_candidate_count": 20,
+        "unique_candidate_count": 16,
+        "candidates_passed_to_reranker": 16,
+        "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        "execution_device": "cuda:0",
+        "batch_size": 5,
+        "inference_batches": 4,
+        "rerank_scores": [
+          -7.406292915344238,
+          -9.185762405395508,
+          -9.373238563537598,
+          -9.3862943649292,
+          -10.03349494934082
+        ],
+        "final_chunk_ids": [
+          "e1839c7663e1311e3ac6a0ee40ae9563597b73a8efbaafd1f4ab099324b73153",
+          "c1600d892be6732a23c7e973ff71b9c08ce2d753545ae0d45be80e0159eb8f3f",
+          "d8bc7fc84f034962f99bfdface1447f3ffccd5bb2456ceaf6cecdf5977fe339c",
+          "1b4bcd0b20505a69713de118ceb7b95094392f7cbbdd53cdedf7bb3cbc598b06",
+          "27bd1db7c0d8f3fc7c5d01971e58117a5cded545b9fc02028f4e9f46bd3a03a9"
+        ],
+        "source_documents": [
+          "DOC-HIS-2419.docx",
+          "the_haitian_revolution.txt",
+          "DOC-HIS-2419.docx",
+          "the_haitian_revolution.txt",
+          "thirty_years_war_and_westphalia.txt"
+        ],
+        "fallback_activated": false,
+        "retrieval_latency_ms": 901.08,
+        "rerank_latency_ms": 261.01,
+        "total_retrieval_latency_ms": 1162.09,
+        "llm_latency_ms": 5616.02,
+        "total_request_latency_ms": 6778.11
+      },
+      "gpu_metrics": {
+        "pre": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 184.0
+        },
+        "post": {
+          "allocated_mb": 94.78,
+          "reserved_mb": 184.0,
+          "max_allocated_mb": 140.06
+        }
+      }
+    }
+  ]
+}
